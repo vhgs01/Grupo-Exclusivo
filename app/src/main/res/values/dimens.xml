@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    Splashscreen    -->
+    <dimen name="splashLogoDimen">250dp</dimen>
+    <dimen name="splashFromMarginBottom">8dp</dimen>
+    <dimen name="splashKaz">50dp</dimen>
+    <dimen name="splashKazMarginBottom">48dp</dimen>
+    <dimen name="splashKazTextSize">25sp</dimen>
+
+    <!--    Registerscreen    -->
+    <dimen name="registerTextMarginTop">8dp</dimen>
+    <dimen name="registerEmailAdressMarginTop">32dp</dimen>
+    <dimen name="registerEmailAdressMarginStard">16dp</dimen>
+    <dimen name="registerEmailAdressMarginEnd">16dp</dimen>
+    <dimen name="registerPasswordMarginStard">16dp</dimen>
+    <dimen name="registerPasswordMarginEnd">16dp</dimen>
+    <dimen name="registerButtonMarginEnd">16dp</dimen>
+    <dimen name="registerButtonMarginTop">32dp</dimen>
+    <dimen name="registerButtonMarginStart">16dp</dimen>
+    <dimen name="registerButtonPaddingTop">24dp</dimen>
+    <dimen name="registerButtonPaddingBottom">24dp</dimen>
+    <dimen name="registerButtonTextSize">18sp</dimen>
+    <dimen name="registerTextFontSize">32sp</dimen>
+    <dimen name="registerPasswordMarginTop">16dp</dimen>
+    <dimen name="registerLeftSeparatorMarginTop">32dp</dimen>
+    <dimen name="registerRightSeparatorMarginEnd">16dp</dimen>
+    <dimen name="registerRightSeparatorMarginTop">32dp</dimen>
+    <dimen name="registerSeparatorTextSize">16sp</dimen>
+    <dimen name="registerSeparatorTextMarginTop">32dp</dimen>
+    <dimen name="registerLeftSeparatorHeight">1dp</dimen>
+    <dimen name="registerLeftSeparatorMarginStart">16dp</dimen>
+    <dimen name="registerLeftSeparatorMarginEnd">16dp</dimen>
+    <dimen name="registerRightSeparatorHeight">1dp</dimen>
+    <dimen name="registerRightSeparatorMarginStart">16dp</dimen>
+    <dimen name="registerFooterViewMarginStart">16dp</dimen>
+    <dimen name="registerFooterViewMarginTop">32dp</dimen>
+    <dimen name="registerFooterViewMarginEnd">16dp</dimen>
+    <dimen name="registerHasAccountTextSize">14sp</dimen>
+    <dimen name="registerButtonDoLoginTextSize">14sp</dimen>
+
+</resources>

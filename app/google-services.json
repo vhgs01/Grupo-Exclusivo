@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "215431963333",
+    "firebase_url": "https://kazapp-799d6.firebaseio.com",
+    "project_id": "kazapp-799d6",
+    "storage_bucket": "kazapp-799d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:215431963333:android:90239d23990f3b3affc6ac",
+        "android_client_info": {
+          "package_name": "br.com.kaz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "215431963333-roj4phlgusjibalh3q0lgbm3m9rudhli.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANt5gU0EKSCTyVj6aLROqEnf6rVC4uQpw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "215431963333-roj4phlgusjibalh3q0lgbm3m9rudhli.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

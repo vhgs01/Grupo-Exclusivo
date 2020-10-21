@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Kaz</string>
+
+    <!--    Splashscreen    -->
+    <string name="splashKaz">KAZ</string>
+    <string name="splashFrom">from</string>
+    <string name="splashLogoContentDescription">Logo do aplicativo Kaz</string>
+
+    <!--    Registerscreen    -->
+    <string name="registerText">Cadastrar</string>
+    <string name="registerButton">Cadastrar</string>
+    <string name="registerEmailAdress">Seu melhor e-mail</string>
+    <string name="registerPassword">Senha</string>
+    <string name="registerSeparatorText">OU</string>
+    <string name="registerHasAccountText">Já tem uma conta?</string>
+    <string name="registerButtonDoLoginText"><u>Faça login</u></string>
+</resources>
