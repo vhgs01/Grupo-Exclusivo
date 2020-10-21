@@ -20,15 +20,19 @@ object FirebaseIntegration {
         return firebaseAuth?.currentUser
     }
 
-    fun createUser(context: Context, email: String, password: String) {
+    fun createUser(context: Context, email: String, password: String): FirebaseUser? {
+        var userCreated: FirebaseUser? = null
+
         firebaseAuth?.createUserWithEmailAndPassword(email, password)
             ?.addOnCompleteListener { task: Task<AuthResult> ->
                 if (task.isSuccessful) {
-                    val user = firebaseAuth!!.currentUser
+                    userCreated = firebaseAuth!!.currentUser
                 } else {
-                    Toast.makeText(context, "Falha na autenticação.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Falha ao criar usuário.", Toast.LENGTH_LONG).show()
                 }
             }
+
+        return userCreated
     }
 
     fun loginWithUser(context: Context, email: String, password: String) {
@@ -37,7 +41,7 @@ object FirebaseIntegration {
                 if (task.isSuccessful) {
                     val user = firebaseAuth?.currentUser
                 } else {
-                    Toast.makeText(context, "Falha na autenticação.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, "Falha na autenticação.", Toast.LENGTH_LONG).show()
                 }
             }
     }

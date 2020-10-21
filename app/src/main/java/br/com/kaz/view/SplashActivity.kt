@@ -34,7 +34,7 @@ class SplashActivity : AppCompatActivity() {
                 //do nothing
             }
             override fun onAnimationEnd(animation: Animation?) {
-                verifyUserIsLogged()
+                redirectUser()
             }
         })
 
@@ -42,7 +42,7 @@ class SplashActivity : AppCompatActivity() {
         ivLogoSplash.startAnimation(animation)
     }
 
-    private fun verifyUserIsLogged() {
+    private fun redirectUser() {
         initializeFirebase()
         val user = getCurrentlyUserSignedIn()
 
