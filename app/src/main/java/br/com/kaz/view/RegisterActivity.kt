@@ -26,7 +26,7 @@ class RegisterActivity : AppCompatActivity() {
     private fun setRegisterButtonListener() {
         registerButton.setOnClickListener {
             if (isValidEmail() && isValidPassword()) {
-                if (registerUser() != null) {
+                if (registerUser()) {
                     redirectToModulesActivity()
                 }
             }
@@ -49,7 +49,7 @@ class RegisterActivity : AppCompatActivity() {
     private fun isValidPassword(): Boolean {
         val pass = registerPassword.text.toString()
 
-        return if (pass.isNotBlank() && pass.isNotEmpty()) {
+        return if (pass.isNotBlank() && pass.isNotEmpty() && pass.length >= 6) {
             true
         } else {
             Toast.makeText(
@@ -61,9 +61,9 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
-    private fun registerUser(): FirebaseUser? {
-        initializeFirebase()
-        return createUser(this, registerEmailAddress.toString(), registerPassword.toString())
+    private fun registerUser(): Boolean {
+        //initializeFirebase()
+        return createUser(this, registerEmailAddress.text.toString(), registerPassword.text.toString())
     }
 
     private fun redirectToModulesActivity() {

@@ -20,13 +20,14 @@ object FirebaseIntegration {
         return firebaseAuth?.currentUser
     }
 
-    fun createUser(context: Context, email: String, password: String): FirebaseUser? {
-        var userCreated: FirebaseUser? = null
+    fun createUser(context: Context, email: String, password: String): Boolean {
+        initializeFirebase()
+        var userCreated = false
 
         firebaseAuth?.createUserWithEmailAndPassword(email, password)
             ?.addOnCompleteListener { task: Task<AuthResult> ->
                 if (task.isSuccessful) {
-                    userCreated = firebaseAuth!!.currentUser
+                    userCreated = true
                 } else {
                     Toast.makeText(context, "Falha ao criar usuário.", Toast.LENGTH_LONG).show()
                 }
