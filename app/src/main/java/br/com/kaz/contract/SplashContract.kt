@@ -11,9 +11,6 @@ interface SplashContract {
     }
 
     interface Presenter {
-        fun initPresenter(splashActivity: SplashActivity, context: Context)
         fun verifyUserIsLogged()
-        fun redirectToRegisterActivity()
-        fun redirectToModulesActivity()
     }
 }
