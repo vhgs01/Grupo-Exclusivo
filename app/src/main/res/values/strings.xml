@@ -15,5 +15,5 @@
     <string name="registerHasAccountText">Já tem uma conta?</string>
     <string name="registerButtonDoLoginText"><u>Faça login</u></string>
     <string name="registerInvalidEmail">E-mail inválido</string>
-    <string name="registerInvalidPassword">Senha inválida</string>
+    <string name="registerInvalidPassword">Digite uma senha de 6 dígitos</string>
 </resources>
