@@ -3,9 +3,7 @@ package br.com.kaz.firebase
 import android.content.Context
 import android.widget.Toast
 import com.google.android.gms.tasks.Task
-import com.google.firebase.auth.AuthResult
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.*
 
 
 object FirebaseIntegration {
@@ -20,20 +18,15 @@ object FirebaseIntegration {
         return firebaseAuth?.currentUser
     }
 
-    fun createUser(context: Context, email: String, password: String): Boolean {
-        initializeFirebase()
-        var userCreated = false
-
+    fun createUser(context: Context, email: String, password: String, action: ( ) -> Unit) {
         firebaseAuth?.createUserWithEmailAndPassword(email, password)
             ?.addOnCompleteListener { task: Task<AuthResult> ->
                 if (task.isSuccessful) {
-                    userCreated = true
+                    action()
                 } else {
                     Toast.makeText(context, "Falha ao criar usuário.", Toast.LENGTH_LONG).show()
                 }
             }
-
-        return userCreated
     }
 
     fun loginWithUser(context: Context, email: String, password: String) {

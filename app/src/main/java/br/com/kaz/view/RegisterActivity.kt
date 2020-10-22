@@ -26,9 +26,7 @@ class RegisterActivity : AppCompatActivity() {
     private fun setRegisterButtonListener() {
         registerButton.setOnClickListener {
             if (isValidEmail() && isValidPassword()) {
-                if (registerUser()) {
-                    redirectToModulesActivity()
-                }
+                registerUser()
             }
         }
     }
@@ -61,9 +59,13 @@ class RegisterActivity : AppCompatActivity() {
         }
     }
 
-    private fun registerUser(): Boolean {
-        //initializeFirebase()
-        return createUser(this, registerEmailAddress.text.toString(), registerPassword.text.toString())
+    private fun registerUser() {
+        createUser(
+            this,
+            registerEmailAddress.text.toString(),
+            registerPassword.text.toString(),
+            ::redirectToModulesActivity
+        )
     }
 
     private fun redirectToModulesActivity() {
