@@ -1,5 +1,6 @@
 package br.com.kaz.firebase
 
+import android.R
 import android.content.Context
 import android.widget.Toast
 import com.google.android.gms.tasks.Task
@@ -18,13 +19,13 @@ object FirebaseIntegration {
         return firebaseAuth?.currentUser
     }
 
-    fun createUser(context: Context, email: String, password: String, action: ( ) -> Unit) {
+    fun createUser(context: Context, email: String, password: String, action: () -> Unit) {
         firebaseAuth?.createUserWithEmailAndPassword(email, password)
             ?.addOnCompleteListener { task: Task<AuthResult> ->
                 if (task.isSuccessful) {
                     action()
                 } else {
-                    Toast.makeText(context, "Falha ao criar usuário.", Toast.LENGTH_LONG).show()
+                    verifyException(task, context)
                 }
             }
     }
@@ -42,5 +43,35 @@ object FirebaseIntegration {
 
     fun singOutUser() {
         firebaseAuth?.signOut()
+    }
+
+    private fun verifyException(task: Task<AuthResult>, context: Context) {
+        try {
+            throw task.exception!!
+        } catch (e: FirebaseAuthWeakPasswordException) {
+            Toast.makeText(
+                context,
+                context.getString(br.com.kaz.R.string.FirebaseAuthWeakPasswordException),
+                Toast.LENGTH_LONG
+            ).show()
+        } catch (e: FirebaseAuthInvalidCredentialsException) {
+            Toast.makeText(
+                context,
+                context.getString(br.com.kaz.R.string.FirebaseAuthInvalidCredentialsException),
+                Toast.LENGTH_LONG
+            ).show()
+        } catch (e: FirebaseAuthUserCollisionException) {
+            Toast.makeText(
+                context,
+                context.getString(br.com.kaz.R.string.FirebaseAuthUserCollisionException),
+                Toast.LENGTH_LONG
+            ).show()
+        } catch (e: Exception) {
+            Toast.makeText(
+                context,
+                context.getString(br.com.kaz.R.string.FirebaseAuthOtherException),
+                Toast.LENGTH_LONG
+            ).show()
+        }
     }
 }

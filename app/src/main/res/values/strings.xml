@@ -16,4 +16,10 @@
     <string name="registerButtonDoLoginText"><u>Faça login</u></string>
     <string name="registerInvalidEmail">E-mail inválido</string>
     <string name="registerInvalidPassword">Digite uma senha de 6 dígitos</string>
+
+    <!--    FirebaseAuth    -->
+    <string name="FirebaseAuthWeakPasswordException">Digite uma senha de 6 dígitos</string>
+    <string name="FirebaseAuthInvalidCredentialsException">Informações inválidas</string>
+    <string name="FirebaseAuthUserCollisionException">E-mail já em uso</string>
+    <string name="FirebaseAuthOtherException">Falha ao criar usuário.</string>
 </resources>
