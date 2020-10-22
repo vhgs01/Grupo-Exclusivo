@@ -9,20 +9,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Kaz">
-        <activity android:name=".view.ModulesActivity"></activity>
         <activity
             android:name=".view.SplashActivity"
             android:label="@string/app_name"
             android:theme="@style/FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".view.RegisterActivity"
             android:label="Cadastro"
+            android:theme="@style/FullScreen" />
+        <activity
+            android:name=".view.ModulesActivity"
+            android:label="Módulos"
             android:theme="@style/FullScreen" />
     </application>
 

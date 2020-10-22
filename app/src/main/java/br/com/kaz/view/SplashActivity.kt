@@ -30,9 +30,11 @@ class SplashActivity : AppCompatActivity() {
                 splashKaz.visibility = View.VISIBLE
                 splashFrom.visibility = View.VISIBLE
             }
+
             override fun onAnimationRepeat(animation: Animation?) {
                 //do nothing
             }
+
             override fun onAnimationEnd(animation: Animation?) {
                 redirectUser()
             }
@@ -48,6 +50,8 @@ class SplashActivity : AppCompatActivity() {
 
         if (user == null) {
             startActivity(Intent(applicationContext, RegisterActivity::class.java))
+        } else {
+            startActivity(Intent(applicationContext, ModulesActivity::class.java))
         }
     }
 
