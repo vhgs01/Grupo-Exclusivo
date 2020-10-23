@@ -1,12 +1,63 @@
 package br.com.kaz.view
 
+import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import br.com.kaz.R
+import br.com.kaz.contract.LoginContract
+import br.com.kaz.presenter.LoginPresenter
+import kotlinx.android.synthetic.main.activity_login.*
+import org.koin.android.ext.android.inject
+import org.koin.core.parameter.parametersOf
 
-class LoginActivity : AppCompatActivity() {
+class LoginActivity : AppCompatActivity(), LoginContract.View {
+
+    private val presenter: LoginPresenter by inject { parametersOf(this) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        setListeners()
+    }
+
+    override fun setListeners() {
+        setRegisterButtonListener()
+        setLoginButtonListener()
+    }
+
+    override fun getViewContext(): Context {
+        return applicationContext
+    }
+
+    override fun setLoginButtonListener() {
+        loginButton!!.setOnClickListener {
+            val email = loginEmailAddress?.text.toString()
+            val pass = loginPassword?.text.toString()
+
+            presenter.handleLoginUser(email, pass)
+        }
+    }
+
+    override fun showInvalidFieldsToast() {
+        Toast.makeText(
+            applicationContext,
+            R.string.registerInvalidfields,
+            Toast.LENGTH_LONG
+        ).show()
+    }
+
+    override fun redirectToModulesActivity() {
+        startActivity(Intent(this, ModulesActivity::class.java))
+        finish()
+    }
+
+    private fun setRegisterButtonListener() {
+        loginButtonRegister!!.setOnClickListener {
+            startActivity(Intent(applicationContext, RegisterActivity::class.java))
+            finish()
+        }
     }
 }

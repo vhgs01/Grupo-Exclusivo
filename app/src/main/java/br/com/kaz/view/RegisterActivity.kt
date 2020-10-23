@@ -3,6 +3,7 @@ package br.com.kaz.view
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.com.kaz.R
 import br.com.kaz.contract.RegisterContract
@@ -36,14 +37,20 @@ class RegisterActivity : AppCompatActivity(), RegisterContract.View {
         setLoginButtonListener()
     }
 
+    override fun showInvalidFieldsToast() {
+        Toast.makeText(
+            applicationContext,
+            R.string.registerInvalidfields,
+            Toast.LENGTH_LONG
+        ).show()
+    }
+
     private fun setRegisterButtonListener() {
         registerButton!!.setOnClickListener {
             val email = registerEmailAddress.text.toString()
             val pass = registerPassword.text.toString()
 
-            if (presenter.isValidEmail(email) && presenter.isValidPassword(pass)) {
-                presenter.registerUser(email, pass)
-            }
+            presenter.handleRegisterUser(email, pass)
         }
     }
 

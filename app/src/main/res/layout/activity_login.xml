@@ -137,7 +137,7 @@
             android:textSize="@dimen/loginHasAccountTextSize" />
 
         <Button
-            android:id="@+id/loginButtonDoLogin"
+            android:id="@+id/loginButtonRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/login_footer_button"
