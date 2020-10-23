@@ -1,6 +1,5 @@
 package br.com.kaz.firebase
 
-import android.R
 import android.content.Context
 import android.widget.Toast
 import com.google.android.gms.tasks.Task

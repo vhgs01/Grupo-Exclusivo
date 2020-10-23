@@ -132,7 +132,7 @@
             android:id="@+id/registerHasAccount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="@dimen/registerHasAccountMarginStart"
             android:text="@string/registerHasAccountText"
             android:textSize="@dimen/registerHasAccountTextSize" />
 

@@ -22,4 +22,13 @@
     <string name="FirebaseAuthInvalidCredentialsException">Informações inválidas</string>
     <string name="FirebaseAuthUserCollisionException">E-mail já em uso</string>
     <string name="FirebaseAuthOtherException">Falha ao criar usuário.</string>
+
+    <!--    Loginscreen    -->
+    <string name="loginText">Entrar</string>
+    <string name="loginButton">Entrar</string>
+    <string name="loginEmailAdress">Seu e-mail</string>
+    <string name="loginPassword">Senha</string>
+    <string name="loginSeparatorText">OU</string>
+    <string name="loginHasAccountText">Ainda não tem uma conta?</string>
+    <string name="loginButtonDoLoginText">Cadastrar</string>
 </resources>

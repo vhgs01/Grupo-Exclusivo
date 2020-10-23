@@ -4,8 +4,8 @@ import android.content.Context
 
 interface RegisterContract {
     interface View {
+        fun setListeners()
         fun redirectToModulesActivity()
-        fun setRegisterButtonListener()
         fun getViewContext(): Context
     }
 

@@ -19,7 +19,7 @@ class RegisterActivity : AppCompatActivity(), RegisterContract.View {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        setRegisterButtonListener()
+        setListeners()
     }
 
     override fun getViewContext(): Context {
@@ -31,7 +31,12 @@ class RegisterActivity : AppCompatActivity(), RegisterContract.View {
         finish()
     }
 
-    override fun setRegisterButtonListener() {
+    override fun setListeners() {
+        setRegisterButtonListener()
+        setLoginButtonListener()
+    }
+
+    private fun setRegisterButtonListener() {
         registerButton!!.setOnClickListener {
             val email = registerEmailAddress.text.toString()
             val pass = registerPassword.text.toString()
@@ -39,6 +44,13 @@ class RegisterActivity : AppCompatActivity(), RegisterContract.View {
             if (presenter.isValidEmail(email) && presenter.isValidPassword(pass)) {
                 presenter.registerUser(email, pass)
             }
+        }
+    }
+
+    private fun setLoginButtonListener() {
+        registerButtonDoLogin!!.setOnClickListener {
+            startActivity(Intent(applicationContext, LoginActivity::class.java))
+            finish()
         }
     }
 
