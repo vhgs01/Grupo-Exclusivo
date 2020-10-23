@@ -1,36 +1,18 @@
 package br.com.kaz.presenter
 
-import android.content.Context
 import br.com.kaz.contract.SplashContract
 import br.com.kaz.firebase.FirebaseIntegration
-import br.com.kaz.view.SplashActivity
 
-class SplashPresenter : SplashContract.Presenter {
-
-    private var context: Context? = null
-    private var splashActivity: SplashActivity? = null
-
-    override fun initPresenter(splashActivity: SplashActivity, context: Context) {
-        this.context = context
-        this.splashActivity = splashActivity
-    }
+class SplashPresenter(val view: SplashContract.View) : SplashContract.Presenter {
 
     override fun verifyUserIsLogged() {
         FirebaseIntegration.initializeFirebase()
         val user = FirebaseIntegration.getCurrentlyUserSignedIn()
 
         if (user == null) {
-            redirectToRegisterActivity()
+            view.redirectToRegisterActivity()
         } else {
-            redirectToModulesActivity()
+            view.redirectToModulesActivity()
         }
-    }
-
-    override fun redirectToRegisterActivity() {
-        splashActivity!!.redirectToRegisterActivity()
-    }
-
-    override fun redirectToModulesActivity() {
-        splashActivity!!.redirectToModulesActivity()
     }
 }

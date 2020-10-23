@@ -14,6 +14,7 @@
     <dimen name="registerEmailAdressMarginEnd">16dp</dimen>
     <dimen name="registerPasswordMarginStard">16dp</dimen>
     <dimen name="registerPasswordMarginEnd">16dp</dimen>
+    <dimen name="registerPasswordMarginTop">16dp</dimen>
     <dimen name="registerButtonMarginEnd">16dp</dimen>
     <dimen name="registerButtonMarginTop">32dp</dimen>
     <dimen name="registerButtonMarginStart">16dp</dimen>
@@ -21,7 +22,6 @@
     <dimen name="registerButtonPaddingBottom">24dp</dimen>
     <dimen name="registerButtonTextSize">18sp</dimen>
     <dimen name="registerTextFontSize">32sp</dimen>
-    <dimen name="registerPasswordMarginTop">16dp</dimen>
     <dimen name="registerLeftSeparatorMarginTop">32dp</dimen>
     <dimen name="registerRightSeparatorMarginEnd">16dp</dimen>
     <dimen name="registerRightSeparatorMarginTop">32dp</dimen>
@@ -36,6 +36,37 @@
     <dimen name="registerFooterViewMarginTop">32dp</dimen>
     <dimen name="registerFooterViewMarginEnd">16dp</dimen>
     <dimen name="registerHasAccountTextSize">14sp</dimen>
+    <dimen name="registerHasAccountMarginStart">16dp</dimen>
     <dimen name="registerButtonDoLoginTextSize">14sp</dimen>
+
+    <!--    Loginscreen    -->
+    <dimen name="loginEmailAdressMarginTop">32dp</dimen>
+    <dimen name="loginEmailAdressMarginStard">16dp</dimen>
+    <dimen name="loginEmailAdressMarginEnd">16dp</dimen>
+    <dimen name="loginPasswordMarginStard">16dp</dimen>
+    <dimen name="loginPasswordMarginEnd">16dp</dimen>
+    <dimen name="loginPasswordMarginTop">16dp</dimen>
+    <dimen name="loginButtonMarginEnd">16dp</dimen>
+    <dimen name="loginButtonMarginTop">32dp</dimen>
+    <dimen name="loginButtonMarginStart">16dp</dimen>
+    <dimen name="loginButtonPaddingTop">24dp</dimen>
+    <dimen name="loginButtonPaddingBottom">24dp</dimen>
+    <dimen name="loginButtonTextSize">18sp</dimen>
+    <dimen name="loginLeftSeparatorMarginTop">32dp</dimen>
+    <dimen name="loginRightSeparatorMarginEnd">16dp</dimen>
+    <dimen name="loginRightSeparatorMarginTop">32dp</dimen>
+    <dimen name="loginSeparatorTextSize">16sp</dimen>
+    <dimen name="loginSeparatorTextMarginTop">32dp</dimen>
+    <dimen name="loginLeftSeparatorHeight">1dp</dimen>
+    <dimen name="loginLeftSeparatorMarginStart">16dp</dimen>
+    <dimen name="loginLeftSeparatorMarginEnd">16dp</dimen>
+    <dimen name="loginRightSeparatorHeight">1dp</dimen>
+    <dimen name="loginRightSeparatorMarginStart">16dp</dimen>
+    <dimen name="loginFooterViewMarginStart">16dp</dimen>
+    <dimen name="loginFooterViewMarginTop">32dp</dimen>
+    <dimen name="loginFooterViewMarginEnd">16dp</dimen>
+    <dimen name="loginHasAccountTextSize">14sp</dimen>
+    <dimen name="loginButtonDoLoginTextSize">14sp</dimen>
+    <dimen name="loginHasAccountMarginStart">16dp</dimen>
 
 </resources>

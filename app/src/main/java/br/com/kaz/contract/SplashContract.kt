@@ -1,8 +1,5 @@
 package br.com.kaz.contract
 
-import android.content.Context
-import br.com.kaz.view.SplashActivity
-
 interface SplashContract {
     interface View {
         fun startAnimation()
@@ -11,9 +8,6 @@ interface SplashContract {
     }
 
     interface Presenter {
-        fun initPresenter(splashActivity: SplashActivity, context: Context)
         fun verifyUserIsLogged()
-        fun redirectToRegisterActivity()
-        fun redirectToModulesActivity()
     }
 }

@@ -10,10 +10,25 @@
     <string name="registerText">Cadastrar</string>
     <string name="registerButton">Cadastrar</string>
     <string name="registerEmailAdress">Seu melhor e-mail</string>
-    <string name="registerPassword">Senha</string>
+    <string name="registerPassword">Senha (6 dígitos)</string>
     <string name="registerSeparatorText">OU</string>
     <string name="registerHasAccountText">Já tem uma conta?</string>
     <string name="registerButtonDoLoginText"><u>Faça login</u></string>
-    <string name="registerInvalidEmail">E-mail inválido</string>
-    <string name="registerInvalidPassword">Digite uma senha de 6 dígitos</string>
+    <string name="registerInvalidfields">E-mail ou senha inválido</string>
+
+    <!--    FirebaseAuth    -->
+    <string name="FirebaseAuthWeakPasswordException">Digite uma senha de 6 dígitos</string>
+    <string name="FirebaseAuthInvalidCredentialsException">E-mail ou senha inválido</string>
+    <string name="FirebaseAuthUserCollisionException">E-mail já em uso</string>
+    <string name="FirebaseAuthOtherException">Falha ao criar usuário</string>
+    <string name="FirebaseAuthInvalidUserException">Falha ao entrar com o usuário</string>
+
+    <!--    Loginscreen    -->
+    <string name="loginText">Entrar</string>
+    <string name="loginButton">Entrar</string>
+    <string name="loginEmailAdress">Seu e-mail</string>
+    <string name="loginPassword">Senha</string>
+    <string name="loginSeparatorText">OU</string>
+    <string name="loginHasAccountText">Ainda não tem uma conta?</string>
+    <string name="loginButtonDoLoginText">Cadastrar</string>
 </resources>

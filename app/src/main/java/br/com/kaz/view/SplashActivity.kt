@@ -11,16 +11,16 @@ import br.com.kaz.R
 import br.com.kaz.contract.SplashContract
 import br.com.kaz.presenter.SplashPresenter
 import kotlinx.android.synthetic.main.activity_splash.*
+import org.koin.android.ext.android.inject
+import org.koin.core.parameter.parametersOf
 
 class SplashActivity : AppCompatActivity(), SplashContract.View {
 
-    private val presenter: SplashPresenter = SplashPresenter()
+    private val presenter: SplashPresenter by inject { parametersOf(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-
-        presenter.initPresenter(this, this)
 
         startAnimation()
     }
