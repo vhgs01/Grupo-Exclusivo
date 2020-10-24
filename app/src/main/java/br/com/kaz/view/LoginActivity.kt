@@ -2,9 +2,9 @@ package br.com.kaz.view
 
 import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import br.com.kaz.R
 import br.com.kaz.contract.LoginContract
 import br.com.kaz.presenter.LoginPresenter
@@ -47,6 +47,31 @@ class LoginActivity : AppCompatActivity(), LoginContract.View {
             R.string.registerInvalidfields,
             Toast.LENGTH_LONG
         ).show()
+    }
+
+    override fun showInvalidUserError() {
+        Toast.makeText(this, R.string.FirebaseAuthInvalidUserException, Toast.LENGTH_LONG)
+            .show()
+    }
+
+    override fun showWeakPasswordError() {
+        Toast.makeText(this, R.string.FirebaseAuthWeakPasswordException, Toast.LENGTH_LONG)
+            .show()
+    }
+
+    override fun showInvalidCredentialsError() {
+        Toast.makeText(this, R.string.FirebaseAuthInvalidCredentialsException, Toast.LENGTH_LONG)
+            .show()
+    }
+
+    override fun showUserCollisionError() {
+        Toast.makeText(this, R.string.FirebaseAuthUserCollisionException, Toast.LENGTH_LONG)
+            .show()
+    }
+
+    override fun showOtherExceptionError() {
+        Toast.makeText(this, R.string.FirebaseAuthOtherException, Toast.LENGTH_LONG)
+            .show()
     }
 
     override fun redirectToModulesActivity() {

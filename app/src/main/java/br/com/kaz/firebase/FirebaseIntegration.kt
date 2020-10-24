@@ -1,81 +1,57 @@
 package br.com.kaz.firebase
 
-import android.content.Context
-import android.widget.Toast
+import br.com.kaz.domain.EntityErrorResult
+import br.com.kaz.domain.EntityResult
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.*
 
-object FirebaseIntegration {
-
-    private var firebaseAuth: FirebaseAuth? = null
-
-    fun initializeFirebase() {
-        firebaseAuth = FirebaseAuth.getInstance()
-    }
+class FirebaseIntegration(private val firebaseAuth: FirebaseAuth) {
 
     fun getCurrentlyUserSignedIn(): FirebaseUser? {
-        return firebaseAuth?.currentUser
+        return firebaseAuth.currentUser
     }
 
-    fun createUser(context: Context, email: String, password: String, action: () -> Unit) {
-        firebaseAuth?.createUserWithEmailAndPassword(email, password)
-            ?.addOnCompleteListener { task: Task<AuthResult> ->
+    fun createUser(
+        email: String,
+        password: String,
+        action: (entityResult: EntityResult<Unit>) -> Unit
+    ) {
+        firebaseAuth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener { task: Task<AuthResult> ->
                 if (task.isSuccessful) {
-                    action()
+                    action(EntityResult.Success(Unit))
                 } else {
-                    verifyUserException(task, context)
+                    action(EntityResult.Error(handleException(task)))
                 }
             }
     }
 
-    fun loginWithUser(context: Context, email: String, password: String, action: () -> Unit) {
-        firebaseAuth?.signInWithEmailAndPassword(email, password)
-            ?.addOnCompleteListener { task: Task<AuthResult> ->
+    fun loginWithUser(
+        email: String,
+        password: String,
+        action: (entityResult: EntityResult<Unit>) -> Unit
+    ) {
+        firebaseAuth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener { task: Task<AuthResult> ->
                 if (task.isSuccessful) {
-                    action()
+                    action(EntityResult.Success(Unit))
                 } else {
-                    verifyUserException(task, context)
+                    action(EntityResult.Error(handleException(task)))
                 }
             }
     }
 
     fun singOutUser() {
-        firebaseAuth?.signOut()
+        firebaseAuth.signOut()
     }
 
-    private fun verifyUserException(task: Task<AuthResult>, context: Context) {
-        try {
-            throw task.exception!!
-        } catch (e: FirebaseAuthWeakPasswordException) {
-            Toast.makeText(
-                context,
-                context.getString(br.com.kaz.R.string.FirebaseAuthWeakPasswordException),
-                Toast.LENGTH_LONG
-            ).show()
-        } catch (e: FirebaseAuthInvalidCredentialsException) {
-            Toast.makeText(
-                context,
-                context.getString(br.com.kaz.R.string.FirebaseAuthInvalidCredentialsException),
-                Toast.LENGTH_LONG
-            ).show()
-        } catch (e: FirebaseAuthInvalidUserException) {
-            Toast.makeText(
-                context,
-                context.getString(br.com.kaz.R.string.FirebaseAuthInvalidUserException),
-                Toast.LENGTH_LONG
-            ).show()
-        } catch (e: FirebaseAuthUserCollisionException) {
-            Toast.makeText(
-                context,
-                context.getString(br.com.kaz.R.string.FirebaseAuthUserCollisionException),
-                Toast.LENGTH_LONG
-            ).show()
-        } catch (e: Exception) {
-            Toast.makeText(
-                context,
-                context.getString(br.com.kaz.R.string.FirebaseAuthOtherException),
-                Toast.LENGTH_LONG
-            ).show()
+    private fun handleException(task: Task<AuthResult>): EntityErrorResult {
+        return when (task.exception!!) {
+            is FirebaseAuthWeakPasswordException -> EntityErrorResult.WeakPassword
+            is FirebaseAuthInvalidCredentialsException -> EntityErrorResult.InvalidCredentials
+            is FirebaseAuthInvalidUserException -> EntityErrorResult.InvalidUser
+            is FirebaseAuthUserCollisionException -> EntityErrorResult.UserCollision
+            else -> EntityErrorResult.OtherException
         }
     }
 }
