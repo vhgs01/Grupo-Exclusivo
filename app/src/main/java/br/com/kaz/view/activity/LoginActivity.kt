@@ -1,4 +1,4 @@
-package br.com.kaz.view
+package br.com.kaz.view.activity
 
 import android.content.Context
 import android.content.Intent

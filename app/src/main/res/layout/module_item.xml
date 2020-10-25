@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/moduleItemWithOpacity"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/moduleItemWithOpacityMargin"
+        android:background="@drawable/module_item_locked"
+        android:translationZ="@dimen/moduleItemTranslationZ"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/moduleItemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/moduleItemTitleMarginStart"
+        android:layout_marginTop="@dimen/moduleItemTitleMarginTop"
+        android:textColor="@color/black"
+        android:textSize="@dimen/moduleItemTitleTextSize"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Módulo 1" />
+
+    <TextView
+        android:id="@+id/moduleItemDescription"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/moduleItemDescriptionMarginStart"
+        android:layout_marginTop="@dimen/moduleItemDescriptionMarginTop"
+        android:layout_marginEnd="@dimen/moduleItemDescriptionMarginEnd"
+        android:layout_marginBottom="@dimen/moduleItemDescriptionMarginBottom"
+        android:ellipsize="end"
+        android:maxLines="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/moduleItemStatusText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/moduleItemTitle"
+        tools:text="Aqui você aprenderá a usar a cabeça. Aqui você aprenderá a usar a cabeça. Aqui você aprenderá a usar a cabeça. Aqui você aprenderá a usar a cabeça." />
+
+    <ImageView
+        android:id="@+id/moduleItemImage"
+        android:layout_width="@dimen/moduleItemImageWidth"
+        android:layout_height="@dimen/moduleItemImageHeight"
+        android:layout_marginEnd="@dimen/moduleItemImageMarginEnd"
+        android:backgroundTint="@color/black"
+        android:translationZ="@dimen/moduleItemImageTranslationZ"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@drawable/ic_item_locked" />
+
+    <TextView
+        android:id="@+id/moduleItemStatusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/moduleItemStatusTextMarginTop"
+        android:layout_marginBottom="@dimen/moduleItemStatusTextMarginBottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/moduleItemImage"
+        app:layout_constraintStart_toStartOf="@+id/moduleItemImage"
+        app:layout_constraintTop_toBottomOf="@+id/moduleItemImage"
+        tools:text="COMPLETO" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

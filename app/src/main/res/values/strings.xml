@@ -31,4 +31,8 @@
     <string name="loginSeparatorText">OU</string>
     <string name="loginHasAccountText">Ainda não tem uma conta?</string>
     <string name="loginButtonDoLoginText">Cadastrar</string>
+
+    <!--    Modulescreen    -->
+    <string name="modulesJourney">Sua Jornada</string>
+    <string name="modulesLogout">Sair</string>
 </resources>

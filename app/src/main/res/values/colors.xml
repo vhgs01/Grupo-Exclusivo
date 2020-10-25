@@ -10,4 +10,7 @@
     <color name="colorPrimary">#FF5821</color>
     <color name="colorPrimaryDark">#A53916</color>
     <color name="colorAccent">#2172FF</color>
+    <color name="colorModulesSeparator">#CACACA</color>
+    <color name="colorGreenStatusButton">#1CA54A</color>
+    <color name="moduleItemLockedWithOpacity">#CCEBEEF5</color>
 </resources>

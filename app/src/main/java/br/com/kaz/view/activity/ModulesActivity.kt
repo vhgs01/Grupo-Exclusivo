@@ -1,4 +1,4 @@
-package br.com.kaz.view
+package br.com.kaz.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

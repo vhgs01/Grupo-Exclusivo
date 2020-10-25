@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--    Splashscreen    -->
+    <!--    SplashScreen    -->
     <dimen name="splashLogoDimen">250dp</dimen>
     <dimen name="splashFromMarginBottom">8dp</dimen>
     <dimen name="splashKaz">50dp</dimen>
     <dimen name="splashKazMarginBottom">48dp</dimen>
     <dimen name="splashKazTextSize">25sp</dimen>
 
-    <!--    Registerscreen    -->
+    <!--    RegisterScreen    -->
     <dimen name="registerTextMarginTop">8dp</dimen>
     <dimen name="registerEmailAdressMarginTop">32dp</dimen>
     <dimen name="registerEmailAdressMarginStard">16dp</dimen>
@@ -39,7 +39,7 @@
     <dimen name="registerHasAccountMarginStart">16dp</dimen>
     <dimen name="registerButtonDoLoginTextSize">14sp</dimen>
 
-    <!--    Loginscreen    -->
+    <!--    LoginScreen    -->
     <dimen name="loginEmailAdressMarginTop">32dp</dimen>
     <dimen name="loginEmailAdressMarginStard">16dp</dimen>
     <dimen name="loginEmailAdressMarginEnd">16dp</dimen>
@@ -68,5 +68,29 @@
     <dimen name="loginHasAccountTextSize">14sp</dimen>
     <dimen name="loginButtonDoLoginTextSize">14sp</dimen>
     <dimen name="loginHasAccountMarginStart">16dp</dimen>
+
+    <!--    ModuleScreen    -->
+    <dimen name="modulesJourneyMarginTop">24dp</dimen>
+    <dimen name="modulesJourneyMarginBottom">24dp</dimen>
+    <dimen name="modulesJourneyTextSize">20sp</dimen>
+    <dimen name="modulesLogoutTextSize">16sp</dimen>
+    <dimen name="modulesSeparatorHeight">1dp</dimen>
+
+    <!--    ModuleItemScreen    -->
+    <dimen name="moduleItemWithOpacityMargin">8dp</dimen>
+    <dimen name="moduleItemTranslationZ">1dp</dimen>
+    <dimen name="moduleItemTitleMarginStart">16dp</dimen>
+    <dimen name="moduleItemTitleMarginTop">16dp</dimen>
+    <dimen name="moduleItemTitleTextSize">16sp</dimen>
+    <dimen name="moduleItemDescriptionMarginStart">16dp</dimen>
+    <dimen name="moduleItemDescriptionMarginTop">8dp</dimen>
+    <dimen name="moduleItemDescriptionMarginEnd">16dp</dimen>
+    <dimen name="moduleItemDescriptionMarginBottom">8dp</dimen>
+    <dimen name="moduleItemImageWidth">40dp</dimen>
+    <dimen name="moduleItemImageHeight">40dp</dimen>
+    <dimen name="moduleItemImageMarginEnd">32dp</dimen>
+    <dimen name="moduleItemImageTranslationZ">1dp</dimen>
+    <dimen name="moduleItemStatusTextMarginTop">4dp</dimen>
+    <dimen name="moduleItemStatusTextMarginBottom">16dp</dimen>
 
 </resources>
