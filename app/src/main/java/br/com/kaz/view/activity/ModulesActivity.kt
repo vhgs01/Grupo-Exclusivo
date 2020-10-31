@@ -1,50 +1,55 @@
 package br.com.kaz.view.activity
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.kaz.R
-import br.com.kaz.model.courses.CourseKaz
-import br.com.kaz.model.methodKaz.MethodKaz
+import br.com.kaz.contract.ModuleContract
+import br.com.kaz.presenter.ModulePresenter
+import br.com.kaz.util.JsonManipulation.readCourseKazJson
 import br.com.kaz.view.adapter.CourseKazAdapter
-import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_modules.*
-import java.io.ByteArrayOutputStream
-import java.io.IOException
-import java.io.InputStream
+import org.koin.android.ext.android.inject
+import org.koin.core.parameter.parametersOf
 
+class ModulesActivity : AppCompatActivity(), ModuleContract.View {
 
-class ModulesActivity : AppCompatActivity() {
+    private val presenter: ModulePresenter by inject { parametersOf(this) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_modules)
 
+        setListeners()
+        configureAdapter()
+    }
+
+    override fun setListeners() {
+        setLogoutButtonListener()
+    }
+
+    override fun configureAdapter() {
         val recyclerView = modulesList
-        recyclerView.adapter = readJson()?.let { CourseKazAdapter(it, this) }
+        recyclerView.adapter = readCourseKazJson(resources)?.let { CourseKazAdapter(it, this) }
         recyclerView.layoutManager = LinearLayoutManager(this)
     }
 
-    private fun readJson(): CourseKaz? {
-        val rawResource = resources.openRawResource(R.raw.method_kaz)
-        val jsonInText = readTextFile(rawResource)
-
-        return Gson().fromJson(jsonInText, CourseKaz::class.java)
+    override fun showSingOutUserError() {
+        Toast.makeText(this, getString(R.string.modulesSingOutUserErrorText), Toast.LENGTH_LONG)
+            .show()
     }
 
-    private fun readTextFile(inputStream: InputStream): String? {
-        val outputStream = ByteArrayOutputStream()
-        val buf = ByteArray(1024)
-        var len: Int
-        try {
-            while (inputStream.read(buf).also { len = it } != -1) {
-                outputStream.write(buf, 0, len)
-            }
-            outputStream.close()
-            inputStream.close()
-        } catch (e: IOException) {
+    override fun redirectToLoginScreen() {
+        startActivity(Intent(this, LoginActivity::class.java))
+        finishAffinity()
+    }
+
+    private fun setLogoutButtonListener() {
+        modulesLogout!!.setOnClickListener {
+            presenter.singOutUser()
         }
-        return outputStream.toString()
     }
-
 
 }

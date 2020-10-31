@@ -35,4 +35,5 @@
     <!--    Modulescreen    -->
     <string name="modulesJourney">Sua Jornada</string>
     <string name="modulesLogout">Sair</string>
+    <string name="modulesSingOutUserErrorText">Não foi possível desconectar</string>
 </resources>

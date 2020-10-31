@@ -74,7 +74,7 @@
     <dimen name="modulesJourneyMarginBottom">24dp</dimen>
     <dimen name="modulesJourneyTextSize">20sp</dimen>
     <dimen name="modulesLogoutTextSize">16sp</dimen>
-    <dimen name="modulesSeparatorHeight">1dp</dimen>
+    <dimen name="ModulesHeaderSeparator">1dp</dimen>
 
     <!--    ModuleItemScreen    -->
     <dimen name="moduleItemWithOpacityMargin">8dp</dimen>
@@ -92,5 +92,8 @@
     <dimen name="moduleItemImageTranslationZ">1dp</dimen>
     <dimen name="moduleItemStatusTextMarginTop">4dp</dimen>
     <dimen name="moduleItemStatusTextMarginBottom">16dp</dimen>
+    <dimen name="modulesCardViewMargin">5dp</dimen>
+    <dimen name="modulesCardViewElenation">1dp</dimen>
+    <dimen name="modulesCardViewCornerRadius">5dp</dimen>
 
 </resources>

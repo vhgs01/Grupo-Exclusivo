@@ -12,7 +12,7 @@ class SplashPresenter(
         val user = firebase.getCurrentlyUserSignedIn()
 
         if (user == null) {
-            view.redirectToRegisterActivity()
+            view.redirectToLoginActivity()
         } else {
             view.redirectToModulesActivity()
         }

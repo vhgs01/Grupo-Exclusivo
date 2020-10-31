@@ -29,7 +29,7 @@ class RegisterActivity : AppCompatActivity(), RegisterContract.View {
 
     override fun redirectToModulesActivity() {
         startActivity(Intent(this, ModulesActivity::class.java))
-        finish()
+        finishAffinity()
     }
 
     override fun setListeners() {
@@ -82,7 +82,7 @@ class RegisterActivity : AppCompatActivity(), RegisterContract.View {
     private fun setLoginButtonListener() {
         registerButtonDoLogin!!.setOnClickListener {
             startActivity(Intent(applicationContext, LoginActivity::class.java))
-            finish()
+            finishAffinity()
         }
     }
 

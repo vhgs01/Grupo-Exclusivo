@@ -38,20 +38,22 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/modulesJourney" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:id="@+id/ModulesHeaderSeparator"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/ModulesHeaderSeparator"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-    <View
-        android:id="@+id/modulesSeparator"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/modulesSeparatorHeight"
-        android:layout_below="@id/modulesHeader"
-        android:background="@color/colorModulesSeparator" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/modulesList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/modulesSeparator"
+        android:layout_below="@id/modulesHeader"
         tools:listitem="@layout/module_item" />
 
 </RelativeLayout>

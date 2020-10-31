@@ -4,6 +4,7 @@ import br.com.kaz.domain.EntityErrorResult
 import br.com.kaz.domain.EntityResult
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.*
+import java.lang.Exception
 
 class FirebaseIntegration(private val firebaseAuth: FirebaseAuth) {
 
@@ -42,7 +43,11 @@ class FirebaseIntegration(private val firebaseAuth: FirebaseAuth) {
     }
 
     fun singOutUser() {
-        firebaseAuth.signOut()
+        try {
+            firebaseAuth.signOut()
+        } catch (e: Exception) {
+            throw NullPointerException()
+        }
     }
 
     private fun handleException(task: Task<AuthResult>): EntityErrorResult {

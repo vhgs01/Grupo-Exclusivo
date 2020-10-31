@@ -47,14 +47,14 @@ class SplashActivity : AppCompatActivity(), SplashContract.View {
         ivLogoSplash.startAnimation(animation)
     }
 
-    override fun redirectToRegisterActivity() {
-        startActivity(Intent(this, RegisterActivity::class.java))
-        finish()
+    override fun redirectToLoginActivity() {
+        startActivity(Intent(this, LoginActivity::class.java))
+        finishAffinity()
     }
 
     override fun redirectToModulesActivity() {
         startActivity(Intent(this, ModulesActivity::class.java))
-        finish()
+        finishAffinity()
     }
 
 }
