@@ -4,15 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.activity.ModulesActivity">
+    tools:context=".view.activity.StepsActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/modulesHeader"
+        android:id="@+id/stepsHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <Button
+            android:id="@+id/stepBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_with_oppacity"
+            android:text="@string/stepsBack"
+            android:textAllCaps="false"
+            android:textColor="@android:color/secondary_text_light_nodisable"
+            android:textSize="@dimen/stepsBackTextSize"
+            app:layout_constraintBottom_toBottomOf="@+id/stepsJourney"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/stepsJourney" />
+
         <TextView
-            android:id="@+id/modulesJourney"
+            android:id="@+id/stepsJourney"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/modulesJourneyMarginTop"
@@ -25,21 +38,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/modulesLogout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_with_oppacity"
-            android:text="@string/modulesLogout"
-            android:textAllCaps="false"
-            android:textColor="@android:color/secondary_text_light_nodisable"
-            android:textSize="@dimen/modulesLogoutTextSize"
-            app:layout_constraintBottom_toBottomOf="@+id/modulesJourney"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/modulesJourney" />
-
         <View
-            android:id="@+id/ModulesHeaderSeparator"
+            android:id="@+id/stepssHeaderSeparator"
             android:layout_width="0dp"
             android:layout_height="@dimen/ModulesHeaderSeparator"
             android:background="@color/black"
@@ -50,10 +50,10 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/modulesList"
+        android:id="@+id/stepsList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/modulesHeader"
-        tools:listitem="@layout/module_item" />
+        android:layout_below="@id/stepsHeader"
+        tools:listitem="@layout/step_item" />
 
 </RelativeLayout>

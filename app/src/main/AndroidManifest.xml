@@ -21,6 +21,10 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".view.activity.LoginActivity"
+            android:label="Login"
+            android:theme="@style/FullScreen" />
+        <activity
             android:name=".view.activity.RegisterActivity"
             android:label="Cadastro"
             android:theme="@style/FullScreen" />
@@ -29,9 +33,9 @@
             android:label="Módulos"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".view.activity.LoginActivity"
-            android:label="Login"
-            android:theme="@style/FullScreen" />
+            android:name=".view.activity.StepsActivity"
+            android:label="Etapas"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>

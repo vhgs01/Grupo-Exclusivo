@@ -38,4 +38,5 @@
     <string name="modulesSingOutUserErrorText">Não foi possível desconectar</string>
     <string name="modulesInProgressText">EXECUTANDO</string>
     <string name="modulesCompletedText">COMPLETO</string>
+    <string name="stepsBack">voltar</string>
 </resources>

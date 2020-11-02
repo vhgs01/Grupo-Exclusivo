@@ -1,6 +1,6 @@
 package br.com.kaz.model.courses
 
-data class Course(
+data class ModuleKaz(
     val completed: Boolean?,
     val description: String,
     val steps: List<Step>,
