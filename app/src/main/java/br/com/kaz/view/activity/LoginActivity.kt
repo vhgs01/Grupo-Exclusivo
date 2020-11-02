@@ -76,13 +76,13 @@ class LoginActivity : AppCompatActivity(), LoginContract.View {
 
     override fun redirectToModulesActivity() {
         startActivity(Intent(this, ModulesActivity::class.java))
-        finish()
+        finishAffinity()
     }
 
     private fun setRegisterButtonListener() {
         loginButtonRegister!!.setOnClickListener {
             startActivity(Intent(applicationContext, RegisterActivity::class.java))
-            finish()
+            finishAffinity()
         }
     }
 }

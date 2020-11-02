@@ -74,10 +74,9 @@
     <dimen name="modulesJourneyMarginBottom">24dp</dimen>
     <dimen name="modulesJourneyTextSize">20sp</dimen>
     <dimen name="modulesLogoutTextSize">16sp</dimen>
-    <dimen name="modulesSeparatorHeight">1dp</dimen>
+    <dimen name="ModulesHeaderSeparator">1dp</dimen>
 
     <!--    ModuleItemScreen    -->
-    <dimen name="moduleItemWithOpacityMargin">8dp</dimen>
     <dimen name="moduleItemTranslationZ">1dp</dimen>
     <dimen name="moduleItemTitleMarginStart">16dp</dimen>
     <dimen name="moduleItemTitleMarginTop">16dp</dimen>
@@ -92,5 +91,28 @@
     <dimen name="moduleItemImageTranslationZ">1dp</dimen>
     <dimen name="moduleItemStatusTextMarginTop">4dp</dimen>
     <dimen name="moduleItemStatusTextMarginBottom">16dp</dimen>
+    <dimen name="modulesCardViewMargin">5dp</dimen>
+    <dimen name="modulesCardViewElenation">1dp</dimen>
+    <dimen name="modulesCardViewCornerRadius">5dp</dimen>
+
+    <!--    StepItemScreen    -->
+    <dimen name="stepItemTranslationZ">1dp</dimen>
+    <dimen name="stepItemTitleMarginStart">16dp</dimen>
+    <dimen name="stepItemTitleMarginTop">16dp</dimen>
+    <dimen name="stepItemTitleTextSize">16sp</dimen>
+    <dimen name="stepItemDescriptionMarginStart">16dp</dimen>
+    <dimen name="stepItemDescriptionMarginTop">8dp</dimen>
+    <dimen name="stepItemDescriptionMarginEnd">16dp</dimen>
+    <dimen name="stepItemDescriptionMarginBottom">8dp</dimen>
+    <dimen name="stepItemImageWidth">40dp</dimen>
+    <dimen name="stepItemImageHeight">40dp</dimen>
+    <dimen name="stepItemImageMarginEnd">32dp</dimen>
+    <dimen name="stepItemImageTranslationZ">1dp</dimen>
+    <dimen name="stepItemStatusTextMarginTop">4dp</dimen>
+    <dimen name="stepItemStatusTextMarginBottom">16dp</dimen>
+    <dimen name="stepCardViewMargin">5dp</dimen>
+    <dimen name="stepCardViewElenation">1dp</dimen>
+    <dimen name="stepCardViewCornerRadius">5dp</dimen>
+    <dimen name="stepsBackTextSize">16sp</dimen>
 
 </resources>

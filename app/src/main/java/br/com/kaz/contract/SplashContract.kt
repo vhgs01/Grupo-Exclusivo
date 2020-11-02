@@ -3,7 +3,7 @@ package br.com.kaz.contract
 interface SplashContract {
     interface View {
         fun startAnimation()
-        fun redirectToRegisterActivity()
+        fun redirectToLoginActivity()
         fun redirectToModulesActivity()
     }
 
