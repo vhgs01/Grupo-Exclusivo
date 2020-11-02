@@ -13,6 +13,7 @@
         <activity
             android:name=".view.activity.SplashActivity"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
             android:theme="@style/FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,18 +24,27 @@
         <activity
             android:name=".view.activity.LoginActivity"
             android:label="Login"
+            android:screenOrientation="portrait"
             android:theme="@style/FullScreen" />
         <activity
             android:name=".view.activity.RegisterActivity"
             android:label="Cadastro"
+            android:screenOrientation="portrait"
             android:theme="@style/FullScreen" />
         <activity
             android:name=".view.activity.ModulesActivity"
             android:label="Módulos"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".view.activity.StepsActivity"
             android:label="Etapas"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".view.activity.ChecklistActivity"
+            android:label="Checklist"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
     </application>
 

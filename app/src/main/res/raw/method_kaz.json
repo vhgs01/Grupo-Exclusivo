@@ -8,7 +8,7 @@
         {
           "title": "Aula 1",
           "description": "Primeira aula do módulo 1 vamo la",
-          "completed": false,
+          "completed": true,
           "checklist": [
             {
               "title": "Primeiro item",
@@ -27,6 +27,25 @@
         {
           "title": "Aula 2",
           "description": "Segunda aula do módulo 1 vamo la",
+          "completed": null,
+          "checklist": [
+            {
+              "title": "Primeiro item",
+              "completed": false
+            },
+            {
+              "title": "Segundo item",
+              "completed": false
+            },
+            {
+              "title": "Terceiro item",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "title": "Aula 3",
+          "description": "Terceira aula do módulo 1 vamo la",
           "completed": false,
           "checklist": [
             {

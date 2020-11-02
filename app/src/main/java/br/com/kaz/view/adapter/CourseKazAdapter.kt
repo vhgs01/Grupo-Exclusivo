@@ -19,12 +19,12 @@ class CourseKazAdapter(private val course: CourseKaz, private val context: Conte
     RecyclerView.Adapter<CourseKazAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var moduleCard = itemView.moduleCard!!
-        var moduleTitle = itemView.moduleItemTitle!!
-        var moduleItemDescription = itemView.moduleItemDescription!!
-        var moduleItemWithOpacity = itemView.moduleItemWithOpacity!!
-        var moduleItemImage = itemView.moduleItemImage!!
-        var moduleItemStatusText = itemView.moduleItemStatusText!!
+        var moduleCard = itemView.cardView!!
+        var moduleTitle = itemView.itemTitle!!
+        var moduleItemDescription = itemView.itemDescription!!
+        var moduleItemWithOpacity = itemView.itemWithOpacity!!
+        var moduleItemImage = itemView.itemImage!!
+        var moduleItemStatusText = itemView.itemStatusText!!
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -76,7 +76,10 @@ class CourseKazAdapter(private val course: CourseKaz, private val context: Conte
     private fun setClickListener(it: ViewHolder, position: Int, moduleKaz: ModuleKaz) {
         it.moduleCard.setOnClickListener {
             if (moduleKaz.completed == false) {
-                Toast.makeText(context, "Módulo não liberado", Toast.LENGTH_LONG).show()
+                Toast.makeText(
+                    context,
+                    context.getString(R.string.moduleNotAbleYet), Toast.LENGTH_LONG
+                ).show()
             } else {
                 val intent = Intent(context, StepsActivity::class.java)
                 intent.putExtra("modulePosition", position)
