@@ -1,11 +1,16 @@
 package br.com.kaz.presenter
 
 import br.com.kaz.contract.LoginContract
-import br.com.kaz.firebase.FirebaseIntegration.loginWithUser
+import br.com.kaz.domain.EntityErrorResult
+import br.com.kaz.domain.EntityResult
+import br.com.kaz.firebase.FirebaseIntegration
 import br.com.kaz.util.FieldsValidations.isValidEmail
 import br.com.kaz.util.FieldsValidations.isValidPassword
 
-class LoginPresenter(val view: LoginContract.View) : LoginContract.Presenter {
+class LoginPresenter(
+    private val view: LoginContract.View,
+    private val firebase: FirebaseIntegration
+) : LoginContract.Presenter {
 
     override fun handleLoginUser(email: String, pass: String) {
         if (isValidEmail(email) && isValidPassword(pass)) {
@@ -16,15 +21,21 @@ class LoginPresenter(val view: LoginContract.View) : LoginContract.Presenter {
     }
 
     override fun loginWithUser(email: String, pass: String) {
-        loginWithUser(
-            view.getViewContext(),
-            email,
-            pass,
-            ::redirectToModuleActivity
-        )
+        firebase.loginWithUser(email, pass, ::onLoginWithUser)
     }
 
-    override fun redirectToModuleActivity() {
-        view.redirectToModulesActivity()
+    private fun onLoginWithUser(result: EntityResult<Unit>) {
+        when (result) {
+            is EntityResult.Success -> view.redirectToModulesActivity()
+            is EntityResult.Error -> {
+                when (result.error) {
+                    EntityErrorResult.InvalidUser -> view.showInvalidUserError()
+                    EntityErrorResult.WeakPassword -> view.showWeakPasswordError()
+                    EntityErrorResult.InvalidCredentials -> view.showInvalidCredentialsError()
+                    EntityErrorResult.UserCollision -> view.showUserCollisionError()
+                    EntityErrorResult.OtherException -> view.showOtherExceptionError()
+                }
+            }
+        }
     }
 }

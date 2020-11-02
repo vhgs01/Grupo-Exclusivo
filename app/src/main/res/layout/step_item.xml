@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/stepCardViewMargin"
+        android:elevation="@dimen/stepCardViewElenation"
+        app:cardCornerRadius="@dimen/stepCardViewCornerRadius">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/stepsItemWithOpacity"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/item_locked"
+                android:translationZ="@dimen/stepItemTranslationZ"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/stepItemTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/stepItemTitleMarginStart"
+                android:layout_marginTop="@dimen/stepItemTitleMarginTop"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/stepItemTitleTextSize"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/stepItemDescription"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Módulo 1" />
+
+            <TextView
+                android:id="@+id/stepItemDescription"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/stepItemDescriptionMarginStart"
+                android:layout_marginTop="@dimen/stepItemDescriptionMarginTop"
+                android:layout_marginEnd="@dimen/stepItemDescriptionMarginEnd"
+                android:layout_marginBottom="@dimen/stepItemDescriptionMarginBottom"
+                android:ellipsize="end"
+                android:maxLines="3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/stepItemStatusText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stepItemTitle"
+                tools:text="Aqui você aprenderá a usar a cabeça. Aqui você aprenderá a usar a cabeça. Aqui você aprenderá a usar a cabeça. Aqui você aprenderá a usar a cabeça." />
+
+            <ImageView
+                android:id="@+id/stepItemImage"
+                android:layout_width="@dimen/stepItemImageWidth"
+                android:layout_height="@dimen/stepItemImageHeight"
+                android:layout_marginEnd="@dimen/stepItemImageMarginEnd"
+                android:backgroundTint="@color/black"
+                android:translationZ="@dimen/stepItemImageTranslationZ"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:background="@drawable/ic_item_locked" />
+
+            <TextView
+                android:id="@+id/stepItemStatusText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/stepItemStatusTextMarginTop"
+                android:layout_marginBottom="@dimen/stepItemStatusTextMarginBottom"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/stepItemImage"
+                app:layout_constraintStart_toStartOf="@+id/stepItemImage"
+                app:layout_constraintTop_toBottomOf="@+id/stepItemImage"
+                tools:text="EXECUTANDO" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

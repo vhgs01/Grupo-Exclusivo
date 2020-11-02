@@ -13,7 +13,7 @@ class MyApplication : Application() {
             AndroidLogger()
             androidContext(this@MyApplication)
 
-            modules(mainModule)
+            modules(mainModule, dataModule)
         }
     }
 }
