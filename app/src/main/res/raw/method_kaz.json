@@ -3,7 +3,7 @@
     {
       "title": "Módulo 1 - Aprendendo o básico",
       "description": "Módulo inicial, aprendendo o básico",
-      "completed": false,
+      "completed": true,
       "steps": [
         {
           "title": "Aula 1",
@@ -47,8 +47,8 @@
     },
     {
       "title": "Módulo 2 - Aprendendo o intermediário",
-      "description": "Módulo intermediário, aprendendo o intermediário",
-      "completed": false,
+      "description": "Módulo intermediário, aprendendo o intermediário, Módulo intermediário, aprendendo o intermediário",
+      "completed": null,
       "steps": [
         {
           "title": "Aula 1",

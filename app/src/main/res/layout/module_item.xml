@@ -21,7 +21,6 @@
                 android:id="@+id/moduleItemWithOpacity"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_margin="@dimen/moduleItemWithOpacityMargin"
                 android:background="@drawable/module_item_locked"
                 android:translationZ="@dimen/moduleItemTranslationZ"
                 android:visibility="gone"
@@ -32,13 +31,16 @@
 
             <TextView
                 android:id="@+id/moduleItemTitle"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/moduleItemTitleMarginStart"
                 android:layout_marginTop="@dimen/moduleItemTitleMarginTop"
+                android:ellipsize="end"
+                android:maxLines="2"
                 android:textColor="@color/black"
                 android:textSize="@dimen/moduleItemTitleTextSize"
                 android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/moduleItemDescription"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="Módulo 1" />
@@ -81,7 +83,7 @@
                 app:layout_constraintEnd_toEndOf="@+id/moduleItemImage"
                 app:layout_constraintStart_toStartOf="@+id/moduleItemImage"
                 app:layout_constraintTop_toBottomOf="@+id/moduleItemImage"
-                tools:text="COMPLETO" />
+                tools:text="EXECUTANDO" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
