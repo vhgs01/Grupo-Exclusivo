@@ -24,7 +24,7 @@ class ChecklistActivity : YouTubeBaseActivity(), ChecklistContract.View {
     override fun configureAdapter(modulePosition: Int, stepPosition: Int) {
         val recyclerView = checklistList
         recyclerView.adapter =
-            JsonManipulation.readCourseKazJson(resources)
+            JsonManipulation.getCourseKaz(applicationContext)
                 ?.let {
                     ChecklistAdapter(
                         it,

@@ -4,10 +4,13 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CompoundButton
 import androidx.recyclerview.widget.RecyclerView
 import br.com.kaz.R
 import br.com.kaz.model.courses.Checklist
 import br.com.kaz.model.courses.CourseKaz
+import br.com.kaz.util.JsonManipulation.convertCourseKazToJson
+import br.com.kaz.util.JsonManipulation.overrideCourseKazJson
 import br.com.kaz.util.YouTubePlayer.initializeYouTubePlayer
 import com.google.android.youtube.player.YouTubePlayerView
 import kotlinx.android.synthetic.main.checklist_item.view.*
@@ -40,7 +43,18 @@ class ChecklistAdapter(
         val checklist = course.moduleKaz[modulePosition].steps[stepPosition].checklist[position]
         val moduleVideoUrl = course.moduleKaz[modulePosition].steps[stepPosition].youtubeVideoId
 
+        setClickListener(holder, position)
         configureModuleView(holder, moduleVideoUrl, checklist)
+    }
+
+    private fun setClickListener(it: ViewHolder, position: Int) {
+        it.checklistBox.setOnClickListener {
+            course.moduleKaz[modulePosition].steps[stepPosition].checklist[position].completed =
+                (it as CompoundButton).isChecked
+
+            val courseKazJsonConverted = convertCourseKazToJson(course)
+            overrideCourseKazJson(context, courseKazJsonConverted)
+        }
     }
 
     private fun configureModuleView(it: ViewHolder, moduleVideoUrl: String, checklist: Checklist) {
@@ -48,7 +62,7 @@ class ChecklistAdapter(
 
         it.checklistItemTitle.text = checklist.title
         it.checklistItemDescription.text = checklist.description
-        it.checklistBox.isChecked = checklist.completed
+        it.checklistBox.isChecked = checklist.completed!!
     }
 
 }
