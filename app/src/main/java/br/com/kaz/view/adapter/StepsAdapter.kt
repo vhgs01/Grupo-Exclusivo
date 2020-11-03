@@ -13,7 +13,7 @@ import br.com.kaz.R
 import br.com.kaz.model.courses.CourseKaz
 import br.com.kaz.model.courses.Step
 import br.com.kaz.view.activity.ChecklistActivity
-import kotlinx.android.synthetic.main.module_item.view.*
+import kotlinx.android.synthetic.main.base_list_item.view.*
 
 class StepsAdapter(
     private val course: CourseKaz,
@@ -36,7 +36,7 @@ class StepsAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.module_item, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.base_list_item, parent, false)
         return ViewHolder(view)
     }
 

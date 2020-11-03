@@ -115,4 +115,17 @@
     <dimen name="stepCardViewCornerRadius">5dp</dimen>
     <dimen name="stepsBackTextSize">16sp</dimen>
 
+    <!--    ChecklistItemScreen    -->
+    <dimen name="checklistJourneyMarginTop">24dp</dimen>
+    <dimen name="checklistJourneyMarginBottom">24dp</dimen>
+    <dimen name="checklistJourneyTextSize">20sp</dimen>
+    <dimen name="checklistLogoutTextSize">16sp</dimen>
+    <dimen name="checklistHeaderSeparator">1dp</dimen>
+    <dimen name="checklistBackTextSize">16sp</dimen>
+    <dimen name="checklistBoxMarginStart">16dp</dimen>
+    <dimen name="checklistBoxPaddingTop">16dp</dimen>
+    <dimen name="checklistBoxPaddingBottom">16dp</dimen>
+    <dimen name="checklistBoxPaddingEnd">16dp</dimen>
+    <dimen name="checklistYouTubePlayerMarginBottom">16dp</dimen>
+
 </resources>

@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/modulesJourneyMarginTop"
             android:layout_marginBottom="@dimen/modulesJourneyMarginBottom"
-            android:text="@string/modulesJourney"
+            android:text="@string/Journey"
             android:textColor="@color/black"
             android:textSize="@dimen/modulesJourneyTextSize"
             app:layout_constraintBottom_toBottomOf="parent"

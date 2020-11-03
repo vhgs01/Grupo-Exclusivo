@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Kaz</string>
+    <string name="Journey">Sua Jornada</string>
+    <string name="youtube_api_key">AIzaSyAAYa22ADnST505mxnUFgFhFFl5WO7ciB8</string>
 
     <!--    Splash Screen    -->
     <string name="splashKaz">KAZ</string>
@@ -33,7 +35,6 @@
     <string name="loginButtonDoLoginText">Cadastrar</string>
 
     <!--    Module Screen    -->
-    <string name="modulesJourney">Sua Jornada</string>
     <string name="modulesLogout">Sair</string>
     <string name="modulesSingOutUserErrorText">Não foi possível desconectar</string>
     <string name="modulesInProgressText">EXECUTANDO</string>

@@ -13,7 +13,7 @@ import br.com.kaz.R
 import br.com.kaz.model.courses.ModuleKaz
 import br.com.kaz.model.courses.CourseKaz
 import br.com.kaz.view.activity.StepsActivity
-import kotlinx.android.synthetic.main.module_item.view.*
+import kotlinx.android.synthetic.main.base_list_item.view.*
 
 class CourseKazAdapter(private val course: CourseKaz, private val context: Context) :
     RecyclerView.Adapter<CourseKazAdapter.ViewHolder>() {
@@ -28,7 +28,7 @@ class CourseKazAdapter(private val course: CourseKaz, private val context: Conte
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.module_item, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.base_list_item, parent, false)
         return ViewHolder(view)
     }
 

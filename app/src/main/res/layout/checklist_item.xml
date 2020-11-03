@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/modulesCardViewMargin"
+        android:elevation="@dimen/modulesCardViewElenation"
+        app:cardCornerRadius="@dimen/modulesCardViewCornerRadius">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/checklistBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/checklistBoxMarginStart"
+                android:button="@drawable/checkbox_checklist"
+                android:gravity="center"
+                android:paddingTop="@dimen/checklistBoxPaddingTop"
+                android:paddingEnd="@dimen/checklistBoxPaddingEnd"
+                android:paddingBottom="@dimen/checklistBoxPaddingBottom"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/checklistItemTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/moduleItemTitleTextSize"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/checklistBox"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Item 1" />
+
+            <TextView
+                android:id="@+id/checklistItemDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/checklistItemTitle"
+                app:layout_constraintTop_toBottomOf="@+id/checklistItemTitle"
+                tools:text="Aqui você aprenderá a usar a cabeça. Aqui você aprenderá a usar a cabeça. Aqui você aprenderá a usar a cabeça. Aqui você aprenderá a usar a cabeça." />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

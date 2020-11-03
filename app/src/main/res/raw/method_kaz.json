@@ -8,18 +8,22 @@
         {
           "title": "Aula 1",
           "description": "Primeira aula do módulo 1 vamo la",
+          "youtubeVideoId": "Dr9ywuaVnEQ",
           "completed": true,
           "checklist": [
             {
               "title": "Primeiro item",
-              "completed": false
+              "description": "Descrição do primeiro item do checklist",
+              "completed": true
             },
             {
               "title": "Segundo item",
-              "completed": false
+              "description": "Descrição do segundo item do checklist",
+              "completed": true
             },
             {
               "title": "Terceiro item",
+              "description": "Descrição do terceiro item do checklist",
               "completed": false
             }
           ]
@@ -27,18 +31,22 @@
         {
           "title": "Aula 2",
           "description": "Segunda aula do módulo 1 vamo la",
+          "youtubeVideoId": "Dk0tfPivnvY",
           "completed": null,
           "checklist": [
             {
               "title": "Primeiro item",
+              "description": "Descrição do primeiro item do checklist",
               "completed": false
             },
             {
               "title": "Segundo item",
+              "description": "Descrição do segundo item do checklist",
               "completed": false
             },
             {
               "title": "Terceiro item",
+              "description": "Descrição do terceiro item do checklist",
               "completed": false
             }
           ]
@@ -46,18 +54,22 @@
         {
           "title": "Aula 3",
           "description": "Terceira aula do módulo 1 vamo la",
+          "youtubeVideoId": "I_WZuvG9IDM",
           "completed": false,
           "checklist": [
             {
               "title": "Primeiro item",
+              "description": "Descrição do segundo item do checklist",
               "completed": false
             },
             {
               "title": "Segundo item",
+              "description": "Descrição do primeiro item do checklist",
               "completed": false
             },
             {
               "title": "Terceiro item",
+              "description": "Descrição do terceiro item do checklist",
               "completed": false
             }
           ]
@@ -72,18 +84,22 @@
         {
           "title": "Aula 1",
           "description": "Primeira aula do módulo 2 vamo la",
+          "youtubeVideoId": "Dr9ywuaVnEQ",
           "completed": false,
           "checklist": [
             {
               "title": "Primeiro item",
+              "description": "Descrição do primeiro item do checklist",
               "completed": false
             },
             {
               "title": "Segundo item",
+              "description": "Descrição do segundo item do checklist",
               "completed": false
             },
             {
               "title": "Terceiro item",
+              "description": "Descrição do terceiro item do checklist",
               "completed": false
             }
           ]
@@ -91,18 +107,22 @@
         {
           "title": "Aula 2",
           "description": "Segunda aula do módulo 2 vamo la",
+          "youtubeVideoId": "Dk0tfPivnvY",
           "completed": false,
           "checklist": [
             {
               "title": "Primeiro item",
+              "description": "Descrição do primeiro item do checklist",
               "completed": false
             },
             {
               "title": "Segundo item",
+              "description": "Descrição do segundo item do checklist",
               "completed": false
             },
             {
               "title": "Terceiro item",
+              "description": "Descrição do terceiro item do checklist",
               "completed": false
             }
           ]
@@ -117,18 +137,22 @@
         {
           "title": "Aula 1",
           "description": "Primeira aula do módulo 3 vamo la",
+          "youtubeVideoId": "Dr9ywuaVnEQ",
           "completed": false,
           "checklist": [
             {
               "title": "Primeiro item",
+              "description": "Descrição do primeiro item do checklist",
               "completed": false
             },
             {
               "title": "Segundo item",
+              "description": "Descrição do segundo item do checklist",
               "completed": false
             },
             {
               "title": "Terceiro item",
+              "description": "Descrição do terceiro item do checklist",
               "completed": false
             }
           ]
@@ -136,18 +160,22 @@
         {
           "title": "Aula 2",
           "description": "Segunda aula do módulo 3 vamo la",
+          "youtubeVideoId": "Dk0tfPivnvY",
           "completed": false,
           "checklist": [
             {
               "title": "Primeiro item",
+              "description": "Descrição do primeiro item do checklist",
               "completed": false
             },
             {
               "title": "Segundo item",
+              "description": "Descrição do segundo item do checklist",
               "completed": false
             },
             {
               "title": "Terceiro item",
+              "description": "Descrição do terceiro item do checklist",
               "completed": false
             }
           ]
