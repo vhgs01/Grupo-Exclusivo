@@ -3,13 +3,13 @@ package br.com.kaz.presenter
 import br.com.kaz.contract.LoginContract
 import br.com.kaz.domain.EntityErrorResult
 import br.com.kaz.domain.EntityResult
-import br.com.kaz.firebase.FirebaseIntegration
+import br.com.kaz.firebase.FirebaseAuthIntegration
 import br.com.kaz.util.FieldsValidations.isValidEmail
 import br.com.kaz.util.FieldsValidations.isValidPassword
 
 class LoginPresenter(
     private val view: LoginContract.View,
-    private val firebase: FirebaseIntegration
+    private val firebaseAuth: FirebaseAuthIntegration
 ) : LoginContract.Presenter {
 
     override fun handleLoginUser(email: String, pass: String) {
@@ -21,7 +21,7 @@ class LoginPresenter(
     }
 
     override fun loginWithUser(email: String, pass: String) {
-        firebase.loginWithUser(email, pass, ::onLoginWithUser)
+        firebaseAuth.loginWithUser(email, pass, ::onLoginWithUser)
     }
 
     private fun onLoginWithUser(result: EntityResult<Unit>) {

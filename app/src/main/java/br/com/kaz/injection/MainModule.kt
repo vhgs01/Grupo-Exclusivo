@@ -4,7 +4,7 @@ import br.com.kaz.contract.LoginContract
 import br.com.kaz.contract.ModuleContract
 import br.com.kaz.contract.RegisterContract
 import br.com.kaz.contract.SplashContract
-import br.com.kaz.firebase.FirebaseIntegration
+import br.com.kaz.firebase.FirebaseAuthIntegration
 import br.com.kaz.presenter.LoginPresenter
 import br.com.kaz.presenter.ModulePresenter
 import br.com.kaz.presenter.RegisterPresenter
@@ -21,5 +21,5 @@ val mainModule = module {
 
 val dataModule = module {
     single { FirebaseAuth.getInstance() }
-    single { FirebaseIntegration(get()) }
+    single { FirebaseAuthIntegration(get()) }
 }

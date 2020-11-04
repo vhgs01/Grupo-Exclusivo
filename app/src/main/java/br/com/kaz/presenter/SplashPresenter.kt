@@ -1,15 +1,15 @@
 package br.com.kaz.presenter
 
 import br.com.kaz.contract.SplashContract
-import br.com.kaz.firebase.FirebaseIntegration
+import br.com.kaz.firebase.FirebaseAuthIntegration
 
 class SplashPresenter(
     private val view: SplashContract.View,
-    private val firebase: FirebaseIntegration
+    private val firebaseAuth: FirebaseAuthIntegration
 ) : SplashContract.Presenter {
 
     override fun verifyUserIsLogged() {
-        val user = firebase.getCurrentlyUserSignedIn()
+        val user = firebaseAuth.getCurrentlyUserSignedIn()
 
         if (user == null) {
             view.redirectToLoginActivity()
