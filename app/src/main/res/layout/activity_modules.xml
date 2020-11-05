@@ -32,7 +32,6 @@
             android:background="@drawable/button_with_oppacity"
             android:text="@string/modulesLogout"
             android:textAllCaps="false"
-            android:textColor="@android:color/secondary_text_light_nodisable"
             android:textSize="@dimen/modulesLogoutTextSize"
             app:layout_constraintBottom_toBottomOf="@+id/modulesJourney"
             app:layout_constraintEnd_toEndOf="parent"

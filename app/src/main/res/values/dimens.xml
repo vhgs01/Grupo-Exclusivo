@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--    SplashScreen    -->
-    <dimen name="splashLogoDimen">250dp</dimen>
+    <dimen name="splashLogoDimen">190dp</dimen>
     <dimen name="splashFromMarginBottom">8dp</dimen>
     <dimen name="splashKaz">50dp</dimen>
     <dimen name="splashKazMarginBottom">48dp</dimen>
