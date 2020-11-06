@@ -15,9 +15,13 @@ class StepsActivity : AppCompatActivity(), StepContract.View {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_steps)
 
-        val modulePosition = intent.getIntExtra("modulePosition", 99)
-
         setListeners()
+    }
+
+    override fun onResume() {
+        super.onResume()
+
+        val modulePosition = intent.getIntExtra("modulePosition", 99)
         configureAdapter(modulePosition)
     }
 

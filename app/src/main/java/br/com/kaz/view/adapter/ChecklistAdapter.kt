@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import br.com.kaz.R
 import br.com.kaz.model.courses.Checklist
 import br.com.kaz.model.courses.CourseKaz
+import br.com.kaz.util.HandleAdapters.handleLockUnlockCourseKaz
 import br.com.kaz.util.JsonManipulation.convertCourseKazToJson
 import br.com.kaz.util.JsonManipulation.overrideCourseKazJson
 import br.com.kaz.util.YouTubePlayer.initializeYouTubePlayer
@@ -52,8 +53,8 @@ class ChecklistAdapter(
             course.moduleKaz[modulePosition].steps[stepPosition].checklist[position].completed =
                 (it as CompoundButton).isChecked
 
-            val courseKazJsonConverted = convertCourseKazToJson(course)
-            overrideCourseKazJson(context, courseKazJsonConverted)
+            handleLockUnlockCourseKaz(course)
+            overrideCourseKazJson(context, convertCourseKazToJson(course))
         }
     }
 

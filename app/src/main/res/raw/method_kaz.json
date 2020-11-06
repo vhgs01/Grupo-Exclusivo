@@ -3,23 +3,23 @@
     {
       "title": "Módulo 1 - Aprendendo o básico",
       "description": "Módulo inicial, aprendendo o básico",
-      "completed": true,
+      "completed": null,
       "steps": [
         {
           "title": "Aula 1",
           "description": "Primeira aula do módulo 1 vamo la",
           "youtubeVideoId": "Dr9ywuaVnEQ",
-          "completed": true,
+          "completed": null,
           "checklist": [
             {
               "title": "Primeiro item",
               "description": "Descrição do primeiro item do checklist",
-              "completed": true
+              "completed": false
             },
             {
               "title": "Segundo item",
               "description": "Descrição do segundo item do checklist",
-              "completed": true
+              "completed": false
             },
             {
               "title": "Terceiro item",
@@ -32,7 +32,7 @@
           "title": "Aula 2",
           "description": "Segunda aula do módulo 1 vamo la",
           "youtubeVideoId": "Dk0tfPivnvY",
-          "completed": null,
+          "completed": false,
           "checklist": [
             {
               "title": "Primeiro item",
@@ -73,19 +73,42 @@
               "completed": false
             }
           ]
+        },
+        {
+          "title": "Aula 4",
+          "description": "Quarta aula do módulo 1 vamo la",
+          "youtubeVideoId": "I_WZuvG9IDM",
+          "completed": false,
+          "checklist": [
+            {
+              "title": "Primeiro item",
+              "description": "Descrição do segundo item do checklist",
+              "completed": false
+            },
+            {
+              "title": "Segundo item",
+              "description": "Descrição do primeiro item do checklist",
+              "completed": false
+            },
+            {
+              "title": "Terceiro item",
+              "description": "Descrição do terceiro item do checklist",
+              "completed": false
+            }
+          ]
         }
       ]
     },
     {
       "title": "Módulo 2 - Aprendendo o intermediário",
       "description": "Módulo intermediário, aprendendo o intermediário, Módulo intermediário, aprendendo o intermediário",
-      "completed": null,
+      "completed": false,
       "steps": [
         {
           "title": "Aula 1",
           "description": "Primeira aula do módulo 2 vamo la",
           "youtubeVideoId": "Dr9ywuaVnEQ",
-          "completed": false,
+          "completed": null,
           "checklist": [
             {
               "title": "Primeiro item",
@@ -138,7 +161,7 @@
           "title": "Aula 1",
           "description": "Primeira aula do módulo 3 vamo la",
           "youtubeVideoId": "Dr9ywuaVnEQ",
-          "completed": false,
+          "completed": null,
           "checklist": [
             {
               "title": "Primeiro item",

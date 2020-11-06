@@ -23,6 +23,11 @@ class ModulesActivity : AppCompatActivity(), ModuleContract.View {
         setContentView(R.layout.activity_modules)
 
         setListeners()
+    }
+
+    override fun onResume() {
+        super.onResume()
+
         configureAdapter()
     }
 
