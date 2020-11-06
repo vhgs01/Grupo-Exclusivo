@@ -3,13 +3,13 @@ package br.com.kaz.presenter
 import br.com.kaz.contract.RegisterContract
 import br.com.kaz.domain.EntityErrorResult
 import br.com.kaz.domain.EntityResult
-import br.com.kaz.firebase.FirebaseIntegration
+import br.com.kaz.firebase.FirebaseAuthIntegration
 import br.com.kaz.util.FieldsValidations.isValidEmail
 import br.com.kaz.util.FieldsValidations.isValidPassword
 
 class RegisterPresenter(
     private val view: RegisterContract.View,
-    private val firebase: FirebaseIntegration
+    private val firebaseAuth: FirebaseAuthIntegration
 ) : RegisterContract.Presenter {
 
     override fun handleRegisterUser(email: String, pass: String) {
@@ -21,7 +21,7 @@ class RegisterPresenter(
     }
 
     override fun registerUser(email: String, pass: String) {
-        firebase.createUser(email, pass, ::onCreateUser)
+        firebaseAuth.createUser(email, pass, ::onCreateUser)
     }
 
     private fun onCreateUser(result: EntityResult<Unit>) {

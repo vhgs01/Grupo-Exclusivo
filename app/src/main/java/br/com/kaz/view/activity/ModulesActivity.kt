@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.kaz.R
 import br.com.kaz.contract.ModuleContract
 import br.com.kaz.presenter.ModulePresenter
-import br.com.kaz.util.JsonManipulation.readCourseKazJson
+import br.com.kaz.util.JsonManipulation.getCourseKaz
 import br.com.kaz.view.adapter.CourseKazAdapter
 import kotlinx.android.synthetic.main.activity_modules.*
 import org.koin.android.ext.android.inject
@@ -23,6 +23,11 @@ class ModulesActivity : AppCompatActivity(), ModuleContract.View {
         setContentView(R.layout.activity_modules)
 
         setListeners()
+    }
+
+    override fun onResume() {
+        super.onResume()
+
         configureAdapter()
     }
 
@@ -32,7 +37,8 @@ class ModulesActivity : AppCompatActivity(), ModuleContract.View {
 
     override fun configureAdapter() {
         val recyclerView = modulesList
-        recyclerView.adapter = readCourseKazJson(resources)?.let { CourseKazAdapter(it, this) }
+        recyclerView.adapter =
+            getCourseKaz(applicationContext)?.let { CourseKazAdapter(it, this) }
         recyclerView.layoutManager = LinearLayoutManager(this)
     }
 

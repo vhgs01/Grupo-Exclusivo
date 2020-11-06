@@ -13,4 +13,6 @@
     <color name="colorModulesSeparator">#CACACA</color>
     <color name="colorGreenStatusButton">#1CA54A</color>
     <color name="itemLockedWithOpacity">#CCEBEEF5</color>
+    <color name="checkbox_unchecked">#f3f4f6</color>
+    <color name="defaultNotificationIconColor">#FF5821</color>
 </resources>

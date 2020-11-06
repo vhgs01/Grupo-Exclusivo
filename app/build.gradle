@@ -43,8 +43,13 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation 'com.google.firebase:firebase-auth:20.0.0'
+
     implementation 'com.google.code.gson:gson:2.8.6'
+
+    implementation files('libs\\YouTubeAndroidPlayerApi.jar')
+
+    implementation 'com.google.firebase:firebase-auth:20.0.0'
+    implementation 'com.google.firebase:firebase-messaging:21.0.0'
 
     def koin_version = "2.1.6"
     implementation "org.koin:koin-android:$koin_version"

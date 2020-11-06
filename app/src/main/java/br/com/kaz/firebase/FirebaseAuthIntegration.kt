@@ -6,7 +6,7 @@ import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.*
 import java.lang.Exception
 
-class FirebaseIntegration(private val firebaseAuth: FirebaseAuth) {
+class FirebaseAuthIntegration(private val firebaseAuth: FirebaseAuth) {
 
     fun getCurrentlyUserSignedIn(): FirebaseUser? {
         return firebaseAuth.currentUser

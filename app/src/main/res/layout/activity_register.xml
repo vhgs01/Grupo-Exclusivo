@@ -1,150 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".view.activity.RegisterActivity">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/ivLogo"
-        android:layout_width="@dimen/splashLogoDimen"
-        android:layout_height="@dimen/splashLogoDimen"
-        android:contentDescription="@string/splashLogoContentDescription"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.033"
-        app:srcCompat="@mipmap/ic_launcher_foreground" />
-
-    <TextView
-        android:id="@+id/tvRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/registerTextMarginTop"
-        android:text="@string/registerText"
-        android:textSize="@dimen/registerTextFontSize"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
-
-    <EditText
-        android:id="@+id/registerEmailAddress"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/registerEmailAdressMarginStard"
-        android:layout_marginTop="@dimen/registerEmailAdressMarginTop"
-        android:layout_marginEnd="@dimen/registerEmailAdressMarginEnd"
-        android:ems="10"
-        android:hint="@string/registerEmailAdress"
-        android:inputType="textEmailAddress"
-        android:textColorHighlight="@color/colorPrimary"
-        android:textColorLink="@color/colorPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvRegister" />
+        tools:context=".view.activity.RegisterActivity">
 
-    <EditText
-        android:id="@+id/registerPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/registerPasswordMarginStard"
-        android:layout_marginTop="@dimen/registerPasswordMarginTop"
-        android:layout_marginEnd="@dimen/registerPasswordMarginEnd"
-        android:ems="10"
-        android:hint="@string/registerPassword"
-        android:inputType="textPassword"
-        android:textColorHighlight="@color/colorPrimary"
-        android:textColorLink="@color/colorPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerEmailAddress" />
-
-    <Button
-        android:id="@+id/registerButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/registerButtonMarginStart"
-        android:layout_marginTop="@dimen/registerButtonMarginTop"
-        android:layout_marginEnd="@dimen/registerButtonMarginEnd"
-        android:background="@drawable/register_button"
-        android:paddingTop="@dimen/registerButtonPaddingTop"
-        android:paddingBottom="@dimen/registerButtonPaddingBottom"
-        android:text="@string/registerButton"
-        android:textColor="@color/white"
-        android:textSize="@dimen/registerButtonTextSize"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerPassword" />
-
-    <View
-        android:id="@+id/registerLeftSeparator"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/registerLeftSeparatorHeight"
-        android:layout_marginStart="@dimen/registerLeftSeparatorMarginStart"
-        android:layout_marginEnd="@dimen/registerLeftSeparatorMarginEnd"
-        android:background="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/registerSeparatorText"
-        app:layout_constraintEnd_toStartOf="@+id/registerSeparatorText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/registerSeparatorText" />
-
-    <TextView
-        android:id="@+id/registerSeparatorText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/registerSeparatorTextMarginTop"
-        android:text="@string/registerSeparatorText"
-        android:textSize="@dimen/registerSeparatorTextSize"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerButton" />
-
-    <View
-        android:id="@+id/registerRightSeparator"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/registerRightSeparatorHeight"
-        android:layout_marginStart="@dimen/registerRightSeparatorMarginStart"
-        android:layout_marginEnd="@dimen/registerRightSeparatorMarginEnd"
-        android:background="@color/black"
-        app:layout_constraintBottom_toBottomOf="@+id/registerSeparatorText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/registerSeparatorText"
-        app:layout_constraintTop_toTopOf="@+id/registerSeparatorText" />
-
-    <LinearLayout
-        android:id="@+id/registerFooterView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/registerFooterViewMarginStart"
-        android:layout_marginTop="@dimen/registerFooterViewMarginTop"
-        android:layout_marginEnd="@dimen/registerFooterViewMarginEnd"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerSeparatorText">
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="@dimen/splashLogoDimen"
+            android:layout_height="@dimen/splashLogoDimen"
+            android:contentDescription="@string/splashLogoContentDescription"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.033"
+            app:srcCompat="@mipmap/ic_launcher_foreground" />
 
         <TextView
-            android:id="@+id/registerHasAccount"
+            android:id="@+id/tvRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/registerHasAccountMarginStart"
-            android:text="@string/registerHasAccountText"
-            android:textSize="@dimen/registerHasAccountTextSize" />
+            android:layout_marginTop="@dimen/registerTextMarginTop"
+            android:text="@string/registerText"
+            android:textSize="@dimen/registerTextFontSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+
+        <EditText
+            android:id="@+id/registerEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/registerEmailAdressMarginStard"
+            android:layout_marginTop="@dimen/registerEmailAdressMarginTop"
+            android:layout_marginEnd="@dimen/registerEmailAdressMarginEnd"
+            android:ems="10"
+            android:hint="@string/registerEmailAdress"
+            android:inputType="textEmailAddress"
+            android:textColorHighlight="@color/colorPrimary"
+            android:textColorLink="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRegister" />
+
+        <EditText
+            android:id="@+id/registerPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/registerPasswordMarginStard"
+            android:layout_marginTop="@dimen/registerPasswordMarginTop"
+            android:layout_marginEnd="@dimen/registerPasswordMarginEnd"
+            android:ems="10"
+            android:hint="@string/registerPassword"
+            android:inputType="textPassword"
+            android:textColorHighlight="@color/colorPrimary"
+            android:textColorLink="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registerEmailAddress" />
 
         <Button
-            android:id="@+id/registerButtonDoLogin"
+            android:id="@+id/registerButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/registerButtonMarginStart"
+            android:layout_marginTop="@dimen/registerButtonMarginTop"
+            android:layout_marginEnd="@dimen/registerButtonMarginEnd"
+            android:background="@drawable/register_button"
+            android:paddingTop="@dimen/registerButtonPaddingTop"
+            android:paddingBottom="@dimen/registerButtonPaddingBottom"
+            android:text="@string/registerButton"
+            android:textColor="@color/white"
+            android:textSize="@dimen/registerButtonTextSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registerPassword" />
+
+        <View
+            android:id="@+id/registerLeftSeparator"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/registerLeftSeparatorHeight"
+            android:layout_marginStart="@dimen/registerLeftSeparatorMarginStart"
+            android:layout_marginEnd="@dimen/registerLeftSeparatorMarginEnd"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/registerSeparatorText"
+            app:layout_constraintEnd_toStartOf="@+id/registerSeparatorText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/registerSeparatorText" />
+
+        <TextView
+            android:id="@+id/registerSeparatorText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/register_footer_button"
-            android:text="@string/registerButtonDoLoginText"
-            android:textColor="@color/colorPrimary"
-            android:textSize="@dimen/registerButtonDoLoginTextSize" />
-    </LinearLayout>
+            android:layout_marginTop="@dimen/registerSeparatorTextMarginTop"
+            android:text="@string/registerSeparatorText"
+            android:textSize="@dimen/registerSeparatorTextSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registerButton" />
+
+        <View
+            android:id="@+id/registerRightSeparator"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/registerRightSeparatorHeight"
+            android:layout_marginStart="@dimen/registerRightSeparatorMarginStart"
+            android:layout_marginEnd="@dimen/registerRightSeparatorMarginEnd"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/registerSeparatorText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/registerSeparatorText"
+            app:layout_constraintTop_toTopOf="@+id/registerSeparatorText" />
+
+        <LinearLayout
+            android:id="@+id/registerFooterView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/registerFooterViewMarginStart"
+            android:layout_marginTop="@dimen/registerFooterViewMarginTop"
+            android:layout_marginEnd="@dimen/registerFooterViewMarginEnd"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registerSeparatorText">
+
+            <TextView
+                android:id="@+id/registerHasAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/registerHasAccountMarginStart"
+                android:text="@string/registerHasAccountText"
+                android:textSize="@dimen/registerHasAccountTextSize" />
+
+            <Button
+                android:id="@+id/registerButtonDoLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/register_footer_button"
+                android:text="@string/registerButtonDoLoginText"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/registerButtonDoLoginTextSize" />
+        </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

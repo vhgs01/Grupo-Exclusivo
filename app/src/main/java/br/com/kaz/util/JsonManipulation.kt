@@ -1,20 +1,61 @@
 package br.com.kaz.util
 
-import android.content.res.Resources
+import android.content.Context
 import br.com.kaz.R
 import br.com.kaz.model.courses.CourseKaz
 import com.google.gson.Gson
-import java.io.ByteArrayOutputStream
-import java.io.IOException
-import java.io.InputStream
+import com.google.gson.GsonBuilder
+import java.io.*
+import java.lang.Exception
 
 object JsonManipulation {
 
-    fun readCourseKazJson(resources: Resources): CourseKaz? {
-        val rawResource = resources.openRawResource(R.raw.method_kaz)
+    fun getCourseKaz(context: Context): CourseKaz? {
+        val file = File(context.filesDir, "method_kaz.json")
+        return try {
+            val jsonInText = readCourseKazJsonFromFiles(file)
+            Gson().fromJson(jsonInText, CourseKaz::class.java)
+        } catch (e: Exception) {
+            readCourseKazJsonFromRaw(context)
+            val jsonInText = readCourseKazJsonFromFiles(file)
+            Gson().fromJson(jsonInText, CourseKaz::class.java)
+        }
+    }
+
+    fun convertCourseKazToJson(courseKaz: CourseKaz): String {
+        return GsonBuilder().serializeNulls().create().toJson(courseKaz)
+    }
+
+    fun overrideCourseKazJson(context: Context, str: String) {
+        val file = File(context.filesDir, "method_kaz.json")
+        val fileWriter = FileWriter(file)
+        val bufferedWriter = BufferedWriter(fileWriter)
+
+        bufferedWriter.write(str)
+        bufferedWriter.close()
+    }
+
+    private fun readCourseKazJsonFromFiles(file: File): String {
+        val fileReader = FileReader(file)
+        val bufferedReader = BufferedReader(fileReader)
+        val stringBuilder = StringBuilder()
+        var line = bufferedReader.readLine()
+
+        while (line != null) {
+            stringBuilder.append(line).append("\n")
+            line = bufferedReader.readLine()
+        }
+
+        val jsonInText = stringBuilder.toString()
+        bufferedReader.close()
+        return jsonInText
+    }
+
+    private fun readCourseKazJsonFromRaw(context: Context) {
+        val rawResource = context.resources.openRawResource(R.raw.method_kaz)
         val jsonInText = readTextFile(rawResource)
 
-        return Gson().fromJson(jsonInText, CourseKaz::class.java)
+        jsonInText?.let { overrideCourseKazJson(context, it) }
     }
 
     private fun readTextFile(inputStream: InputStream): String? {

@@ -1,12 +1,14 @@
 <resources>
     <string name="app_name">Kaz</string>
+    <string name="Journey">Sua Jornada</string>
+    <string name="youtube_api_key">AIzaSyAAYa22ADnST505mxnUFgFhFFl5WO7ciB8</string>
 
-    <!--    Splashscreen    -->
+    <!--    Splash Screen    -->
     <string name="splashKaz">KAZ</string>
     <string name="splashFrom">from</string>
     <string name="splashLogoContentDescription">Logo do aplicativo Kaz</string>
 
-    <!--    Registerscreen    -->
+    <!--    Register Screen    -->
     <string name="registerText">Cadastrar</string>
     <string name="registerButton">Cadastrar</string>
     <string name="registerEmailAdress">Seu melhor e-mail</string>
@@ -23,7 +25,7 @@
     <string name="FirebaseAuthOtherException">Falha ao criar usuário</string>
     <string name="FirebaseAuthInvalidUserException">Falha ao entrar com o usuário</string>
 
-    <!--    Loginscreen    -->
+    <!--    Login Screen    -->
     <string name="loginText">Entrar</string>
     <string name="loginButton">Entrar</string>
     <string name="loginEmailAdress">Seu e-mail</string>
@@ -32,11 +34,16 @@
     <string name="loginHasAccountText">Ainda não tem uma conta?</string>
     <string name="loginButtonDoLoginText">Cadastrar</string>
 
-    <!--    Modulescreen    -->
-    <string name="modulesJourney">Sua Jornada</string>
+    <!--    Module Screen    -->
     <string name="modulesLogout">Sair</string>
     <string name="modulesSingOutUserErrorText">Não foi possível desconectar</string>
     <string name="modulesInProgressText">EXECUTANDO</string>
     <string name="modulesCompletedText">COMPLETO</string>
     <string name="stepsBack">voltar</string>
+    <string name="moduleNotAbleYet">Módulo não liberado</string>
+
+    <!--    Step Screen    -->
+    <string name="stepNotAbleYet">Etapa não liberada</string>
+    <string name="stepInProgressText">EXECUTANDO</string>
+    <string name="stepCompletedText">COMPLETO</string>
 </resources>
