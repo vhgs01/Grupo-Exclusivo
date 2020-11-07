@@ -3,12 +3,13 @@ package br.com.kaz.view.activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.com.kaz.R
 import br.com.kaz.contract.LoginContract
 import br.com.kaz.presenter.LoginPresenter
+import br.com.kaz.util.LottieAnimation.cancelAnimation
+import br.com.kaz.util.LottieAnimation.startAnimation
 import kotlinx.android.synthetic.main.activity_login.*
 import org.koin.android.ext.android.inject
 import org.koin.core.parameter.parametersOf
@@ -85,11 +86,11 @@ class LoginActivity : AppCompatActivity(), LoginContract.View {
         if (startAnimation) {
             loginButton.text = ""
 
-            startLottieAnimation()
+            startAnimation(loginLottieAnimation)
         } else {
             loginButton.text = getString(R.string.loginButton)
 
-            cancelLottieAnimation()
+            cancelAnimation(loginLottieAnimation)
         }
     }
 
@@ -98,15 +99,5 @@ class LoginActivity : AppCompatActivity(), LoginContract.View {
             startActivity(Intent(applicationContext, RegisterActivity::class.java))
             finishAffinity()
         }
-    }
-
-    private fun startLottieAnimation() {
-        loginLottieAnimation.visibility = View.VISIBLE
-        loginLottieAnimation.playAnimation()
-    }
-
-    private fun cancelLottieAnimation() {
-        loginLottieAnimation.visibility = View.GONE
-        loginLottieAnimation.cancelAnimation()
     }
 }

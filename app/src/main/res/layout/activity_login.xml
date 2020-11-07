@@ -90,7 +90,6 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:translationZ="10dp"
-            android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="@+id/loginButton"
             app:layout_constraintEnd_toEndOf="@+id/loginButton"
             app:layout_constraintStart_toStartOf="@+id/loginButton"
