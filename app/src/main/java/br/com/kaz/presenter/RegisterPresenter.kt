@@ -12,8 +12,8 @@ class RegisterPresenter(
     private val firebaseAuth: FirebaseAuthIntegration
 ) : RegisterContract.Presenter {
 
-    override fun handleRegisterUser(email: String, pass: String) {
-        if (isValidEmail(email) && isValidPassword(pass)) {
+    override fun handleRegisterUser(email: String, pass: String, passConfirmation: String) {
+        if (isValidEmail(email) && isValidPassword(pass, passConfirmation)) {
             registerUser(email, pass)
         } else {
             view.showInvalidFieldsToast()

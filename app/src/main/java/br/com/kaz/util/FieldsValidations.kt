@@ -8,7 +8,13 @@ object FieldsValidations {
         return emailPattern.toRegex().matches(email)
     }
 
-    fun isValidPassword(pass: String): Boolean {
+    fun isValidPassword(pass: String, passConfirmation: String?): Boolean {
+        if (passConfirmation != null) {
+            if (pass != passConfirmation) {
+                return false
+            }
+        }
+
         return pass.isNotBlank() && pass.isNotEmpty() && pass.length >= 6
     }
 

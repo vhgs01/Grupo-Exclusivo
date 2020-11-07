@@ -13,6 +13,7 @@
     <string name="registerButton">Cadastrar</string>
     <string name="registerEmailAdress">Seu melhor e-mail</string>
     <string name="registerPassword">Senha (6 dígitos)</string>
+    <string name="registerPasswordConfirmation">Confirme sua senha</string>
     <string name="registerSeparatorText">OU</string>
     <string name="registerHasAccountText">Já tem uma conta?</string>
     <string name="registerButtonDoLoginText"><u>Faça login</u></string>

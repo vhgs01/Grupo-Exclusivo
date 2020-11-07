@@ -66,6 +66,22 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/registerEmailAddress" />
 
+        <EditText
+            android:id="@+id/registerPasswordConfirmation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/registerPasswordMarginStard"
+            android:layout_marginTop="@dimen/registerPasswordMarginTop"
+            android:layout_marginEnd="@dimen/registerPasswordMarginEnd"
+            android:ems="10"
+            android:hint="@string/registerPasswordConfirmation"
+            android:inputType="textPassword"
+            android:textColorHighlight="@color/colorPrimary"
+            android:textColorLink="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registerPassword" />
+
         <Button
             android:id="@+id/registerButton"
             android:layout_width="match_parent"
@@ -81,7 +97,7 @@
             android:textSize="@dimen/registerButtonTextSize"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/registerPassword" />
+            app:layout_constraintTop_toBottomOf="@+id/registerPasswordConfirmation" />
 
         <View
             android:id="@+id/registerLeftSeparator"

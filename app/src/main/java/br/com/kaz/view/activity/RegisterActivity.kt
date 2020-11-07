@@ -74,8 +74,9 @@ class RegisterActivity : AppCompatActivity(), RegisterContract.View {
         registerButton!!.setOnClickListener {
             val email = registerEmailAddress.text.toString()
             val pass = registerPassword.text.toString()
+            val passConfirmation = registerPasswordConfirmation.text.toString()
 
-            presenter.handleRegisterUser(email, pass)
+            presenter.handleRegisterUser(email, pass, passConfirmation)
         }
     }
 

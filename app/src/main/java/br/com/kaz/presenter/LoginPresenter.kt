@@ -13,7 +13,7 @@ class LoginPresenter(
 ) : LoginContract.Presenter {
 
     override fun handleLoginUser(email: String, pass: String) {
-        if (isValidEmail(email) && isValidPassword(pass)) {
+        if (isValidEmail(email) && isValidPassword(pass, null)) {
             loginWithUser(email, pass)
         } else {
             view.showInvalidFieldsToast()
