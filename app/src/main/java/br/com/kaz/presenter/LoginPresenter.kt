@@ -29,6 +29,8 @@ class LoginPresenter(
         when (result) {
             is EntityResult.Success -> view.redirectToModulesActivity()
             is EntityResult.Error -> {
+                view.handleAnimation(false)
+
                 when (result.error) {
                     EntityErrorResult.InvalidUser -> view.showInvalidUserError()
                     EntityErrorResult.WeakPassword -> view.showWeakPasswordError()
