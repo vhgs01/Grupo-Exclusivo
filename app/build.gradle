@@ -44,9 +44,11 @@ dependencies {
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 
+    implementation 'com.airbnb.android:lottie:3.4.4'
+
     implementation 'com.google.code.gson:gson:2.8.6'
 
-    implementation files('libs\\YouTubeAndroidPlayerApi.jar')
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
 
     implementation 'com.google.firebase:firebase-auth:20.0.0'
     implementation 'com.google.firebase:firebase-messaging:21.0.0'

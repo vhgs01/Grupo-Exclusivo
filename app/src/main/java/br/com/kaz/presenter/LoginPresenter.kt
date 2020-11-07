@@ -16,6 +16,7 @@ class LoginPresenter(
         if (isValidEmail(email) && isValidPassword(pass, null)) {
             loginWithUser(email, pass)
         } else {
+            view.handleAnimation(false)
             view.showInvalidFieldsToast()
         }
     }

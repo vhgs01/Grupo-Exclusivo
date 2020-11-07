@@ -3,6 +3,7 @@ package br.com.kaz.view.activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.com.kaz.R
@@ -37,6 +38,7 @@ class LoginActivity : AppCompatActivity(), LoginContract.View {
             val email = loginEmailAddress?.text.toString()
             val pass = loginPassword?.text.toString()
 
+            handleAnimation(true)
             presenter.handleLoginUser(email, pass)
         }
     }
@@ -79,10 +81,32 @@ class LoginActivity : AppCompatActivity(), LoginContract.View {
         finishAffinity()
     }
 
-    private fun setRegisterButtonListener() {
+    override fun handleAnimation(startAnimation: Boolean) {
+        if (startAnimation) {
+            loginButton.text = ""
+
+            startLottieAnimation()
+        } else {
+            loginButton.text = getString(R.string.loginButton)
+
+            cancelLottieAnimation()
+        }
+    }
+
+    override fun setRegisterButtonListener() {
         loginButtonRegister!!.setOnClickListener {
             startActivity(Intent(applicationContext, RegisterActivity::class.java))
             finishAffinity()
         }
+    }
+
+    private fun startLottieAnimation() {
+        loginLottieAnimation.visibility = View.VISIBLE
+        loginLottieAnimation.playAnimation()
+    }
+
+    private fun cancelLottieAnimation() {
+        loginLottieAnimation.visibility = View.GONE
+        loginLottieAnimation.cancelAnimation()
     }
 }
