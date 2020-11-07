@@ -6,6 +6,7 @@ interface ModuleContract {
         fun setListeners()
         fun showSingOutUserError()
         fun redirectToLoginScreen()
+        fun handleAnimation(startAnimation: Boolean)
     }
 
     interface  Presenter {

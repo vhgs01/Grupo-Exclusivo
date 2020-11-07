@@ -14,6 +14,7 @@ class ModulePresenter(
             view.redirectToLoginScreen()
         } catch (e: NullPointerException) {
             view.showSingOutUserError()
+            view.handleAnimation(false)
         }
     }
 }

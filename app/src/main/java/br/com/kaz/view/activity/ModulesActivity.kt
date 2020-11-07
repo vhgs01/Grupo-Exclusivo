@@ -2,6 +2,7 @@ package br.com.kaz.view.activity
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -9,6 +10,7 @@ import br.com.kaz.R
 import br.com.kaz.contract.ModuleContract
 import br.com.kaz.presenter.ModulePresenter
 import br.com.kaz.util.JsonManipulation.getCourseKaz
+import br.com.kaz.util.LottieAnimation
 import br.com.kaz.view.adapter.CourseKazAdapter
 import kotlinx.android.synthetic.main.activity_modules.*
 import org.koin.android.ext.android.inject
@@ -35,6 +37,18 @@ class ModulesActivity : AppCompatActivity(), ModuleContract.View {
         setLogoutButtonListener()
     }
 
+    override fun handleAnimation(startAnimation: Boolean) {
+        if (startAnimation) {
+            modulesLogout.text = ""
+
+            LottieAnimation.startAnimation(modulesLottieAnimation)
+        } else {
+            modulesLogout.text = getString(R.string.modulesLogout)
+
+            LottieAnimation.cancelAnimation(modulesLottieAnimation)
+        }
+    }
+
     override fun configureAdapter() {
         val recyclerView = modulesList
         recyclerView.adapter =
@@ -54,6 +68,7 @@ class ModulesActivity : AppCompatActivity(), ModuleContract.View {
 
     private fun setLogoutButtonListener() {
         modulesLogout!!.setOnClickListener {
+            handleAnimation(true)
             presenter.singOutUser()
         }
     }
