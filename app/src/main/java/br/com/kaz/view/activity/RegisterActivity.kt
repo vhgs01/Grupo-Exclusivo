@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity
 import br.com.kaz.R
 import br.com.kaz.contract.RegisterContract
 import br.com.kaz.presenter.RegisterPresenter
+import br.com.kaz.util.LottieAnimation.startAnimation
+import br.com.kaz.util.LottieAnimation.cancelAnimation
 import kotlinx.android.synthetic.main.activity_register.*
 import org.koin.android.ext.android.inject
 import org.koin.core.parameter.parametersOf
@@ -45,6 +47,18 @@ class RegisterActivity : AppCompatActivity(), RegisterContract.View {
         ).show()
     }
 
+    override fun handleAnimation(startAnimation: Boolean) {
+        if (startAnimation) {
+            registerButton.text = ""
+
+            startAnimation(registerLottieAnimation)
+        } else {
+            registerButton.text = getString(R.string.registerButton)
+
+            cancelAnimation(registerLottieAnimation)
+        }
+    }
+
     override fun showInvalidUserError() {
         Toast.makeText(this, R.string.FirebaseAuthInvalidUserException, Toast.LENGTH_LONG)
             .show()
@@ -76,6 +90,7 @@ class RegisterActivity : AppCompatActivity(), RegisterContract.View {
             val pass = registerPassword.text.toString()
             val passConfirmation = registerPasswordConfirmation.text.toString()
 
+            handleAnimation(true)
             presenter.handleRegisterUser(email, pass, passConfirmation)
         }
     }

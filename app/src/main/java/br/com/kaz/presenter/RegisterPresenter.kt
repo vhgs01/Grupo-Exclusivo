@@ -16,6 +16,7 @@ class RegisterPresenter(
         if (isValidEmail(email) && isValidPassword(pass, passConfirmation)) {
             registerUser(email, pass)
         } else {
+            view.handleAnimation(false)
             view.showInvalidFieldsToast()
         }
     }
@@ -28,6 +29,8 @@ class RegisterPresenter(
         when (result) {
             is EntityResult.Success -> view.redirectToModulesActivity()
             is EntityResult.Error -> {
+                view.handleAnimation(false)
+
                 when (result.error) {
                     EntityErrorResult.InvalidUser -> view.showInvalidUserError()
                     EntityErrorResult.WeakPassword -> view.showWeakPasswordError()

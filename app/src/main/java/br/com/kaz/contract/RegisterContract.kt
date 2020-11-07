@@ -7,6 +7,7 @@ interface RegisterContract {
         fun setListeners()
         fun redirectToModulesActivity()
         fun getViewContext(): Context
+        fun handleAnimation(startAnimation: Boolean)
         fun showInvalidFieldsToast()
         fun showInvalidUserError()
         fun showWeakPasswordError()
