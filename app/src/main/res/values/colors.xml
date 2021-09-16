@@ -7,12 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="colorPrimary">#FF5821</color>
-    <color name="colorPrimaryDark">#A53916</color>
+    <color name="colorPrimary">#3ce907</color>
+    <color name="colorPrimaryDark">#3ce907</color>
     <color name="colorAccent">#2172FF</color>
     <color name="colorModulesSeparator">#CACACA</color>
-    <color name="colorGreenStatusButton">#1CA54A</color>
+    <color name="colorGreenStatusButton">#3ce907</color>
     <color name="itemLockedWithOpacity">#CCEBEEF5</color>
     <color name="checkbox_unchecked">#f3f4f6</color>
-    <color name="defaultNotificationIconColor">#FF5821</color>
+    <color name="defaultNotificationIconColor">#3ce907</color>
 </resources>

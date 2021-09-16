@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">Kaz</string>
+    <string name="app_name">Grupo Exclusivo</string>
     <string name="Journey">Sua Jornada</string>
     <string name="youtube_api_key">AIzaSyAAYa22ADnST505mxnUFgFhFFl5WO7ciB8</string>
 
     <!--    Splash Screen    -->
-    <string name="splashKaz">KAZ</string>
+    <string name="splashGrupoExclusivo">Grupo Exclusivo</string>
     <string name="splashFrom">from</string>
-    <string name="splashLogoContentDescription">Logo do aplicativo Kaz</string>
+    <string name="splashLogoContentDescription">Logo do aplicativo Grupo Exclusivo</string>
 
     <!--    Register Screen    -->
     <string name="registerText">Cadastrar</string>
