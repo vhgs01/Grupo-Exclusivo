@@ -7,7 +7,7 @@ interface LoginContract {
         fun setListeners()
         fun setLoginButtonListener()
         fun setRegisterButtonListener()
-        fun redirectToModulesActivity()
+        fun redirectToHomeActivity()
         fun getViewContext(): Context
         fun handleAnimation(startAnimation: Boolean)
         fun showInvalidFieldsToast()

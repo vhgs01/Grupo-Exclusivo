@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.HomeActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/homeHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/homeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/homeTitleMarginTop"
+            android:layout_marginBottom="@dimen/homeTitleMarginBottom"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/homeTitleTextSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/homeLogout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_with_oppacity"
+            android:text="@string/modulesLogout"
+            android:textAllCaps="false"
+            android:textSize="@dimen/modulesLogoutTextSize"
+            app:layout_constraintBottom_toBottomOf="@+id/homeTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/homeTitle" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/homeLottieAnimation"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:translationZ="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/homeLogout"
+            app:layout_constraintEnd_toEndOf="@+id/homeLogout"
+            app:layout_constraintStart_toStartOf="@+id/homeLogout"
+            app:layout_constraintTop_toTopOf="@+id/homeLogout"
+            app:lottie_autoPlay="false"
+            app:lottie_colorFilter="@color/black"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/loading_button" />
+
+        <View
+            android:id="@+id/homeHeaderSeparator"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/homeHeaderSeparator"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewModules"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/homeCardViewMarginStart"
+        android:layout_marginTop="@dimen/homeCardViewMarginTop"
+        android:layout_marginEnd="@dimen/homeCardViewMargineEnd"
+        android:elevation="@dimen/modulesCardViewElenation"
+        app:cardCornerRadius="@dimen/modulesCardViewCornerRadius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeHeader">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/homeCardHeight"
+            android:scaleType="centerCrop"
+            android:src="@drawable/home_wellcome" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewHandout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/homeCardViewMarginStart"
+        android:layout_marginTop="@dimen/homeCardViewMarginTop"
+        android:layout_marginEnd="@dimen/homeCardViewMargineEnd"
+        android:elevation="@dimen/modulesCardViewElenation"
+        app:cardCornerRadius="@dimen/modulesCardViewCornerRadius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewModules">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/homeCardHeight"
+            android:scaleType="centerCrop"
+            android:src="@drawable/home_wellcome" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewSheets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/homeCardViewMarginStart"
+        android:layout_marginTop="@dimen/homeCardViewMarginTop"
+        android:layout_marginEnd="@dimen/homeCardViewMargineEnd"
+        android:elevation="@dimen/modulesCardViewElenation"
+        app:cardCornerRadius="@dimen/modulesCardViewCornerRadius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewHandout">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/homeCardHeight"
+            android:scaleType="centerCrop"
+            android:src="@drawable/home_wellcome" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -52,8 +52,8 @@ class SplashActivity : AppCompatActivity(), SplashContract.View {
         finishAffinity()
     }
 
-    override fun redirectToModulesActivity() {
-        startActivity(Intent(this, ModulesActivity::class.java))
+    override fun redirectToHomeActivity() {
+        startActivity(Intent(this, HomeActivity::class.java))
         finishAffinity()
     }
 

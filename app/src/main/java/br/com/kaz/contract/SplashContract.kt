@@ -4,7 +4,7 @@ interface SplashContract {
     interface View {
         fun startAnimation()
         fun redirectToLoginActivity()
-        fun redirectToModulesActivity()
+        fun redirectToHomeActivity()
     }
 
     interface Presenter {

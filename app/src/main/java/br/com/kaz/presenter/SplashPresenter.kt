@@ -14,7 +14,7 @@ class SplashPresenter(
         if (user == null) {
             view.redirectToLoginActivity()
         } else {
-            view.redirectToModulesActivity()
+            view.redirectToHomeActivity()
         }
     }
 }

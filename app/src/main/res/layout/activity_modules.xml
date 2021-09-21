@@ -11,6 +11,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <Button
+            android:id="@+id/modulesBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_with_oppacity"
+            android:text="@string/stepsBack"
+            android:textAllCaps="false"
+            android:textSize="@dimen/stepsBackTextSize"
+            app:layout_constraintBottom_toBottomOf="@+id/modulesJourney"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/modulesJourney" />
+
         <TextView
             android:id="@+id/modulesJourney"
             android:layout_width="wrap_content"
@@ -24,32 +36,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/modulesLogout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_with_oppacity"
-            android:text="@string/modulesLogout"
-            android:textAllCaps="false"
-            android:textSize="@dimen/modulesLogoutTextSize"
-            app:layout_constraintBottom_toBottomOf="@+id/modulesJourney"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/modulesJourney" />
-
-        <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/modulesLottieAnimation"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:translationZ="10dp"
-            app:layout_constraintBottom_toBottomOf="@+id/modulesLogout"
-            app:layout_constraintEnd_toEndOf="@+id/modulesLogout"
-            app:layout_constraintStart_toStartOf="@+id/modulesLogout"
-            app:layout_constraintTop_toTopOf="@+id/modulesLogout"
-            app:lottie_autoPlay="false"
-            app:lottie_colorFilter="@color/black"
-            app:lottie_loop="true"
-            app:lottie_rawRes="@raw/loading_button" />
 
         <View
             android:id="@+id/ModulesHeaderSeparator"

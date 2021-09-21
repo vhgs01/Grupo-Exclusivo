@@ -27,7 +27,7 @@ class LoginPresenter(
 
     private fun onLoginWithUser(result: EntityResult<Unit>) {
         when (result) {
-            is EntityResult.Success -> view.redirectToModulesActivity()
+            is EntityResult.Success -> view.redirectToHomeActivity()
             is EntityResult.Error -> {
                 view.handleAnimation(false)
 

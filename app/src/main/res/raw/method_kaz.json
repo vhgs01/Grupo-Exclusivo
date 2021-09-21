@@ -1,7 +1,7 @@
 {
   "moduleKaz": [
     {
-      "title": "Módulo 1 - Onde tudo começa!",
+      "title": "Módulo 1 - Onde tudo Começa",
       "description": "Módulo inicial, onde você irá aprender o que precisa ter para começar.",
       "completed": null,
       "steps": [
@@ -12,8 +12,8 @@
           "completed": null,
           "checklist": [
             {
-              "title": "Estou pronto para começar minha jornada.",
-              "description": "Basta clicar nas bolinhas a esquerda para marcar como concluído",
+              "title": "Estou pronto para começar minha jornada",
+              "description": "Clique na bolinha para avançar.",
               "completed": false
             }
           ]
@@ -25,19 +25,29 @@
           "completed": false,
           "checklist": [
             {
-              "title": "Criar conta em uma correotra.",
+              "title": "Escolher uma das Corretoras",
               "description": "Descrição do primeiro item do checklist",
               "completed": false
             },
             {
-              "title": "Tudo certo.",
+              "title": "Abrir conta na Corretora",
+              "description": "Descrição do primeiro item do checklist",
+              "completed": false
+            },
+            {
+              "title": "Contrate o PROFIT CHART PRO",
               "description": "Descrição do segundo item do checklist",
+              "completed": false
+            },
+            {
+              "title": "Estou pronto para continuar",
+              "description": "Clique na bolinha para avançar.",
               "completed": false
             }
           ]
         },
         {
-          "title": "Configurando seu Profit Chart Pro",
+          "title": "Configurando o PROFIT CHART PRO",
           "description": "Assim como um bom piloto tem um bom carro, um bom Trader tem uma boa plataforma.",
           "youtubeVideoId": "y5n5eqpwY3U",
           "completed": false,
@@ -48,13 +58,18 @@
               "completed": false
             },
             {
-              "title": "Baixar Plataforma",
+              "title": "Baixar a Plataforma",
               "description": "Descrição do segundo item do checklist",
               "completed": false
             },
             {
-              "title": "Configurar Gráfico",
+              "title": "Adicionar um Gráfico",
               "description": "Descrição do terceiro item do checklist",
+              "completed": false
+            },
+            {
+              "title": "Estou pronto para continuar",
+              "description": "Clique na bolinha para avançar.",
               "completed": false
             }
           ]
@@ -66,13 +81,23 @@
           "completed": false,
           "checklist": [
             {
-              "title": "Entendi o que é Índice",
+              "title": "Compreender o Mercado Futuro",
               "description": "Descrição do segundo item do checklist",
               "completed": false
             },
             {
-              "title": "Entendi o que é Dólar",
+              "title": "Entender sobre Alavancagem",
+              "description": "Descrição do segundo item do checklist",
+              "completed": false
+            },
+            {
+              "title": "Entender sobre cada Ativo",
               "description": "Descrição do primeiro item do checklist",
+              "completed": false
+            },
+            {
+              "title": "Estou pronto para continuar",
+              "description": "Clique na bolinha para avançar.",
               "completed": false
             }
           ]
@@ -84,18 +109,18 @@
           "completed": false,
           "checklist": [
             {
-              "title": "Sei o que é Grafico Temporal",
+              "title": "Entender o que é Grafico Temporal",
               "description": "Descrição do segundo item do checklist",
               "completed": false
             },
             {
-              "title": "Sei o que é Gráfico Atemporal",
+              "title": "Entender o que é Gráfico Atemporal",
               "description": "Descrição do primeiro item do checklist",
               "completed": false
             },
             {
-              "title": "Já dominei tudo sobre gráficos",
-              "description": "Descrição do terceiro item do checklist",
+              "title": "Estou pronto para continuar",
+              "description": "Clique na bolinha para avançar.",
               "completed": false
             }
           ]
@@ -107,18 +132,28 @@
           "completed": false,
           "checklist": [
             {
-              "title": "Sei o que é Clandle",
+              "title": "Compreender o que é Candle",
               "description": "Descrição do segundo item do checklist",
               "completed": false
             },
             {
-              "title": "Candle de Defesa tá tranquilo",
+              "title": "Entender sobre Candles Laterais",
               "description": "Descrição do primeiro item do checklist",
               "completed": false
             },
             {
-              "title": "Candle de Ataque tá tranquilo",
+              "title": "Entender sobre Candles Laterais",
+              "description": "Descrição do primeiro item do checklist",
+              "completed": false
+            },
+            {
+              "title": "Analisar exemplos no Gráfico",
               "description": "Descrição do terceiro item do checklist",
+              "completed": false
+            },
+            {
+              "title": "Estou pronto para continuar",
+              "description": "Clique na bolinha para avançar.",
               "completed": false
             }
           ]
@@ -126,7 +161,7 @@
       ]
     },
     {
-      "title": "Módulo 2 - Começando a Avancar.",
+      "title": "Módulo 2 - Começando a Avancar",
       "description": "Já saimos do extremo básico e começamos a avançar.",
       "completed": false,
       "steps": [
@@ -145,6 +180,11 @@
               "title": "Resistência já sei tudo",
               "description": "Descrição do segundo item do checklist",
               "completed": false
+            },
+            {
+              "title": "Estou pronto para continuar",
+              "description": "Clique na bolinha para avançar.",
+              "completed": false
             }
           ]
         },
@@ -160,8 +200,8 @@
               "completed": false
             },
             {
-              "title": "Pode ir pro próximo módulo",
-              "description": "Descrição do segundo item do checklist",
+              "title": "Estou pronto para continuar",
+              "description": "Clique na bolinha para avançar.",
               "completed": false
             }
           ]
@@ -169,7 +209,7 @@
       ]
     },
     {
-      "title": "Módulo 3 - Apertem os cintos!",
+      "title": "Módulo 3 - Apertem os Cintos",
       "description": "É hora de acelerar, vamos nessa!",
       "completed": false,
       "steps": [
@@ -192,6 +232,11 @@
             {
               "title": "Tudo no controle",
               "description": "Descrição do terceiro item do checklist",
+              "completed": false
+            },
+            {
+              "title": "Estou pronto para continuar",
+              "description": "Clique na bolinha para avançar.",
               "completed": false
             }
           ]
@@ -216,18 +261,23 @@
               "title": "Ajuste está ajustado.",
               "description": "Descrição do terceiro item do checklist",
               "completed": false
+            },
+            {
+              "title": "Estou pronto para continuar",
+              "description": "Clique na bolinha para avançar.",
+              "completed": false
             }
           ]
         },
         {
           "title": "Aula Bônus",
-          "description": "Chegaram até aqui, vocês merecem...",
+          "description": "Chegou até aqui, você merece...",
           "youtubeVideoId": "qNFGs_a6X8",
           "completed": false,
           "checklist": [
             {
-              "title": "Entendi tudo, estou pronto(a) para avançar",
-              "description": "Descrição do primeiro item do checklist",
+              "title": "Estou pronto para continuar",
+              "description": "Clique na bolinha para avançar.",
               "completed": false
             }
           ]
@@ -235,7 +285,7 @@
       ]
     },
     {
-      "title": "Módulo 4 - Longe do começo e longe do Fim.",
+      "title": "Módulo 4 - Longe do começo e longe do Fim",
       "description": "Calma, não desista!",
       "completed": false,
       "steps": [
@@ -254,6 +304,11 @@
               "title": "Lateralidade é tranquilo",
               "description": "Descrição do segundo item do checklist",
               "completed": false
+            },
+            {
+              "title": "Estou pronto para continuar",
+              "description": "Clique na bolinha para avançar.",
+              "completed": false
             }
           ]
         }
@@ -271,18 +326,23 @@
           "completed": null,
           "checklist": [
             {
-              "title": "Entendido tudo sobre OCO",
+              "title": "Compreender sobre OCO",
               "description": "Descrição do primeiro item do checklist",
               "completed": false
             },
             {
-              "title": "Entendido tudo sobre Triângulo",
+              "title": "Compreender sobre Triângulo",
               "description": "Descrição do segundo item do checklist",
               "completed": false
             },
             {
-              "title": "Entendido tudo sobre Bandeira",
+              "title": "Compreender sobre Bandeira",
               "description": "Descrição do segundo item do checklist",
+              "completed": false
+            },
+            {
+              "title": "Estou pronto para continuar",
+              "description": "Clique na bolinha para avançar.",
               "completed": false
             }
           ]
@@ -294,8 +354,13 @@
           "completed": null,
           "checklist": [
             {
-              "title": "Entendido tudo Topo e Fundo",
+              "title": "Compreender sobre Topo e Fundo",
               "description": "Descrição do primeiro item do checklist",
+              "completed": false
+            },
+            {
+              "title": "Estou pronto para continuar",
+              "description": "Clique na bolinha para avançar.",
               "completed": false
             }
           ]
@@ -319,8 +384,8 @@
               "completed": false
             },
             {
-              "title": "Entendido tudo sobre",
-              "description": "Descrição do segundo item do checklist",
+              "title": "Estou pronto para continuar",
+              "description": "Clique na bolinha para avançar.",
               "completed": false
             }
           ]
@@ -328,7 +393,7 @@
       ]
     },
     {
-      "title": "Módulo 7 - Quero é  Money!",
+      "title": "Módulo 7 - Quero é  Money",
       "description": "É onde você aprende a colocar seu dinheiro no Bolso.",
       "completed": false,
       "steps": [
@@ -344,8 +409,8 @@
               "completed": false
             },
             {
-              "title": "Entendido tudo sobre",
-              "description": "Descrição do segundo item do checklist",
+              "title": "Estou pronto para continuar",
+              "description": "Clique na bolinha para avançar.",
               "completed": false
             }
           ]
@@ -372,18 +437,23 @@
               "title": "Prometo respeitar meu gerenciamento.",
               "description": "Descrição do segundo item do checklist",
               "completed": false
+            },
+            {
+              "title": "Estou pronto para continuar",
+              "description": "Clique na bolinha para avançar.",
+              "completed": false
             }
           ]
         },
         {
-          "title": "Sua jornada continua",
+          "title": "Sua jornada Continua",
           "description": "O próximo passo em direção ao lucro.",
           "youtubeVideoId": "_PM8assZP34",
           "completed": null,
           "checklist": [
             {
-              "title": "Grupo exclusivo de mentoria",
-              "description": "Entrar para o próximo grupo da mentoria.",
+              "title": "Comunidade Grupo Exclusivo",
+              "description": "Fazer parte de nossa Comunidade",
               "completed": false
             }
           ]

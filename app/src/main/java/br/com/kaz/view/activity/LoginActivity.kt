@@ -77,8 +77,8 @@ class LoginActivity : AppCompatActivity(), LoginContract.View {
             .show()
     }
 
-    override fun redirectToModulesActivity() {
-        startActivity(Intent(this, ModulesActivity::class.java))
+    override fun redirectToHomeActivity() {
+        startActivity(Intent(this, HomeActivity::class.java))
         finishAffinity()
     }
 

@@ -1,12 +1,12 @@
 package br.com.kaz.presenter
 
-import br.com.kaz.contract.ModuleContract
+import br.com.kaz.contract.HomeContract
 import br.com.kaz.firebase.FirebaseAuthIntegration
 
-class ModulePresenter(
-    private val view: ModuleContract.View,
+class HomePresenter(
+    private val view: HomeContract.View,
     private val firebaseAuth: FirebaseAuthIntegration
-) : ModuleContract.Presenter {
+) : HomeContract.Presenter {
 
     override fun singOutUser() {
         try {
@@ -17,4 +17,5 @@ class ModulePresenter(
             view.handleAnimation(false)
         }
     }
+
 }
