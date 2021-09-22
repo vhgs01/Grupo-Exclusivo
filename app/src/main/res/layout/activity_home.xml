@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/whiteTwo"
     tools:context=".view.activity.HomeActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/homeHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -21,8 +23,9 @@
             android:layout_marginTop="@dimen/homeTitleMarginTop"
             android:layout_marginBottom="@dimen/homeTitleMarginBottom"
             android:text="@string/app_name"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="@dimen/homeTitleTextSize"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -30,11 +33,10 @@
 
         <Button
             android:id="@+id/homeLogout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_with_oppacity"
-            android:text="@string/modulesLogout"
-            android:textAllCaps="false"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/button_with_img"
             android:textSize="@dimen/modulesLogoutTextSize"
             app:layout_constraintBottom_toBottomOf="@+id/homeTitle"
             app:layout_constraintEnd_toEndOf="parent"
@@ -72,6 +74,7 @@
         android:layout_marginStart="@dimen/homeCardViewMarginStart"
         android:layout_marginTop="@dimen/homeCardViewMarginTop"
         android:layout_marginEnd="@dimen/homeCardViewMargineEnd"
+        android:backgroundTint="@color/whiteTwo"
         android:elevation="@dimen/modulesCardViewElenation"
         app:cardCornerRadius="@dimen/modulesCardViewCornerRadius"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,7 +85,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/homeCardHeight"
             android:scaleType="centerCrop"
-            android:src="@drawable/home_wellcome" />
+            android:src="@drawable/img_one" />
 
     </androidx.cardview.widget.CardView>
 
@@ -93,6 +96,7 @@
         android:layout_marginStart="@dimen/homeCardViewMarginStart"
         android:layout_marginTop="@dimen/homeCardViewMarginTop"
         android:layout_marginEnd="@dimen/homeCardViewMargineEnd"
+        android:backgroundTint="@color/whiteTwo"
         android:elevation="@dimen/modulesCardViewElenation"
         app:cardCornerRadius="@dimen/modulesCardViewCornerRadius"
         app:layout_constraintEnd_toEndOf="parent"
@@ -103,7 +107,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/homeCardHeight"
             android:scaleType="centerCrop"
-            android:src="@drawable/home_wellcome" />
+            android:src="@drawable/img_two" />
 
     </androidx.cardview.widget.CardView>
 
@@ -114,6 +118,7 @@
         android:layout_marginStart="@dimen/homeCardViewMarginStart"
         android:layout_marginTop="@dimen/homeCardViewMarginTop"
         android:layout_marginEnd="@dimen/homeCardViewMargineEnd"
+        android:backgroundTint="@color/whiteTwo"
         android:elevation="@dimen/modulesCardViewElenation"
         app:cardCornerRadius="@dimen/modulesCardViewCornerRadius"
         app:layout_constraintEnd_toEndOf="parent"
@@ -124,7 +129,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/homeCardHeight"
             android:scaleType="centerCrop"
-            android:src="@drawable/home_wellcome" />
+            android:src="@drawable/img_three" />
 
     </androidx.cardview.widget.CardView>
 

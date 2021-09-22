@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--    SplashScreen    -->
-    <dimen name="splashLogoDimen">190dp</dimen>
+    <dimen name="splashLogoDimen">230dp</dimen>
     <dimen name="splashFromMarginBottom">8dp</dimen>
     <dimen name="splashKaz">50dp</dimen>
     <dimen name="splashKazMarginBottom">48dp</dimen>
@@ -101,8 +101,8 @@
     <dimen name="moduleItemImageTranslationZ">1dp</dimen>
     <dimen name="moduleItemStatusTextMarginTop">4dp</dimen>
     <dimen name="moduleItemStatusTextMarginBottom">16dp</dimen>
-    <dimen name="modulesCardViewMargin">5dp</dimen>
-    <dimen name="modulesCardViewElenation">1dp</dimen>
+    <dimen name="modulesCardViewMargin">10dp</dimen>
+    <dimen name="modulesCardViewElenation">3dp</dimen>
     <dimen name="modulesCardViewCornerRadius">5dp</dimen>
 
     <!--    StepItemScreen    -->
@@ -136,6 +136,7 @@
     <dimen name="checklistBoxPaddingTop">16dp</dimen>
     <dimen name="checklistBoxPaddingBottom">16dp</dimen>
     <dimen name="checklistBoxPaddingEnd">16dp</dimen>
+    <dimen name="checklistYouTubePlayerMarginTop">16dp</dimen>
     <dimen name="checklistYouTubePlayerMarginBottom">16dp</dimen>
 
 </resources>

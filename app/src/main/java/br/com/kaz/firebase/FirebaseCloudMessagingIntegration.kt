@@ -23,13 +23,14 @@ class FirebaseCloudMessagingIntegration : FirebaseMessagingService() {
     private val channelDescription = "Your description..."
 
     companion object {
-        var sharedPred: SharedPreferences? = null
+        private var sharedPref: SharedPreferences? = null
+
         var token: String?
             get() {
-                return sharedPred?.getString("token", "")
+                return sharedPref?.getString("token", "")
             }
             set(value) {
-                sharedPred?.edit()?.putString("token", value)?.apply()
+                sharedPref?.edit()?.putString("token", value)?.apply()
             }
     }
 
@@ -54,7 +55,7 @@ class FirebaseCloudMessagingIntegration : FirebaseMessagingService() {
 
         val pendingIntent = PendingIntent.getActivity(this, 0, intent, FLAG_ONE_SHOT)
         val notificationBuilder = NotificationCompat.Builder(this, channelId)
-            .setSmallIcon(R.drawable.notification_png)
+            .setSmallIcon(R.drawable.notification)
             .setContentTitle(message.data["title"])
             .setContentText(message.data["message"])
             .setContentIntent(pendingIntent)

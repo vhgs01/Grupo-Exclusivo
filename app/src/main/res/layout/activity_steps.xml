@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/whiteTwo"
     tools:context=".view.activity.StepsActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/stepsHeader"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/gray">
 
         <Button
             android:id="@+id/stepBack"
@@ -18,6 +20,7 @@
             android:background="@drawable/button_with_oppacity"
             android:text="@string/stepsBack"
             android:textAllCaps="false"
+            android:textColor="@color/white"
             android:textSize="@dimen/stepsBackTextSize"
             app:layout_constraintBottom_toBottomOf="@+id/stepsJourney"
             app:layout_constraintStart_toStartOf="parent"
@@ -30,8 +33,9 @@
             android:layout_marginTop="@dimen/modulesJourneyMarginTop"
             android:layout_marginBottom="@dimen/modulesJourneyMarginBottom"
             android:text="@string/Journey"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="@dimen/modulesJourneyTextSize"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
