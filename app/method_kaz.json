@@ -1,98 +1,159 @@
 {
   "moduleKaz": [
     {
-      "title": "Módulo 1 - Aprendendo o básico",
-      "description": "Módulo inicial, aprendendo o básico",
+      "title": "Módulo 1 - Onde tudo Começa",
+      "description": "Módulo inicial, onde você irá aprender o que precisa ter para começar.",
       "completed": null,
       "steps": [
         {
-          "title": "Aula 1",
-          "description": "Primeira aula do módulo 1 vamo la",
-          "youtubeVideoId": "Dr9ywuaVnEQ",
+          "title": "Bem vindo(a)!",
+          "description": "Seja muito bem vindo(a)!",
+          "youtubeVideoId": "faltaOlink",
           "completed": null,
           "checklist": [
             {
-              "title": "Primeiro item",
-              "description": "Descrição do primeiro item do checklist",
-              "completed": false
-            },
-            {
-              "title": "Segundo item",
-              "description": "Descrição do segundo item do checklist",
-              "completed": false
-            },
-            {
-              "title": "Terceiro item",
-              "description": "Descrição do terceiro item do checklist",
+              "title": "Estou pronto para começar minha jornada",
+              "description": "Clique na bolinha para avançar.",
               "completed": false
             }
           ]
         },
         {
-          "title": "Aula 2",
-          "description": "Segunda aula do módulo 1 vamo la",
-          "youtubeVideoId": "Dk0tfPivnvY",
+          "title": "Como escolher uma corretora?",
+          "description": "O primeiro passo para se tornar um Trader Exclusivo é saber escolher uma boa Corretora.",
+          "youtubeVideoId": "1eUFi_2SCpA",
           "completed": false,
           "checklist": [
             {
-              "title": "Primeiro item",
-              "description": "Descrição do primeiro item do checklist",
+              "title": "Escolher uma das Corretoras",
+              "description": "",
               "completed": false
             },
             {
-              "title": "Segundo item",
-              "description": "Descrição do segundo item do checklist",
+              "title": "Abrir conta na Corretora",
+              "description": "",
               "completed": false
             },
             {
-              "title": "Terceiro item",
-              "description": "Descrição do terceiro item do checklist",
+              "title": "Contrate o PROFIT CHART PRO",
+              "description": "",
+              "completed": false
+            },
+            {
+              "title": "Estou pronto para continuar",
+              "description": "",
               "completed": false
             }
           ]
         },
         {
-          "title": "Aula 3",
-          "description": "Terceira aula do módulo 1 vamo la",
-          "youtubeVideoId": "I_WZuvG9IDM",
+          "title": "Configurando o PROFIT CHART PRO",
+          "description": "Assim como um bom piloto tem um bom carro, um bom Trader tem uma boa plataforma.",
+          "youtubeVideoId": "y5n5eqpwY3U",
           "completed": false,
           "checklist": [
             {
-              "title": "Primeiro item",
-              "description": "Descrição do segundo item do checklist",
+              "title": "Ativar RLP",
+              "description": "",
               "completed": false
             },
             {
-              "title": "Segundo item",
-              "description": "Descrição do primeiro item do checklist",
+              "title": "Baixar a Plataforma",
+              "description": "",
               "completed": false
             },
             {
-              "title": "Terceiro item",
-              "description": "Descrição do terceiro item do checklist",
+              "title": "Adicionar um Gráfico",
+              "description": "",
+              "completed": false
+            },
+            {
+              "title": "Estou pronto para continuar",
+              "description": "",
               "completed": false
             }
           ]
         },
         {
-          "title": "Aula 4",
-          "description": "Quarta aula do módulo 1 vamo la",
-          "youtubeVideoId": "I_WZuvG9IDM",
+          "title": "Mini Índice e Mini Dólar",
+          "description": "Nada como conhecer os ativos que vamos operar, correto?",
+          "youtubeVideoId": "7cO-AMp7wHQ",
           "completed": false,
           "checklist": [
             {
-              "title": "Primeiro item",
-              "description": "Descrição do segundo item do checklist",
+              "title": "Compreender o Mercado Futuro",
+              "description": "",
               "completed": false
             },
             {
-              "title": "Segundo item",
-              "description": "Descrição do primeiro item do checklist",
+              "title": "Entender sobre Alavancagem",
+              "description": "",
               "completed": false
             },
             {
-              "title": "Terceiro item",
-              "description": "Descrição do terceiro item do checklist",
+              "title": "Entender sobre cada Ativo",
+              "description": "",
+              "completed": false
+            },
+            {
+              "title": "Estou pronto para continuar",
+              "description": "",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "title": "Tipos de Gráfico",
+          "description": "É de extrema importância ter uma boa leitura gráfica, e pra isso, é necessário saber o que é.",
+          "youtubeVideoId": "JF8K_d4vCTg",
+          "completed": false,
+          "checklist": [
+            {
+              "title": "Entender o que é Grafico Temporal",
+              "description": "",
+              "completed": false
+            },
+            {
+              "title": "Entender o que é Gráfico Atemporal",
+              "description": "",
+              "completed": false
+            },
+            {
+              "title": "Estou pronto para continuar",
+              "description": "",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "title": "O que são Candles",
+          "description": "Candles... Clandes... Presta atenção nessa aula.",
+          "youtubeVideoId": "NPQmx1jYPZQ",
+          "completed": false,
+          "checklist": [
+            {
+              "title": "Compreender o que é Candle",
+              "description": "",
+              "completed": false
+            },
+            {
+              "title": "Entender sobre Candles Laterais",
+              "description": "",
+              "completed": false
+            },
+            {
+              "title": "Entender sobre Candles de Tendência",
+              "description": "",
+              "completed": false
+            },
+            {
+              "title": "Analisar exemplos no Gráfico",
+              "description": "",
+              "completed": false
+            },
+            {
+              "title": "Estou pronto para continuar",
+              "description": "",
               "completed": false
             }
           ]
@@ -100,52 +161,47 @@
       ]
     },
     {
-      "title": "Módulo 2 - Aprendendo o intermediário",
-      "description": "Módulo intermediário, aprendendo o intermediário, Módulo intermediário, aprendendo o intermediário",
+      "title": "Módulo 2 - Começando a Avancar",
+      "description": "Já saimos do extremo básico e começamos a avançar.",
       "completed": false,
       "steps": [
         {
-          "title": "Aula 1",
-          "description": "Primeira aula do módulo 2 vamo la",
-          "youtubeVideoId": "Dr9ywuaVnEQ",
+          "title": "Suporte e Resistência",
+          "description": "Tudo começa e termina nisso aqui, então, presta atenção.",
+          "youtubeVideoId": "GWNABxHm56c",
           "completed": null,
           "checklist": [
             {
-              "title": "Primeiro item",
-              "description": "Descrição do primeiro item do checklist",
+              "title": "Suporte é tranquilo",
+              "description": "",
               "completed": false
             },
             {
-              "title": "Segundo item",
-              "description": "Descrição do segundo item do checklist",
+              "title": "Resistência já sei tudo",
+              "description": "",
               "completed": false
             },
             {
-              "title": "Terceiro item",
-              "description": "Descrição do terceiro item do checklist",
+              "title": "Estou pronto para continuar",
+              "description": "",
               "completed": false
             }
           ]
         },
         {
-          "title": "Aula 2",
-          "description": "Segunda aula do módulo 2 vamo la",
-          "youtubeVideoId": "Dk0tfPivnvY",
+          "title": "Canais de Tendência",
+          "description": "Uma das coisas que você mais vai utilizar.",
+          "youtubeVideoId": "OU5vdPp_qp0",
           "completed": false,
           "checklist": [
             {
-              "title": "Primeiro item",
-              "description": "Descrição do primeiro item do checklist",
+              "title": "Já aprendi tudo",
+              "description": "",
               "completed": false
             },
             {
-              "title": "Segundo item",
-              "description": "Descrição do segundo item do checklist",
-              "completed": false
-            },
-            {
-              "title": "Terceiro item",
-              "description": "Descrição do terceiro item do checklist",
+              "title": "Estou pronto para continuar",
+              "description": "",
               "completed": false
             }
           ]
@@ -153,52 +209,251 @@
       ]
     },
     {
-      "title": "Módulo 3 - Aprendendo o Avançado",
-      "description": "Módulo avançado, aprendendo o avançado",
+      "title": "Módulo 3 - Apertem os Cintos",
+      "description": "É hora de acelerar, vamos nessa!",
       "completed": false,
       "steps": [
         {
-          "title": "Aula 1",
-          "description": "Primeira aula do módulo 3 vamo la",
-          "youtubeVideoId": "Dr9ywuaVnEQ",
+          "title": "Indicadores: Volume e Saldo",
+          "description": "Os Indicadores mãe.... Isso resume bem.",
+          "youtubeVideoId": "hFpQO0C1WUM",
           "completed": null,
           "checklist": [
             {
-              "title": "Primeiro item",
-              "description": "Descrição do primeiro item do checklist",
+              "title": "Saldo já está configurado",
+              "description": "",
               "completed": false
             },
             {
-              "title": "Segundo item",
-              "description": "Descrição do segundo item do checklist",
+              "title": "Volume já está confirado",
+              "description": "",
               "completed": false
             },
             {
-              "title": "Terceiro item",
-              "description": "Descrição do terceiro item do checklist",
+              "title": "Tudo no controle",
+              "description": "",
+              "completed": false
+            },
+            {
+              "title": "Estou pronto para continuar",
+              "description": "",
               "completed": false
             }
           ]
         },
         {
-          "title": "Aula 2",
-          "description": "Segunda aula do módulo 3 vamo la",
-          "youtubeVideoId": "Dk0tfPivnvY",
+          "title": "VWAP, Média e Ajuste",
+          "description": "Chegamos aos Indicadores Filhos.",
+          "youtubeVideoId": "BxOCWZQDX3c",
           "completed": false,
           "checklist": [
             {
-              "title": "Primeiro item",
-              "description": "Descrição do primeiro item do checklist",
+              "title": "VWAP configurad chefe",
+              "description": "",
               "completed": false
             },
             {
-              "title": "Segundo item",
-              "description": "Descrição do segundo item do checklist",
+              "title": "Média já está no esquema",
+              "description": "",
               "completed": false
             },
             {
-              "title": "Terceiro item",
-              "description": "Descrição do terceiro item do checklist",
+              "title": "Ajuste está ajustado.",
+              "description": "",
+              "completed": false
+            },
+            {
+              "title": "Estou pronto para continuar",
+              "description": "",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "title": "Aula Bônus",
+          "description": "Chegou até aqui, você merece...",
+          "youtubeVideoId": "qNFGs_a6X8",
+          "completed": false,
+          "checklist": [
+            {
+              "title": "Estou pronto para continuar",
+              "description": "",
+              "completed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Módulo 4 - Longe do começo e longe do Fim",
+      "description": "Calma, não desista!",
+      "completed": false,
+      "steps": [
+        {
+          "title": "Fases do Mercado",
+          "description": "É igual você só anda ou para.",
+          "youtubeVideoId": "vR1kwE8VCxo",
+          "completed": null,
+          "checklist": [
+            {
+              "title": "Tendência é fácil damais",
+              "description": "",
+              "completed": false
+            },
+            {
+              "title": "Lateralidade é tranquilo",
+              "description": "",
+              "completed": false
+            },
+            {
+              "title": "Estou pronto para continuar",
+              "description": "",
+              "completed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Módulo 5 - Aula de Artes",
+      "description": "É quase uma aula de artes... Brincadiera.",
+      "completed": false,
+      "steps": [
+        {
+          "title": "OCO, Triângulo e Bandeira",
+          "description": "Tudo mastigado pra você,.",
+          "youtubeVideoId": "nLhwuib1szU",
+          "completed": null,
+          "checklist": [
+            {
+              "title": "Compreender sobre OCO",
+              "description": "",
+              "completed": false
+            },
+            {
+              "title": "Compreender sobre Triângulo",
+              "description": "",
+              "completed": false
+            },
+            {
+              "title": "Compreender sobre Bandeira",
+              "description": "",
+              "completed": false
+            },
+            {
+              "title": "Estou pronto para continuar",
+              "description": "",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "title": "Topo e Fundo Duplo",
+          "description": "Não é por nada, mas são meus preferidos.",
+          "youtubeVideoId": "tXhCgz2f0nM",
+          "completed": null,
+          "checklist": [
+            {
+              "title": "Compreender sobre Topo e Fundo",
+              "description": "",
+              "completed": false
+            },
+            {
+              "title": "Estou pronto para continuar",
+              "description": "",
+              "completed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Módulo 6 - Melhor Módulo",
+      "description": "É onde você aprende a limitar suas percas.",
+      "completed": false,
+      "steps": [
+        {
+          "title": "Stop Loss, como definir",
+          "description": "Tudo mastigado pra você,.",
+          "youtubeVideoId": "XUceb8gMviY",
+          "completed": null,
+          "checklist": [
+            {
+              "title": "Já sei como me proteger.",
+              "description": "",
+              "completed": false
+            },
+            {
+              "title": "Estou pronto para continuar",
+              "description": "",
+              "completed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Módulo 7 - Quero é  Money",
+      "description": "É onde você aprende a colocar seu dinheiro no Bolso.",
+      "completed": false,
+      "steps": [
+        {
+          "title": "Alvos, como definir",
+          "description": "Tudo mastigado pra você,.",
+          "youtubeVideoId": "wlAjrogxJBo",
+          "completed": null,
+          "checklist": [
+            {
+              "title": "Já sei como pegar meu lucro",
+              "description": "",
+              "completed": false
+            },
+            {
+              "title": "Estou pronto para continuar",
+              "description": "",
+              "completed": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Módulo 8 - Gerenciamento",
+      "description": "Quer ser lucrativo? Entenda isso.",
+      "completed": false,
+      "steps": [
+        {
+          "title": "Gerenciamento de Risco",
+          "description": "Tudo mastigado pra você,.",
+          "youtubeVideoId": "_PM8F8kZP34",
+          "completed": null,
+          "checklist": [
+            {
+              "title": "Entendi tudo",
+              "description": "",
+              "completed": false
+            },
+            {
+              "title": "Prometo respeitar meu gerenciamento.",
+              "description": "",
+              "completed": false
+            },
+            {
+              "title": "Estou pronto para continuar",
+              "description": "",
+              "completed": false
+            }
+          ]
+        },
+        {
+          "title": "Sua jornada Continua",
+          "description": "O próximo passo em direção ao lucro.",
+          "youtubeVideoId": "_PM8assZP34",
+          "completed": null,
+          "checklist": [
+            {
+              "title": "Comunidade Grupo Exclusivo",
+              "description": "Fazer parte de nossa Comunidade",
               "completed": false
             }
           ]

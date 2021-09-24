@@ -33,9 +33,15 @@ class StepsActivity : AppCompatActivity(), StepContract.View {
 
     override fun configureAdapter(modulePosition: Int) {
         val recyclerView = stepsList
-        recyclerView.adapter =
-            getCourseKaz(applicationContext)?.let { StepsAdapter(it, this, modulePosition) }
+        val course = getCourseKaz(applicationContext)
+
+        recyclerView.adapter = course?.let { StepsAdapter(it, this, modulePosition) }
+
         recyclerView.layoutManager = LinearLayoutManager(this)
+
+        stepsJourney.text = course?.let {
+            it.moduleKaz[modulePosition].title.split("- ")[1]
+        }
     }
 
 

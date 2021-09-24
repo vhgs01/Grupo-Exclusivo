@@ -2,7 +2,7 @@
 <resources>
     <!--    SplashScreen    -->
     <dimen name="splashLogoDimen">230dp</dimen>
-    <dimen name="splashFromMarginBottom">8dp</dimen>
+    <dimen name="splashFromMarginBottom">12dp</dimen>
     <dimen name="splashKaz">50dp</dimen>
     <dimen name="splashKazMarginBottom">48dp</dimen>
     <dimen name="splashKazTextSize">25sp</dimen>

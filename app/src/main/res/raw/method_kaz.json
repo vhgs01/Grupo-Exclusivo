@@ -26,22 +26,22 @@
           "checklist": [
             {
               "title": "Escolher uma das Corretoras",
-              "description": "Descrição do primeiro item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Abrir conta na Corretora",
-              "description": "Descrição do primeiro item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Contrate o PROFIT CHART PRO",
-              "description": "Descrição do segundo item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Estou pronto para continuar",
-              "description": "Clique na bolinha para avançar.",
+              "description": "",
               "completed": false
             }
           ]
@@ -54,22 +54,22 @@
           "checklist": [
             {
               "title": "Ativar RLP",
-              "description": "Descrição do primeiro item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Baixar a Plataforma",
-              "description": "Descrição do segundo item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Adicionar um Gráfico",
-              "description": "Descrição do terceiro item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Estou pronto para continuar",
-              "description": "Clique na bolinha para avançar.",
+              "description": "",
               "completed": false
             }
           ]
@@ -82,22 +82,22 @@
           "checklist": [
             {
               "title": "Compreender o Mercado Futuro",
-              "description": "Descrição do segundo item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Entender sobre Alavancagem",
-              "description": "Descrição do segundo item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Entender sobre cada Ativo",
-              "description": "Descrição do primeiro item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Estou pronto para continuar",
-              "description": "Clique na bolinha para avançar.",
+              "description": "",
               "completed": false
             }
           ]
@@ -110,17 +110,17 @@
           "checklist": [
             {
               "title": "Entender o que é Grafico Temporal",
-              "description": "Descrição do segundo item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Entender o que é Gráfico Atemporal",
-              "description": "Descrição do primeiro item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Estou pronto para continuar",
-              "description": "Clique na bolinha para avançar.",
+              "description": "",
               "completed": false
             }
           ]
@@ -133,27 +133,27 @@
           "checklist": [
             {
               "title": "Compreender o que é Candle",
-              "description": "Descrição do segundo item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Entender sobre Candles Laterais",
-              "description": "Descrição do primeiro item do checklist",
+              "description": "",
               "completed": false
             },
             {
-              "title": "Entender sobre Candles Laterais",
-              "description": "Descrição do primeiro item do checklist",
+              "title": "Entender sobre Candles de Tendência",
+              "description": "",
               "completed": false
             },
             {
               "title": "Analisar exemplos no Gráfico",
-              "description": "Descrição do terceiro item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Estou pronto para continuar",
-              "description": "Clique na bolinha para avançar.",
+              "description": "",
               "completed": false
             }
           ]
@@ -173,17 +173,17 @@
           "checklist": [
             {
               "title": "Suporte é tranquilo",
-              "description": "Descrição do primeiro item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Resistência já sei tudo",
-              "description": "Descrição do segundo item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Estou pronto para continuar",
-              "description": "Clique na bolinha para avançar.",
+              "description": "",
               "completed": false
             }
           ]
@@ -196,12 +196,12 @@
           "checklist": [
             {
               "title": "Já aprendi tudo",
-              "description": "Descrição do primeiro item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Estou pronto para continuar",
-              "description": "Clique na bolinha para avançar.",
+              "description": "",
               "completed": false
             }
           ]
@@ -221,22 +221,22 @@
           "checklist": [
             {
               "title": "Saldo já está configurado",
-              "description": "Descrição do primeiro item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Volume já está confirado",
-              "description": "Descrição do segundo item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Tudo no controle",
-              "description": "Descrição do terceiro item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Estou pronto para continuar",
-              "description": "Clique na bolinha para avançar.",
+              "description": "",
               "completed": false
             }
           ]
@@ -249,22 +249,22 @@
           "checklist": [
             {
               "title": "VWAP configurad chefe",
-              "description": "Descrição do primeiro item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Média já está no esquema",
-              "description": "Descrição do segundo item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Ajuste está ajustado.",
-              "description": "Descrição do terceiro item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Estou pronto para continuar",
-              "description": "Clique na bolinha para avançar.",
+              "description": "",
               "completed": false
             }
           ]
@@ -277,7 +277,7 @@
           "checklist": [
             {
               "title": "Estou pronto para continuar",
-              "description": "Clique na bolinha para avançar.",
+              "description": "",
               "completed": false
             }
           ]
@@ -297,17 +297,17 @@
           "checklist": [
             {
               "title": "Tendência é fácil damais",
-              "description": "Descrição do primeiro item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Lateralidade é tranquilo",
-              "description": "Descrição do segundo item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Estou pronto para continuar",
-              "description": "Clique na bolinha para avançar.",
+              "description": "",
               "completed": false
             }
           ]
@@ -327,22 +327,22 @@
           "checklist": [
             {
               "title": "Compreender sobre OCO",
-              "description": "Descrição do primeiro item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Compreender sobre Triângulo",
-              "description": "Descrição do segundo item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Compreender sobre Bandeira",
-              "description": "Descrição do segundo item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Estou pronto para continuar",
-              "description": "Clique na bolinha para avançar.",
+              "description": "",
               "completed": false
             }
           ]
@@ -355,12 +355,12 @@
           "checklist": [
             {
               "title": "Compreender sobre Topo e Fundo",
-              "description": "Descrição do primeiro item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Estou pronto para continuar",
-              "description": "Clique na bolinha para avançar.",
+              "description": "",
               "completed": false
             }
           ]
@@ -380,12 +380,12 @@
           "checklist": [
             {
               "title": "Já sei como me proteger.",
-              "description": "Descrição do primeiro item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Estou pronto para continuar",
-              "description": "Clique na bolinha para avançar.",
+              "description": "",
               "completed": false
             }
           ]
@@ -405,12 +405,12 @@
           "checklist": [
             {
               "title": "Já sei como pegar meu lucro",
-              "description": "Descrição do primeiro item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Estou pronto para continuar",
-              "description": "Clique na bolinha para avançar.",
+              "description": "",
               "completed": false
             }
           ]
@@ -430,17 +430,17 @@
           "checklist": [
             {
               "title": "Entendi tudo",
-              "description": "Descrição do primeiro item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Prometo respeitar meu gerenciamento.",
-              "description": "Descrição do segundo item do checklist",
+              "description": "",
               "completed": false
             },
             {
               "title": "Estou pronto para continuar",
-              "description": "Clique na bolinha para avançar.",
+              "description": "",
               "completed": false
             }
           ]

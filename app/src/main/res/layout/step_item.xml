@@ -37,7 +37,7 @@
                 android:layout_marginStart="@dimen/stepItemTitleMarginStart"
                 android:layout_marginTop="@dimen/stepItemTitleMarginTop"
                 android:ellipsize="end"
-                android:maxLines="2"
+                android:maxLines="1"
                 android:textColor="@color/black"
                 android:textSize="@dimen/stepItemTitleTextSize"
                 android:textStyle="bold"
