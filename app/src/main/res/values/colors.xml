@@ -18,4 +18,5 @@
     <color name="itemLockedWithOpacity">#CCEBEEF5</color>
     <color name="checkbox_unchecked">#f3f4f6</color>
     <color name="defaultNotificationIconColor">#005829</color>
+    <color name="favWhatsapp">#25D366</color>
 </resources>

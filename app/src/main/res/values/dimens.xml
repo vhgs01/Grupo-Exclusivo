@@ -78,6 +78,8 @@
     <dimen name="homeCardHeight">150dp</dimen>
     <dimen name="homeTitleTextSize">20sp</dimen>
     <dimen name="homeHeaderSeparator">1dp</dimen>
+    <dimen name="homeFabMarginStart">20dp</dimen>
+    <dimen name="homeFabMarginBottom">20dp</dimen>
 
     <!--    ModuleScreen    -->
     <dimen name="modulesJourneyMarginTop">24dp</dimen>
