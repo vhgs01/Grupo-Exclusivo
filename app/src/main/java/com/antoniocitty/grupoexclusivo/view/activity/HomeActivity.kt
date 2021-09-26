@@ -17,6 +17,7 @@ import kotlinx.android.synthetic.main.activity_home.*
 import org.koin.android.ext.android.inject
 import org.koin.core.parameter.parametersOf
 import java.net.URLEncoder
+import java.util.*
 
 
 class HomeActivity : AppCompatActivity(), HomeContract.View {
@@ -24,6 +25,7 @@ class HomeActivity : AppCompatActivity(), HomeContract.View {
     companion object {
         private const val WEBVIEW_TO_OPEN = "webview_to_open"
         private const val HANDOUT = "handout"
+        private const val ONE_MINUTE = 60000L
         private const val PURCHASE = "purchase"
         private const val WHATS_PHONE = "5528999511880"
         private const val WHATS_MESSAGE =
@@ -46,6 +48,13 @@ class HomeActivity : AppCompatActivity(), HomeContract.View {
 
         if (courseIsCompleted) cardPurchase.visibility = View.VISIBLE else cardPurchase.visibility =
             View.GONE
+
+        Timer().schedule(object : TimerTask() {
+            override fun run() {
+                runOnUiThread { favWhats.visibility = View.VISIBLE }
+            }
+
+        }, ONE_MINUTE)
     }
 
     override fun setListeners() {

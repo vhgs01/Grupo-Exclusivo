@@ -143,6 +143,7 @@
         android:backgroundTint="@color/whiteTwo"
         android:contentDescription="@null"
         android:scaleType="center"
+        android:visibility="gone"
         app:borderWidth="0dp"
         app:fabSize="normal"
         app:layout_constraintBottom_toBottomOf="parent"
