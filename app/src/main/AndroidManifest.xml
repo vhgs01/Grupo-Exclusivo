@@ -64,10 +64,15 @@
             android:label="Checklist"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
-
         <activity
             android:name=".view.activity.HomeActivity"
             android:label="Home"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".WebViewActivity"
+            android:label="Webview"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />
 

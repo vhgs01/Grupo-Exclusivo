@@ -1,5 +1,6 @@
 package br.com.kaz.view.adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,7 @@ import br.com.kaz.model.courses.CourseKaz
 import br.com.kaz.util.HandleAdapters.handleLockUnlockCourseKaz
 import br.com.kaz.util.JsonManipulation.convertCourseKazToJson
 import br.com.kaz.util.JsonManipulation.overrideCourseKazJson
+import br.com.kaz.util.SharedPreferences.saveCompletedStateOnSharedPrefs
 import br.com.kaz.util.YouTubePlayer.initializeYouTubePlayer
 import com.google.android.youtube.player.YouTubePlayerView
 import kotlinx.android.synthetic.main.checklist_item.view.*
@@ -53,8 +55,14 @@ class ChecklistAdapter(
             course.moduleKaz[modulePosition].steps[stepPosition].checklist[position].completed =
                 (it as CompoundButton).isChecked
 
-            handleLockUnlockCourseKaz(course)
+            val course = handleLockUnlockCourseKaz(course)
             overrideCourseKazJson(context, convertCourseKazToJson(course))
+
+            if (course.moduleKaz.last().completed == true) {
+                saveCompletedStateOnSharedPrefs(context, true)
+            } else {
+                saveCompletedStateOnSharedPrefs(context, false)
+            }
         }
     }
 
