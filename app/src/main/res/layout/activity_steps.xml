@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/whiteTwo"
-    tools:context=".view.activity.StepsActivity">
+    tools:context=".grupoexclusivo.view.activity.StepsActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/stepsHeader"

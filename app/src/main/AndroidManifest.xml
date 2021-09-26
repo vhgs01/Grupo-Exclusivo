@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="br.com.kaz">
+    package="com.antoniocitty.grupoexclusivo">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -71,7 +71,7 @@
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name=".WebViewActivity"
+            android:name=".view.activity.WebViewActivity"
             android:label="Webview"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme" />

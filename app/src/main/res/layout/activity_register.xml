@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".view.activity.RegisterActivity">
+        tools:context=".grupoexclusivo.view.activity.RegisterActivity">
 
         <ImageView
             android:id="@+id/ivLogo"
