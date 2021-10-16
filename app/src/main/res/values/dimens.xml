@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--    SplashScreen    -->
-    <dimen name="splashLogoDimen">190dp</dimen>
-    <dimen name="splashFromMarginBottom">8dp</dimen>
+    <dimen name="splashLogoDimen">180dp</dimen>
+    <dimen name="splashFromMarginBottom">12dp</dimen>
     <dimen name="splashKaz">50dp</dimen>
     <dimen name="splashKazMarginBottom">48dp</dimen>
     <dimen name="splashKazTextSize">25sp</dimen>
@@ -69,6 +69,19 @@
     <dimen name="loginButtonDoLoginTextSize">14sp</dimen>
     <dimen name="loginHasAccountMarginStart">16dp</dimen>
 
+    <!--    HomeScreen    -->
+    <dimen name="homeTitleMarginTop">24dp</dimen>
+    <dimen name="homeTitleMarginBottom">24dp</dimen>
+    <dimen name="homeCardViewMarginTop">20dp</dimen>
+    <dimen name="homeCardViewMarginStart">20dp</dimen>
+    <dimen name="homeCardViewHalfMargin">10dp</dimen>
+    <dimen name="homeCardViewMarginEnd">20dp</dimen>
+    <dimen name="homeCardHeight">150dp</dimen>
+    <dimen name="homeTitleTextSize">20sp</dimen>
+    <dimen name="homeHeaderSeparator">1dp</dimen>
+    <dimen name="homeFabMarginStart">20dp</dimen>
+    <dimen name="homeFabMarginBottom">20dp</dimen>
+
     <!--    ModuleScreen    -->
     <dimen name="modulesJourneyMarginTop">24dp</dimen>
     <dimen name="modulesJourneyMarginBottom">24dp</dimen>
@@ -91,8 +104,8 @@
     <dimen name="moduleItemImageTranslationZ">1dp</dimen>
     <dimen name="moduleItemStatusTextMarginTop">4dp</dimen>
     <dimen name="moduleItemStatusTextMarginBottom">16dp</dimen>
-    <dimen name="modulesCardViewMargin">5dp</dimen>
-    <dimen name="modulesCardViewElenation">1dp</dimen>
+    <dimen name="modulesCardViewMargin">10dp</dimen>
+    <dimen name="modulesCardViewElenation">3dp</dimen>
     <dimen name="modulesCardViewCornerRadius">5dp</dimen>
 
     <!--    StepItemScreen    -->
@@ -126,6 +139,7 @@
     <dimen name="checklistBoxPaddingTop">16dp</dimen>
     <dimen name="checklistBoxPaddingBottom">16dp</dimen>
     <dimen name="checklistBoxPaddingEnd">16dp</dimen>
+    <dimen name="checklistYouTubePlayerMarginTop">16dp</dimen>
     <dimen name="checklistYouTubePlayerMarginBottom">16dp</dimen>
 
 </resources>

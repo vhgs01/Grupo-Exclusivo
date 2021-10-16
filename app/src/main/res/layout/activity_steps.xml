@@ -4,37 +4,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.activity.StepsActivity">
+    android:background="@color/whiteTwo"
+    tools:context=".grupoexclusivo.view.activity.StepsActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/stepsHeader"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/black">
 
         <Button
             android:id="@+id/stepBack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_with_oppacity"
-            android:text="@string/stepsBack"
-            android:textAllCaps="false"
-            android:textSize="@dimen/stepsBackTextSize"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/ic_back"
+            android:textSize="@dimen/modulesLogoutTextSize"
             app:layout_constraintBottom_toBottomOf="@+id/stepsJourney"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/stepsJourney" />
 
         <TextView
             android:id="@+id/stepsJourney"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="@dimen/modulesJourneyMarginTop"
+            android:layout_marginEnd="20dp"
             android:layout_marginBottom="@dimen/modulesJourneyMarginBottom"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxLines="1"
             android:text="@string/Journey"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textSize="@dimen/modulesJourneyTextSize"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/stepBack"
             app:layout_constraintTop_toTopOf="parent" />
 
         <View
@@ -53,6 +60,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/stepsHeader"
+        android:paddingTop="10dp"
         tools:listitem="@layout/step_item" />
 
 </RelativeLayout>

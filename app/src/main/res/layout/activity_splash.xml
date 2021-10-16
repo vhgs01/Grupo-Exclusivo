@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.activity.SplashActivity">
+    android:background="@color/black"
+    tools:context=".grupoexclusivo.view.activity.SplashActivity">
 
     <ImageView
         android:id="@+id/ivLogoSplash"
@@ -23,7 +24,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/splashFromMarginBottom"
         android:text="@string/splashFrom"
-        android:visibility="gone"
+        android:visibility="visible"
+        android:textColor="@color/grayTwo"
         app:layout_constraintBottom_toTopOf="@+id/splashKaz"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -33,11 +35,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/splashKaz"
-        android:text="@string/splashKaz"
-        android:textColor="@color/colorPrimary"
+        android:text="@string/splashGrupoExclusivo"
+        android:textColor="@color/white"
         android:textSize="@dimen/splashKazTextSize"
         android:textStyle="bold"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

@@ -3,12 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/black">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".view.activity.RegisterActivity">
+        tools:context=".grupoexclusivo.view.activity.RegisterActivity">
 
         <ImageView
             android:id="@+id/ivLogo"
@@ -23,17 +24,6 @@
             app:layout_constraintVertical_bias="0.033"
             app:srcCompat="@mipmap/ic_launcher_foreground" />
 
-        <TextView
-            android:id="@+id/tvRegister"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/registerTextMarginTop"
-            android:text="@string/registerText"
-            android:textSize="@dimen/registerTextFontSize"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
-
         <EditText
             android:id="@+id/registerEmailAddress"
             android:layout_width="match_parent"
@@ -41,14 +31,17 @@
             android:layout_marginStart="@dimen/registerEmailAdressMarginStard"
             android:layout_marginTop="@dimen/registerEmailAdressMarginTop"
             android:layout_marginEnd="@dimen/registerEmailAdressMarginEnd"
+            android:backgroundTint="@color/white"
             android:ems="10"
             android:hint="@string/registerEmailAdress"
             android:inputType="textEmailAddress"
-            android:textColorHighlight="@color/colorPrimary"
-            android:textColorLink="@color/colorPrimary"
+            android:textColor="@color/white"
+            android:textColorHighlight="@color/white"
+            android:textColorHint="@color/white"
+            android:textColorLink="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvRegister" />
+            app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
 
         <EditText
             android:id="@+id/registerPassword"
@@ -57,14 +50,36 @@
             android:layout_marginStart="@dimen/registerPasswordMarginStard"
             android:layout_marginTop="@dimen/registerPasswordMarginTop"
             android:layout_marginEnd="@dimen/registerPasswordMarginEnd"
+            android:backgroundTint="@color/white"
             android:ems="10"
             android:hint="@string/registerPassword"
             android:inputType="textPassword"
-            android:textColorHighlight="@color/colorPrimary"
-            android:textColorLink="@color/colorPrimary"
+            android:textColor="@color/white"
+            android:textColorHighlight="@color/white"
+            android:textColorHint="@color/white"
+            android:textColorLink="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/registerEmailAddress" />
+
+        <EditText
+            android:id="@+id/registerPasswordConfirmation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/registerPasswordMarginStard"
+            android:layout_marginTop="@dimen/registerPasswordMarginTop"
+            android:layout_marginEnd="@dimen/registerPasswordMarginEnd"
+            android:backgroundTint="@color/white"
+            android:ems="10"
+            android:hint="@string/registerPasswordConfirmation"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHighlight="@color/white"
+            android:textColorHint="@color/white"
+            android:textColorLink="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registerPassword" />
 
         <Button
             android:id="@+id/registerButton"
@@ -81,7 +96,22 @@
             android:textSize="@dimen/registerButtonTextSize"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/registerPassword" />
+            app:layout_constraintTop_toBottomOf="@+id/registerPasswordConfirmation" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/registerLottieAnimation"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:translationZ="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/registerButton"
+            app:layout_constraintEnd_toEndOf="@+id/registerButton"
+            app:layout_constraintStart_toStartOf="@+id/registerButton"
+            app:layout_constraintTop_toTopOf="@+id/registerButton"
+            app:lottie_autoPlay="false"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/loading_button" />
 
         <View
             android:id="@+id/registerLeftSeparator"
@@ -89,7 +119,7 @@
             android:layout_height="@dimen/registerLeftSeparatorHeight"
             android:layout_marginStart="@dimen/registerLeftSeparatorMarginStart"
             android:layout_marginEnd="@dimen/registerLeftSeparatorMarginEnd"
-            android:background="@color/black"
+            android:background="@color/white"
             app:layout_constraintBottom_toBottomOf="@+id/registerSeparatorText"
             app:layout_constraintEnd_toStartOf="@+id/registerSeparatorText"
             app:layout_constraintStart_toStartOf="parent"
@@ -101,6 +131,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/registerSeparatorTextMarginTop"
             android:text="@string/registerSeparatorText"
+            android:textColor="@color/white"
             android:textSize="@dimen/registerSeparatorTextSize"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -112,7 +143,7 @@
             android:layout_height="@dimen/registerRightSeparatorHeight"
             android:layout_marginStart="@dimen/registerRightSeparatorMarginStart"
             android:layout_marginEnd="@dimen/registerRightSeparatorMarginEnd"
-            android:background="@color/black"
+            android:background="@color/white"
             app:layout_constraintBottom_toBottomOf="@+id/registerSeparatorText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/registerSeparatorText"
@@ -138,6 +169,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/registerHasAccountMarginStart"
                 android:text="@string/registerHasAccountText"
+                android:textColor="@color/white"
                 android:textSize="@dimen/registerHasAccountTextSize" />
 
             <Button

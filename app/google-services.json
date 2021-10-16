@@ -1,34 +1,33 @@
 {
   "project_info": {
-    "project_number": "215431963333",
-    "firebase_url": "https://kazapp-799d6.firebaseio.com",
-    "project_id": "kazapp-799d6",
-    "storage_bucket": "kazapp-799d6.appspot.com"
+    "project_number": "331667734110",
+    "project_id": "grupo-exclusivo",
+    "storage_bucket": "grupo-exclusivo.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:215431963333:android:90239d23990f3b3affc6ac",
+        "mobilesdk_app_id": "1:331667734110:android:c7855b9ae15aabc22a7ecf",
         "android_client_info": {
-          "package_name": "br.com.kaz"
+          "package_name": "com.antoniocitty.grupoexclusivo"
         }
       },
       "oauth_client": [
         {
-          "client_id": "215431963333-roj4phlgusjibalh3q0lgbm3m9rudhli.apps.googleusercontent.com",
+          "client_id": "331667734110-t3u9rmo8cmualqgc6sjlc2p0vkv7h7d7.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyANt5gU0EKSCTyVj6aLROqEnf6rVC4uQpw"
+          "current_key": "AIzaSyA2MvUsFTq3bbhFRxSGws6mn9be_t5BYMw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "215431963333-roj4phlgusjibalh3q0lgbm3m9rudhli.apps.googleusercontent.com",
+              "client_id": "331667734110-t3u9rmo8cmualqgc6sjlc2p0vkv7h7d7.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
