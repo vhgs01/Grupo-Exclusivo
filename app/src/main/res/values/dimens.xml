@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--    SplashScreen    -->
-    <dimen name="splashLogoDimen">230dp</dimen>
+    <dimen name="splashLogoDimen">180dp</dimen>
     <dimen name="splashFromMarginBottom">12dp</dimen>
     <dimen name="splashKaz">50dp</dimen>
     <dimen name="splashKazMarginBottom">48dp</dimen>
@@ -74,7 +74,8 @@
     <dimen name="homeTitleMarginBottom">24dp</dimen>
     <dimen name="homeCardViewMarginTop">20dp</dimen>
     <dimen name="homeCardViewMarginStart">20dp</dimen>
-    <dimen name="homeCardViewMargineEnd">20dp</dimen>
+    <dimen name="homeCardViewHalfMargin">10dp</dimen>
+    <dimen name="homeCardViewMarginEnd">20dp</dimen>
     <dimen name="homeCardHeight">150dp</dimen>
     <dimen name="homeTitleTextSize">20sp</dimen>
     <dimen name="homeHeaderSeparator">1dp</dimen>

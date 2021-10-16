@@ -73,7 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/homeCardViewMarginStart"
         android:layout_marginTop="@dimen/homeCardViewMarginTop"
-        android:layout_marginEnd="@dimen/homeCardViewMargineEnd"
+        android:layout_marginEnd="@dimen/homeCardViewMarginEnd"
         android:backgroundTint="@color/whiteTwo"
         android:elevation="@dimen/modulesCardViewElenation"
         app:cardCornerRadius="@dimen/modulesCardViewCornerRadius"
@@ -95,7 +95,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/homeCardViewMarginStart"
         android:layout_marginTop="@dimen/homeCardViewMarginTop"
-        android:layout_marginEnd="@dimen/homeCardViewMargineEnd"
+        android:layout_marginEnd="@dimen/homeCardViewMarginEnd"
         android:backgroundTint="@color/whiteTwo"
         android:elevation="@dimen/modulesCardViewElenation"
         app:cardCornerRadius="@dimen/modulesCardViewCornerRadius"
@@ -111,19 +111,49 @@
 
     </androidx.cardview.widget.CardView>
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardPurchase"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/homeCardViewMarginStart"
         android:layout_marginTop="@dimen/homeCardViewMarginTop"
-        android:layout_marginEnd="@dimen/homeCardViewMargineEnd"
+        android:layout_marginEnd="@dimen/homeCardViewHalfMargin"
         android:backgroundTint="@color/whiteTwo"
         android:elevation="@dimen/modulesCardViewElenation"
         android:visibility="gone"
         app:cardCornerRadius="@dimen/modulesCardViewCornerRadius"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewHandout">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/homeCardHeight"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_three" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardLoggedArea"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/homeCardViewMarginTop"
+        android:backgroundTint="@color/whiteTwo"
+        android:layout_marginStart="@dimen/homeCardViewHalfMargin"
+        android:layout_marginEnd="@dimen/homeCardViewMarginEnd"
+        android:elevation="@dimen/modulesCardViewElenation"
+        android:visibility="gone"
+        app:cardCornerRadius="@dimen/modulesCardViewCornerRadius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toBottomOf="@+id/cardViewHandout">
 
         <ImageView

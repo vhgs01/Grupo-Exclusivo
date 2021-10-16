@@ -30,7 +30,7 @@ class RegisterActivity : AppCompatActivity(), RegisterContract.View {
     }
 
     override fun redirectToModulesActivity() {
-        startActivity(Intent(this, ModulesActivity::class.java))
+        startActivity(Intent(this, HomeActivity::class.java))
         finishAffinity()
     }
 

@@ -5,18 +5,16 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
+    <color name="black">#1e1e1e</color>
     <color name="white">#FFFFFFFF</color>
     <color name="whiteTwo">#E3E3E3</color>
     <color name="gray">#38383a</color>
     <color name="grayTwo">#656565</color>
-    <color name="colorPrimary">#00b257</color>
-    <color name="colorPrimaryDark">#005829</color>
-    <color name="colorAccent">#2172FF</color>
+    <color name="colorPrimary">#09c6a6</color>
+    <color name="colorPrimaryDark">#088C76</color>
+    <color name="colorAccent">#0150e9</color>
     <color name="colorModulesSeparator">#CACACA</color>
-    <color name="colorGreenStatusButton">#005829</color>
     <color name="itemLockedWithOpacity">#CCEBEEF5</color>
     <color name="checkbox_unchecked">#f3f4f6</color>
-    <color name="defaultNotificationIconColor">#005829</color>
     <color name="favWhatsapp">#25D366</color>
 </resources>

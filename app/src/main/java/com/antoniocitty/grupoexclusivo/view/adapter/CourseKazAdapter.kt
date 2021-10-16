@@ -58,7 +58,7 @@ class CourseKazAdapter(private val course: CourseKaz, private val context: Conte
                 it.moduleItemWithOpacity.visibility = View.GONE
                 it.moduleItemImage.visibility = View.VISIBLE
                 it.moduleItemImage.backgroundTintList =
-                    ColorStateList.valueOf(context.getColor(R.color.colorGreenStatusButton))
+                    ColorStateList.valueOf(context.getColor(R.color.colorPrimaryDark))
                 it.moduleItemImage.background =
                     ContextCompat.getDrawable(context, R.drawable.ic_item_completed)
                 it.moduleItemStatusText.text = context.getString(R.string.modulesCompletedText)

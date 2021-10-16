@@ -26,7 +26,7 @@
             android:resource="@drawable/notification" />
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_color"
-            android:resource="@color/defaultNotificationIconColor" />
+            android:resource="@color/colorPrimaryDark" />
 
         <activity
             android:name=".view.activity.SplashActivity"

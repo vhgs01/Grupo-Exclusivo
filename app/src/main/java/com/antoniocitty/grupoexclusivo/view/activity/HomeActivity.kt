@@ -27,6 +27,7 @@ class HomeActivity : AppCompatActivity(), HomeContract.View {
         private const val HANDOUT = "handout"
         private const val ONE_MINUTE = 60000L
         private const val PURCHASE = "purchase"
+        private const val LOGGED_AREA = "logged_area"
         private const val WHATS_PHONE = "5528999511880"
         private const val WHATS_MESSAGE =
             "Olá Antônio! Estava usando o aplicativo e fiquei com uma dúvida, poderia me ajudar?"
@@ -46,8 +47,13 @@ class HomeActivity : AppCompatActivity(), HomeContract.View {
         val prefs = getSharedPreferences(SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE)
         val courseIsCompleted = prefs.getBoolean(FIELD_COURSE_COMPLETED, false)
 
-        if (courseIsCompleted) cardPurchase.visibility = View.VISIBLE else cardPurchase.visibility =
-            View.GONE
+        if (courseIsCompleted) {
+            cardPurchase.visibility = View.VISIBLE
+            cardLoggedArea.visibility = View.VISIBLE
+        } else {
+            cardPurchase.visibility = View.GONE
+            cardLoggedArea.visibility = View.GONE
+        }
 
         Timer().schedule(object : TimerTask() {
             override fun run() {
@@ -62,6 +68,7 @@ class HomeActivity : AppCompatActivity(), HomeContract.View {
         setLogoutButtonListener()
         setHandoutButtonListener()
         setPurchaseButtonListener()
+        setLoggedAreaButtonListener()
         setFabListener()
     }
 
@@ -114,6 +121,15 @@ class HomeActivity : AppCompatActivity(), HomeContract.View {
             val intent = Intent(applicationContext, WebViewActivity::class.java)
 
             intent.putExtra(WEBVIEW_TO_OPEN, PURCHASE)
+            startActivity(intent)
+        }
+    }
+
+    private fun setLoggedAreaButtonListener() {
+        cardLoggedArea.setOnClickListener {
+            val intent = Intent(applicationContext, WebViewActivity::class.java)
+
+            intent.putExtra(WEBVIEW_TO_OPEN, LOGGED_AREA)
             startActivity(intent)
         }
     }

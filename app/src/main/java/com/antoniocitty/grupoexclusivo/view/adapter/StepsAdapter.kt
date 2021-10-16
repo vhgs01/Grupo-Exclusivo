@@ -62,7 +62,7 @@ class StepsAdapter(
                 it.stepItemWithOpacity.visibility = View.GONE
                 it.stepItemImage.visibility = View.VISIBLE
                 it.stepItemImage.backgroundTintList =
-                    ColorStateList.valueOf(context.getColor(R.color.colorGreenStatusButton))
+                    ColorStateList.valueOf(context.getColor(R.color.colorPrimaryDark))
                 it.stepItemImage.background =
                     ContextCompat.getDrawable(context, R.drawable.ic_item_completed)
                 it.stepItemStatusText.text = context.getString(R.string.stepCompletedText)
