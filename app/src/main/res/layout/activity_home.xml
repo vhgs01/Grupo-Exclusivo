@@ -137,7 +137,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/homeCardHeight"
             android:scaleType="centerCrop"
-            android:src="@drawable/img_three" />
+            android:src="@drawable/seja_membro" />
 
     </androidx.cardview.widget.CardView>
 
@@ -160,7 +160,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/homeCardHeight"
             android:scaleType="centerCrop"
-            android:src="@drawable/img_three" />
+            android:src="@drawable/area_membro" />
 
     </androidx.cardview.widget.CardView>
 
