@@ -18,7 +18,7 @@ class WebViewActivity : AppCompatActivity() {
         private const val BASE_URL = "https://docs.google.com/gview?embedded=true&url="
         private const val HANDOUT_URL = "https://antoniocitty.com/Apostila.pdf"
         private const val PURCHASE_URL = "https://go.hotmart.com/W61107558X"
-        private const val LOGGED_AREA_URL = "https://grupoexclusivo.astronmembers.com"
+        private const val LOGGED_AREA_URL = "https://grupoexclusivo.com"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
