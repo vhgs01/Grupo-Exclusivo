@@ -157,6 +157,7 @@
                 android:id="@+id/loginButtonRegister"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/loginButtonRegisterMarginStart"
                 android:background="@drawable/login_footer_button"
                 android:text="@string/loginButtonDoLoginText"
                 android:textColor="@color/colorPrimary"

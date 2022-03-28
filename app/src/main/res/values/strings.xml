@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">Grupo Exclusivo</string>
     <string name="Journey">Sua Jornada</string>
-    <string name="youtube_api_key">AIzaSyAAYa22ADnST505mxnUFgFhFFl5WO7ciB8</string>
+    <string name="ytFirstStep">AIzaSyAAYa22</string>
+    <string name="ytSecondStep">ADnST505mxnUFgFh</string>
+    <string name="ytThirdStep">FFl5WO7ciB8</string>
+    <string name="ytJoinedStep">%1$s%2$s%3$s</string>
 
     <!--    Splash Screen    -->
     <string name="splashGrupoExclusivo">Grupo Exclusivo</string>

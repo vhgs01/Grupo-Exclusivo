@@ -4,7 +4,9 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CheckBox
 import android.widget.CompoundButton
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.antoniocitty.grupoexclusivo.R
 import com.antoniocitty.grupoexclusivo.model.courses.Checklist
@@ -27,9 +29,8 @@ class ChecklistAdapter(
     RecyclerView.Adapter<ChecklistAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var checklistItemTitle = itemView.checklistItemTitle!!
-        var checklistItemDescription = itemView.checklistItemDescription!!
-        var checklistBox = itemView.checklistBox!!
+        var checklistItemTitle: TextView? = itemView.checklistItemTitle
+        var checklistBox: CheckBox? = itemView.checklistBox
     }
 
     override fun getItemCount(): Int {
@@ -50,7 +51,7 @@ class ChecklistAdapter(
     }
 
     private fun setClickListener(it: ViewHolder, position: Int) {
-        it.checklistBox.setOnClickListener {
+        it.checklistBox?.setOnClickListener {
             course.moduleKaz[modulePosition].steps[stepPosition].checklist[position].completed =
                 (it as CompoundButton).isChecked
 
@@ -68,9 +69,10 @@ class ChecklistAdapter(
     private fun configureModuleView(it: ViewHolder, moduleVideoUrl: String, checklist: Checklist) {
         initializeYouTubePlayer(checklistYouTubePlayerView, context, moduleVideoUrl)
 
-        it.checklistItemTitle.text = checklist.title
-        it.checklistItemDescription.text = checklist.description
-        it.checklistBox.isChecked = checklist.completed!!
+        it.checklistItemTitle?.text = checklist.title
+        checklist.completed?.let { completed ->
+            it.checklistBox?.isChecked = completed
+        }
     }
 
 }

@@ -6,7 +6,10 @@ import android.content.res.ColorStateList
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
+import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.antoniocitty.grupoexclusivo.R
@@ -19,12 +22,12 @@ class CourseKazAdapter(private val course: CourseKaz, private val context: Conte
     RecyclerView.Adapter<CourseKazAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var moduleCard = itemView.cardView!!
-        var moduleTitle = itemView.itemTitle!!
-        var moduleItemDescription = itemView.itemDescription!!
-        var moduleItemWithOpacity = itemView.itemWithOpacity!!
-        var moduleItemImage = itemView.itemImage!!
-        var moduleItemStatusText = itemView.itemStatusText!!
+        var moduleCard: CardView? = itemView.cardView
+        var moduleTitle: TextView? = itemView.itemTitle
+        var moduleItemDescription: TextView? = itemView.itemDescription
+        var moduleItemWithOpacity: View? = itemView.itemWithOpacity
+        var moduleItemImage: ImageView? = itemView.itemImage
+        var moduleItemStatusText: TextView? = itemView.itemStatusText
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -44,37 +47,37 @@ class CourseKazAdapter(private val course: CourseKaz, private val context: Conte
     }
 
     private fun configureModuleView(it: ViewHolder, moduleKaz: ModuleKaz) {
-        it.moduleTitle.text = moduleKaz.title
-        it.moduleItemDescription.text = moduleKaz.description
+        it.moduleTitle?.text = moduleKaz.title
+        it.moduleItemDescription?.text = moduleKaz.description
 
         when (moduleKaz.completed) {
             false -> {
-                it.moduleItemWithOpacity.visibility = View.VISIBLE
-                it.moduleItemImage.visibility = View.VISIBLE
-                it.moduleItemImage.background =
+                it.moduleItemWithOpacity?.visibility = View.VISIBLE
+                it.moduleItemImage?.visibility = View.VISIBLE
+                it.moduleItemImage?.background =
                     ContextCompat.getDrawable(context, R.drawable.ic_item_locked)
             }
             true -> {
-                it.moduleItemWithOpacity.visibility = View.GONE
-                it.moduleItemImage.visibility = View.VISIBLE
-                it.moduleItemImage.backgroundTintList =
+                it.moduleItemWithOpacity?.visibility = View.GONE
+                it.moduleItemImage?.visibility = View.VISIBLE
+                it.moduleItemImage?.backgroundTintList =
                     ColorStateList.valueOf(context.getColor(R.color.colorPrimaryDark))
-                it.moduleItemImage.background =
+                it.moduleItemImage?.background =
                     ContextCompat.getDrawable(context, R.drawable.ic_item_completed)
-                it.moduleItemStatusText.text = context.getString(R.string.modulesCompletedText)
+                it.moduleItemStatusText?.text = context.getString(R.string.modulesCompletedText)
             }
             else -> {
-                it.moduleItemWithOpacity.visibility = View.GONE
-                it.moduleItemImage.visibility = View.VISIBLE
-                it.moduleItemImage.background =
+                it.moduleItemWithOpacity?.visibility = View.GONE
+                it.moduleItemImage?.visibility = View.VISIBLE
+                it.moduleItemImage?.background =
                     ContextCompat.getDrawable(context, R.drawable.ic_item_doing)
-                it.moduleItemStatusText.text = context.getString(R.string.modulesInProgressText)
+                it.moduleItemStatusText?.text = context.getString(R.string.modulesInProgressText)
             }
         }
     }
 
     private fun setClickListener(it: ViewHolder, position: Int, moduleKaz: ModuleKaz) {
-        it.moduleCard.setOnClickListener {
+        it.moduleCard?.setOnClickListener {
             if (moduleKaz.completed == false) {
                 Toast.makeText(
                     context,
