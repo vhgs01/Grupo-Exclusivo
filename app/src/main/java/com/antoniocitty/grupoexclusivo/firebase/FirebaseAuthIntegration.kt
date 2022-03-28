@@ -51,12 +51,16 @@ class FirebaseAuthIntegration(private val firebaseAuth: FirebaseAuth) {
     }
 
     private fun handleException(task: Task<AuthResult>): EntityErrorResult {
-        return when (task.exception!!) {
-            is FirebaseAuthWeakPasswordException -> EntityErrorResult.WeakPassword
-            is FirebaseAuthInvalidCredentialsException -> EntityErrorResult.InvalidCredentials
-            is FirebaseAuthInvalidUserException -> EntityErrorResult.InvalidUser
-            is FirebaseAuthUserCollisionException -> EntityErrorResult.UserCollision
-            else -> EntityErrorResult.OtherException
+        task.exception?.let { exception ->
+            return when (exception) {
+                is FirebaseAuthWeakPasswordException -> EntityErrorResult.WeakPassword
+                is FirebaseAuthInvalidCredentialsException -> EntityErrorResult.InvalidCredentials
+                is FirebaseAuthInvalidUserException -> EntityErrorResult.InvalidUser
+                is FirebaseAuthUserCollisionException -> EntityErrorResult.UserCollision
+                else -> EntityErrorResult.OtherException
+            }
+        } ?: kotlin.run {
+            return EntityErrorResult.OtherException
         }
     }
 }

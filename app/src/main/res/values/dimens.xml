@@ -68,6 +68,7 @@
     <dimen name="loginHasAccountTextSize">14sp</dimen>
     <dimen name="loginButtonDoLoginTextSize">14sp</dimen>
     <dimen name="loginHasAccountMarginStart">16dp</dimen>
+    <dimen name="loginButtonRegisterMarginStart">10dp</dimen>
 
     <!--    HomeScreen    -->
     <dimen name="homeTitleMarginTop">24dp</dimen>

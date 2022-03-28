@@ -6,7 +6,10 @@ import android.content.res.ColorStateList
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
+import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.antoniocitty.grupoexclusivo.R
@@ -23,12 +26,12 @@ class StepsAdapter(
     RecyclerView.Adapter<StepsAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var stepCard = itemView.cardView!!
-        var stepItemTitle = itemView.itemTitle!!
-        var stepItemDescription = itemView.itemDescription!!
-        var stepItemWithOpacity = itemView.itemWithOpacity!!
-        var stepItemImage = itemView.itemImage!!
-        var stepItemStatusText = itemView.itemStatusText!!
+        var stepCard: CardView? = itemView.cardView
+        var stepItemTitle: TextView? = itemView.itemTitle
+        var stepItemDescription: TextView? = itemView.itemDescription
+        var stepItemWithOpacity: View? = itemView.itemWithOpacity
+        var stepItemImage: ImageView? = itemView.itemImage
+        var stepItemStatusText: TextView? = itemView.itemStatusText
     }
 
     override fun getItemCount(): Int {
@@ -48,37 +51,37 @@ class StepsAdapter(
     }
 
     private fun configureModuleView(it: ViewHolder, step: Step) {
-        it.stepItemTitle.text = step.title
-        it.stepItemDescription.text = step.description
+        it.stepItemTitle?.text = step.title
+        it.stepItemDescription?.text = step.description
 
         when (step.completed) {
             false -> {
-                it.stepItemWithOpacity.visibility = View.VISIBLE
-                it.stepItemImage.visibility = View.VISIBLE
-                it.stepItemImage.background =
+                it.stepItemWithOpacity?.visibility = View.VISIBLE
+                it.stepItemImage?.visibility = View.VISIBLE
+                it.stepItemImage?.background =
                     ContextCompat.getDrawable(context, R.drawable.ic_item_locked)
             }
             true -> {
-                it.stepItemWithOpacity.visibility = View.GONE
-                it.stepItemImage.visibility = View.VISIBLE
-                it.stepItemImage.backgroundTintList =
+                it.stepItemWithOpacity?.visibility = View.GONE
+                it.stepItemImage?.visibility = View.VISIBLE
+                it.stepItemImage?.backgroundTintList =
                     ColorStateList.valueOf(context.getColor(R.color.colorPrimaryDark))
-                it.stepItemImage.background =
+                it.stepItemImage?.background =
                     ContextCompat.getDrawable(context, R.drawable.ic_item_completed)
-                it.stepItemStatusText.text = context.getString(R.string.stepCompletedText)
+                it.stepItemStatusText?.text = context.getString(R.string.stepCompletedText)
             }
             else -> {
-                it.stepItemWithOpacity.visibility = View.GONE
-                it.stepItemImage.visibility = View.VISIBLE
-                it.stepItemImage.background =
+                it.stepItemWithOpacity?.visibility = View.GONE
+                it.stepItemImage?.visibility = View.VISIBLE
+                it.stepItemImage?.background =
                     ContextCompat.getDrawable(context, R.drawable.ic_item_doing)
-                it.stepItemStatusText.text = context.getString(R.string.stepInProgressText)
+                it.stepItemStatusText?.text = context.getString(R.string.stepInProgressText)
             }
         }
     }
 
     private fun setClickListener(it: ViewHolder, position: Int, step: Step) {
-        it.stepCard.setOnClickListener {
+        it.stepCard?.setOnClickListener {
             if (step.completed == false) {
                 Toast.makeText(
                     context,

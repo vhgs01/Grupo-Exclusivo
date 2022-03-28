@@ -137,7 +137,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/homeCardHeight"
             android:scaleType="centerCrop"
-            android:src="@drawable/img_three" />
+            android:src="@drawable/seja_membro" />
 
     </androidx.cardview.widget.CardView>
 
@@ -145,10 +145,10 @@
         android:id="@+id/cardLoggedArea"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/homeCardViewMarginTop"
-        android:backgroundTint="@color/whiteTwo"
         android:layout_marginStart="@dimen/homeCardViewHalfMargin"
+        android:layout_marginTop="@dimen/homeCardViewMarginTop"
         android:layout_marginEnd="@dimen/homeCardViewMarginEnd"
+        android:backgroundTint="@color/whiteTwo"
         android:elevation="@dimen/modulesCardViewElenation"
         android:visibility="gone"
         app:cardCornerRadius="@dimen/modulesCardViewCornerRadius"
@@ -160,7 +160,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/homeCardHeight"
             android:scaleType="centerCrop"
-            android:src="@drawable/img_three" />
+            android:src="@drawable/area_membro" />
 
     </androidx.cardview.widget.CardView>
 
@@ -170,15 +170,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/homeFabMarginStart"
         android:layout_marginBottom="@dimen/homeFabMarginBottom"
-        android:backgroundTint="@color/whiteTwo"
+        android:backgroundTint="#00000000"
         android:contentDescription="@null"
-        android:scaleType="center"
+        android:outlineProvider="none"
         android:visibility="gone"
         app:borderWidth="0dp"
         app:fabSize="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:maxImageSize="64dp"
+        app:maxImageSize="58dp"
         app:srcCompat="@drawable/whats"
         app:tint="@null" />
 

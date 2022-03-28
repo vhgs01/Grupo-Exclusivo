@@ -85,20 +85,24 @@ class RegisterActivity : AppCompatActivity(), RegisterContract.View {
     }
 
     private fun setRegisterButtonListener() {
-        registerButton!!.setOnClickListener {
-            val email = registerEmailAddress.text.toString()
-            val pass = registerPassword.text.toString()
-            val passConfirmation = registerPasswordConfirmation.text.toString()
+        registerButton?.let { btn ->
+            btn.setOnClickListener {
+                val email = registerEmailAddress.text.toString()
+                val pass = registerPassword.text.toString()
+                val passConfirmation = registerPasswordConfirmation.text.toString()
 
-            handleAnimation(true)
-            presenter.handleRegisterUser(email, pass, passConfirmation)
+                handleAnimation(true)
+                presenter.handleRegisterUser(email, pass, passConfirmation)
+            }
         }
     }
 
     private fun setLoginButtonListener() {
-        registerButtonDoLogin!!.setOnClickListener {
-            startActivity(Intent(applicationContext, LoginActivity::class.java))
-            finishAffinity()
+        registerButtonDoLogin?.let { btn ->
+            btn.setOnClickListener {
+                startActivity(Intent(applicationContext, LoginActivity::class.java))
+                finishAffinity()
+            }
         }
     }
 

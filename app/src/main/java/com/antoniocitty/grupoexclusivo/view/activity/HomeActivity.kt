@@ -95,9 +95,11 @@ class HomeActivity : AppCompatActivity(), HomeContract.View {
     }
 
     private fun setLogoutButtonListener() {
-        homeLogout!!.setOnClickListener {
-            handleAnimation(true)
-            presenter.singOutUser()
+        homeLogout?.let { btn ->
+            btn.setOnClickListener {
+                handleAnimation(true)
+                presenter.singOutUser()
+            }
         }
     }
 

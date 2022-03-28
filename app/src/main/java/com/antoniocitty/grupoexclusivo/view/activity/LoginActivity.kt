@@ -35,12 +35,14 @@ class LoginActivity : AppCompatActivity(), LoginContract.View {
     }
 
     override fun setLoginButtonListener() {
-        loginButton!!.setOnClickListener {
-            val email = loginEmailAddress?.text.toString()
-            val pass = loginPassword?.text.toString()
+        loginButton?.let { btn ->
+            btn.setOnClickListener {
+                val email = loginEmailAddress?.text.toString()
+                val pass = loginPassword?.text.toString()
 
-            handleAnimation(true)
-            presenter.handleLoginUser(email, pass)
+                handleAnimation(true)
+                presenter.handleLoginUser(email, pass)
+            }
         }
     }
 
@@ -95,9 +97,11 @@ class LoginActivity : AppCompatActivity(), LoginContract.View {
     }
 
     override fun setRegisterButtonListener() {
-        loginButtonRegister!!.setOnClickListener {
-            startActivity(Intent(applicationContext, RegisterActivity::class.java))
-            finishAffinity()
+        loginButtonRegister?.let { btn ->
+            btn.setOnClickListener {
+                startActivity(Intent(applicationContext, RegisterActivity::class.java))
+                finishAffinity()
+            }
         }
     }
 }
