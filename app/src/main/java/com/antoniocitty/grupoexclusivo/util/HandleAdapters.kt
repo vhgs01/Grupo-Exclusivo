@@ -1,16 +1,16 @@
 package com.antoniocitty.grupoexclusivo.util
 
-import com.antoniocitty.grupoexclusivo.model.courses.CourseKaz
+import com.antoniocitty.grupoexclusivo.model.courses.CourseGE
 
 object HandleAdapters {
 
-    fun handleLockUnlockCourseKaz(
-        course: CourseKaz
-    ): CourseKaz {
+    fun handleLockUnlockCourseGE(
+        course: CourseGE
+    ): CourseGE {
         var allModulesUnlockeds = true
         var currentModuleAssigned = false
 
-        for (module in course.moduleKaz) {
+        for (module in course.moduleGE) {
             var allStepsUnlockeds = true
             var currentStepAlreadyAssigned = false
 
@@ -46,7 +46,7 @@ object HandleAdapters {
         }
 
         if (allModulesUnlockeds) {
-            course.moduleKaz.last().completed = true
+            course.moduleGE.last().completed = true
         }
 
         return course

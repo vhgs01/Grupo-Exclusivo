@@ -7,20 +7,23 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.antoniocitty.grupoexclusivo.R
 import com.antoniocitty.grupoexclusivo.contract.LoginContract
+import com.antoniocitty.grupoexclusivo.databinding.ActivityLoginBinding
 import com.antoniocitty.grupoexclusivo.presenter.LoginPresenter
 import com.antoniocitty.grupoexclusivo.util.LottieAnimation.cancelAnimation
 import com.antoniocitty.grupoexclusivo.util.LottieAnimation.startAnimation
-import kotlinx.android.synthetic.main.activity_login.*
 import org.koin.android.ext.android.inject
 import org.koin.core.parameter.parametersOf
 
 class LoginActivity : AppCompatActivity(), LoginContract.View {
 
+    private lateinit var binding: ActivityLoginBinding
+
     private val presenter: LoginPresenter by inject { parametersOf(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         setListeners()
     }
@@ -34,8 +37,8 @@ class LoginActivity : AppCompatActivity(), LoginContract.View {
         return applicationContext
     }
 
-    override fun setLoginButtonListener() {
-        loginButton?.let { btn ->
+    override fun setLoginButtonListener() = with(binding) {
+        loginButton.let { btn ->
             btn.setOnClickListener {
                 val email = loginEmailAddress?.text.toString()
                 val pass = loginPassword?.text.toString()
@@ -84,7 +87,7 @@ class LoginActivity : AppCompatActivity(), LoginContract.View {
         finishAffinity()
     }
 
-    override fun handleAnimation(startAnimation: Boolean) {
+    override fun handleAnimation(startAnimation: Boolean) = with(binding) {
         if (startAnimation) {
             loginButton.text = ""
 
@@ -96,8 +99,8 @@ class LoginActivity : AppCompatActivity(), LoginContract.View {
         }
     }
 
-    override fun setRegisterButtonListener() {
-        loginButtonRegister?.let { btn ->
+    override fun setRegisterButtonListener() = with(binding) {
+        loginButtonRegister.let { btn ->
             btn.setOnClickListener {
                 startActivity(Intent(applicationContext, RegisterActivity::class.java))
                 finishAffinity()

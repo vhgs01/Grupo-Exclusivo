@@ -1,5 +1,6 @@
 package com.antoniocitty.grupoexclusivo.view.activity
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -9,28 +10,32 @@ import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
 import com.antoniocitty.grupoexclusivo.R
 import com.antoniocitty.grupoexclusivo.contract.SplashContract
+import com.antoniocitty.grupoexclusivo.databinding.ActivitySplashBinding
 import com.antoniocitty.grupoexclusivo.presenter.SplashPresenter
-import kotlinx.android.synthetic.main.activity_splash.*
 import org.koin.android.ext.android.inject
 import org.koin.core.parameter.parametersOf
 
+@SuppressLint("CustomSplashScreen")
 class SplashActivity : AppCompatActivity(), SplashContract.View {
+
+    private lateinit var binding: ActivitySplashBinding
 
     private val presenter: SplashPresenter by inject { parametersOf(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
+        binding = ActivitySplashBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         startAnimation()
     }
 
-    override fun startAnimation() {
+    override fun startAnimation() = with(binding) {
         val animation = AnimationUtils.loadAnimation(applicationContext, R.anim.splash_animation)
 
         animation.setAnimationListener(object : AnimationListener {
             override fun onAnimationStart(animation: Animation?) {
-                splashKaz.visibility = View.VISIBLE
+                splashGE.visibility = View.VISIBLE
                 splashFrom.visibility = View.VISIBLE
             }
 

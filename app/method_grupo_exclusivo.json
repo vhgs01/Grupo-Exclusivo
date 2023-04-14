@@ -1,5 +1,5 @@
 {
-  "moduleKaz": [
+  "moduleGE": [
     {
       "title": "Módulo 1 - Onde tudo Começa",
       "description": "Módulo inicial, onde você irá aprender o que precisa ter para começar.",
@@ -8,7 +8,7 @@
         {
           "title": "Bem vindo(a)!",
           "description": "Seja muito bem vindo(a)!",
-          "youtubeVideoId": "faltaOlink",
+          "youtubeVideoId": "W0NRx9WxmFs",
           "completed": null,
           "checklist": [
             {
@@ -439,21 +439,8 @@
               "completed": false
             },
             {
-              "title": "Estou pronto para continuar",
+              "title": "Estou pronto para seguir sozinho",
               "description": "",
-              "completed": false
-            }
-          ]
-        },
-        {
-          "title": "Sua jornada Continua",
-          "description": "O próximo passo em direção ao lucro.",
-          "youtubeVideoId": "_PM8assZP34",
-          "completed": null,
-          "checklist": [
-            {
-              "title": "Comunidade Grupo Exclusivo",
-              "description": "Fazer parte de nossa Comunidade",
               "completed": false
             }
           ]

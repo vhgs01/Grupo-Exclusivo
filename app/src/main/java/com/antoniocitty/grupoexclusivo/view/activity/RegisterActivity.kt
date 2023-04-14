@@ -7,20 +7,23 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.antoniocitty.grupoexclusivo.R
 import com.antoniocitty.grupoexclusivo.contract.RegisterContract
+import com.antoniocitty.grupoexclusivo.databinding.ActivityRegisterBinding
 import com.antoniocitty.grupoexclusivo.presenter.RegisterPresenter
 import com.antoniocitty.grupoexclusivo.util.LottieAnimation.startAnimation
 import com.antoniocitty.grupoexclusivo.util.LottieAnimation.cancelAnimation
-import kotlinx.android.synthetic.main.activity_register.*
 import org.koin.android.ext.android.inject
 import org.koin.core.parameter.parametersOf
 
 class RegisterActivity : AppCompatActivity(), RegisterContract.View {
 
+    private lateinit var binding: ActivityRegisterBinding
+
     private val presenter: RegisterPresenter by inject { parametersOf(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_register)
+        binding = ActivityRegisterBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         setListeners()
     }
@@ -47,7 +50,7 @@ class RegisterActivity : AppCompatActivity(), RegisterContract.View {
         ).show()
     }
 
-    override fun handleAnimation(startAnimation: Boolean) {
+    override fun handleAnimation(startAnimation: Boolean) = with(binding) {
         if (startAnimation) {
             registerButton.text = ""
 
@@ -60,13 +63,11 @@ class RegisterActivity : AppCompatActivity(), RegisterContract.View {
     }
 
     override fun showInvalidUserError() {
-        Toast.makeText(this, R.string.FirebaseAuthInvalidUserException, Toast.LENGTH_LONG)
-            .show()
+        Toast.makeText(this, R.string.FirebaseAuthInvalidUserException, Toast.LENGTH_LONG).show()
     }
 
     override fun showWeakPasswordError() {
-        Toast.makeText(this, R.string.FirebaseAuthWeakPasswordException, Toast.LENGTH_LONG)
-            .show()
+        Toast.makeText(this, R.string.FirebaseAuthWeakPasswordException, Toast.LENGTH_LONG).show()
     }
 
     override fun showInvalidCredentialsError() {
@@ -75,17 +76,15 @@ class RegisterActivity : AppCompatActivity(), RegisterContract.View {
     }
 
     override fun showUserCollisionError() {
-        Toast.makeText(this, R.string.FirebaseAuthUserCollisionException, Toast.LENGTH_LONG)
-            .show()
+        Toast.makeText(this, R.string.FirebaseAuthUserCollisionException, Toast.LENGTH_LONG).show()
     }
 
     override fun showOtherExceptionError() {
-        Toast.makeText(this, R.string.FirebaseAuthOtherException, Toast.LENGTH_LONG)
-            .show()
+        Toast.makeText(this, R.string.FirebaseAuthOtherException, Toast.LENGTH_LONG).show()
     }
 
-    private fun setRegisterButtonListener() {
-        registerButton?.let { btn ->
+    private fun setRegisterButtonListener() = with(binding) {
+        registerButton.let { btn ->
             btn.setOnClickListener {
                 val email = registerEmailAddress.text.toString()
                 val pass = registerPassword.text.toString()
@@ -97,8 +96,8 @@ class RegisterActivity : AppCompatActivity(), RegisterContract.View {
         }
     }
 
-    private fun setLoginButtonListener() {
-        registerButtonDoLogin?.let { btn ->
+    private fun setLoginButtonListener() = with(binding) {
+        registerButtonDoLogin.let { btn ->
             btn.setOnClickListener {
                 startActivity(Intent(applicationContext, LoginActivity::class.java))
                 finishAffinity()

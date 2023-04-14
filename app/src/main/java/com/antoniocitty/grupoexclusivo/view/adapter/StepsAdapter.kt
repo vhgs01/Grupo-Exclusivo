@@ -13,38 +13,40 @@ import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.antoniocitty.grupoexclusivo.R
-import com.antoniocitty.grupoexclusivo.model.courses.CourseKaz
+import com.antoniocitty.grupoexclusivo.databinding.BaseListItemBinding
+import com.antoniocitty.grupoexclusivo.model.courses.CourseGE
 import com.antoniocitty.grupoexclusivo.model.courses.Step
 import com.antoniocitty.grupoexclusivo.view.activity.ChecklistActivity
-import kotlinx.android.synthetic.main.base_list_item.view.*
+import java.lang.Exception
 
 class StepsAdapter(
-    private val course: CourseKaz,
-    private val context: Context,
-    private val modulePosition: Int
-) :
-    RecyclerView.Adapter<StepsAdapter.ViewHolder>() {
+    private val course: CourseGE, private val context: Context, private val modulePosition: Int
+) : RecyclerView.Adapter<StepsAdapter.ViewHolder>() {
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var stepCard: CardView? = itemView.cardView
-        var stepItemTitle: TextView? = itemView.itemTitle
-        var stepItemDescription: TextView? = itemView.itemDescription
-        var stepItemWithOpacity: View? = itemView.itemWithOpacity
-        var stepItemImage: ImageView? = itemView.itemImage
-        var stepItemStatusText: TextView? = itemView.itemStatusText
+    class ViewHolder(binding: BaseListItemBinding) : RecyclerView.ViewHolder(binding.root) {
+        var stepCard: CardView? = binding.cardView
+        var stepItemTitle: TextView? = binding.itemTitle
+        var stepItemDescription: TextView? = binding.itemDescription
+        var stepItemWithOpacity: View? = binding.itemWithOpacity
+        var stepItemImage: ImageView? = binding.itemImage
+        var stepItemStatusText: TextView? = binding.itemStatusText
     }
 
     override fun getItemCount(): Int {
-        return course.moduleKaz[modulePosition].steps.size
+        return try {
+            course.moduleGE[modulePosition].steps.size
+        } catch (e: Exception) {
+            0
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.base_list_item, parent, false)
-        return ViewHolder(view)
+        val binding = BaseListItemBinding.inflate(LayoutInflater.from(context), parent, false)
+        return ViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val step = course.moduleKaz[modulePosition].steps[position]
+        val step = course.moduleGE[modulePosition].steps[position]
 
         configureModuleView(holder, step)
         setClickListener(holder, position, step)
@@ -61,6 +63,7 @@ class StepsAdapter(
                 it.stepItemImage?.background =
                     ContextCompat.getDrawable(context, R.drawable.ic_item_locked)
             }
+
             true -> {
                 it.stepItemWithOpacity?.visibility = View.GONE
                 it.stepItemImage?.visibility = View.VISIBLE
@@ -70,6 +73,7 @@ class StepsAdapter(
                     ContextCompat.getDrawable(context, R.drawable.ic_item_completed)
                 it.stepItemStatusText?.text = context.getString(R.string.stepCompletedText)
             }
+
             else -> {
                 it.stepItemWithOpacity?.visibility = View.GONE
                 it.stepItemImage?.visibility = View.VISIBLE
@@ -84,14 +88,15 @@ class StepsAdapter(
         it.stepCard?.setOnClickListener {
             if (step.completed == false) {
                 Toast.makeText(
-                    context,
-                    context.getString(R.string.stepNotAbleYet),
-                    Toast.LENGTH_LONG
+                    context, context.getString(R.string.stepNotAbleYet), Toast.LENGTH_LONG
                 ).show()
             } else {
                 val intent = Intent(context, ChecklistActivity::class.java)
-                intent.putExtra("modulePosition", modulePosition)
-                intent.putExtra("stepPosition", position)
+                intent.let {
+                    it.putExtra("modulePosition", modulePosition)
+                    it.putExtra("stepPosition", position)
+                    it.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                }
                 context.startActivity(intent)
             }
         }
