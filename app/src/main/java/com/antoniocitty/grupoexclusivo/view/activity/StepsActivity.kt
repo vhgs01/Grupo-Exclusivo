@@ -3,17 +3,19 @@ package com.antoniocitty.grupoexclusivo.view.activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.antoniocitty.grupoexclusivo.R
 import com.antoniocitty.grupoexclusivo.contract.StepContract
-import com.antoniocitty.grupoexclusivo.util.JsonManipulation.getCourseKaz
+import com.antoniocitty.grupoexclusivo.databinding.ActivityStepsBinding
+import com.antoniocitty.grupoexclusivo.util.JsonManipulation.getCourseGE
 import com.antoniocitty.grupoexclusivo.view.adapter.StepsAdapter
-import kotlinx.android.synthetic.main.activity_steps.*
 
 class StepsActivity : AppCompatActivity(), StepContract.View {
 
+    private lateinit var binding: ActivityStepsBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_steps)
+        binding = ActivityStepsBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         setListeners()
     }
@@ -25,22 +27,20 @@ class StepsActivity : AppCompatActivity(), StepContract.View {
         configureAdapter(modulePosition)
     }
 
-    override fun setListeners() {
-        stepBack.setOnClickListener {
-            finish()
-        }
+    override fun setListeners() = with(binding) {
+        stepBack.setOnClickListener { finish() }
     }
 
-    override fun configureAdapter(modulePosition: Int) {
+    override fun configureAdapter(modulePosition: Int) = with(binding) {
         val recyclerView = stepsList
-        val course = getCourseKaz(applicationContext)
+        val course = getCourseGE(applicationContext)
 
-        recyclerView.adapter = course?.let { StepsAdapter(it, this, modulePosition) }
+        recyclerView.adapter = course?.let { StepsAdapter(it, applicationContext, modulePosition) }
 
-        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.layoutManager = LinearLayoutManager(applicationContext)
 
         stepsJourney.text = course?.let {
-            it.moduleKaz[modulePosition].title.split("- ")[1]
+            it.moduleGE[modulePosition].title.split("- ")[1]
         }
     }
 

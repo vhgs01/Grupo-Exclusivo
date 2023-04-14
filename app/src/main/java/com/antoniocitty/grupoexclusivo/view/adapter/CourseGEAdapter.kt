@@ -13,50 +13,56 @@ import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.antoniocitty.grupoexclusivo.R
-import com.antoniocitty.grupoexclusivo.model.courses.ModuleKaz
-import com.antoniocitty.grupoexclusivo.model.courses.CourseKaz
+import com.antoniocitty.grupoexclusivo.databinding.BaseListItemBinding
+import com.antoniocitty.grupoexclusivo.model.courses.ModuleGE
+import com.antoniocitty.grupoexclusivo.model.courses.CourseGE
 import com.antoniocitty.grupoexclusivo.view.activity.StepsActivity
-import kotlinx.android.synthetic.main.base_list_item.view.*
+import java.lang.Exception
 
-class CourseKazAdapter(private val course: CourseKaz, private val context: Context) :
-    RecyclerView.Adapter<CourseKazAdapter.ViewHolder>() {
+class CourseGEAdapter(private val course: CourseGE, private val context: Context) :
+    RecyclerView.Adapter<CourseGEAdapter.ViewHolder>() {
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var moduleCard: CardView? = itemView.cardView
-        var moduleTitle: TextView? = itemView.itemTitle
-        var moduleItemDescription: TextView? = itemView.itemDescription
-        var moduleItemWithOpacity: View? = itemView.itemWithOpacity
-        var moduleItemImage: ImageView? = itemView.itemImage
-        var moduleItemStatusText: TextView? = itemView.itemStatusText
+    class ViewHolder(binding: BaseListItemBinding) : RecyclerView.ViewHolder(binding.root) {
+        var moduleCard: CardView? = binding.cardView
+        var moduleTitle: TextView? = binding.itemTitle
+        var moduleItemDescription: TextView? = binding.itemDescription
+        var moduleItemWithOpacity: View? = binding.itemWithOpacity
+        var moduleItemImage: ImageView? = binding.itemImage
+        var moduleItemStatusText: TextView? = binding.itemStatusText
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.base_list_item, parent, false)
-        return ViewHolder(view)
+        val binding = BaseListItemBinding.inflate(LayoutInflater.from(context), parent, false)
+        return ViewHolder(binding)
     }
 
     override fun getItemCount(): Int {
-        return course.moduleKaz.size
+        return try {
+            course.moduleGE.size
+        } catch (e: Exception) {
+            0
+        }
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val module = course.moduleKaz[position]
+        val module = course.moduleGE[position]
 
         configureModuleView(holder, module)
         setClickListener(holder, position, module)
     }
 
-    private fun configureModuleView(it: ViewHolder, moduleKaz: ModuleKaz) {
-        it.moduleTitle?.text = moduleKaz.title
-        it.moduleItemDescription?.text = moduleKaz.description
+    private fun configureModuleView(it: ViewHolder, moduleGE: ModuleGE) {
+        it.moduleTitle?.text = moduleGE.title
+        it.moduleItemDescription?.text = moduleGE.description
 
-        when (moduleKaz.completed) {
+        when (moduleGE.completed) {
             false -> {
                 it.moduleItemWithOpacity?.visibility = View.VISIBLE
                 it.moduleItemImage?.visibility = View.VISIBLE
                 it.moduleItemImage?.background =
                     ContextCompat.getDrawable(context, R.drawable.ic_item_locked)
             }
+
             true -> {
                 it.moduleItemWithOpacity?.visibility = View.GONE
                 it.moduleItemImage?.visibility = View.VISIBLE
@@ -66,6 +72,7 @@ class CourseKazAdapter(private val course: CourseKaz, private val context: Conte
                     ContextCompat.getDrawable(context, R.drawable.ic_item_completed)
                 it.moduleItemStatusText?.text = context.getString(R.string.modulesCompletedText)
             }
+
             else -> {
                 it.moduleItemWithOpacity?.visibility = View.GONE
                 it.moduleItemImage?.visibility = View.VISIBLE
@@ -76,16 +83,18 @@ class CourseKazAdapter(private val course: CourseKaz, private val context: Conte
         }
     }
 
-    private fun setClickListener(it: ViewHolder, position: Int, moduleKaz: ModuleKaz) {
+    private fun setClickListener(it: ViewHolder, position: Int, moduleGE: ModuleGE) {
         it.moduleCard?.setOnClickListener {
-            if (moduleKaz.completed == false) {
+            if (moduleGE.completed == false) {
                 Toast.makeText(
-                    context,
-                    context.getString(R.string.moduleNotAbleYet), Toast.LENGTH_LONG
+                    context, context.getString(R.string.moduleNotAbleYet), Toast.LENGTH_LONG
                 ).show()
             } else {
                 val intent = Intent(context, StepsActivity::class.java)
-                intent.putExtra("modulePosition", position)
+                intent.let {
+                    it.putExtra("modulePosition", position)
+                    it.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                }
                 context.startActivity(intent)
             }
         }

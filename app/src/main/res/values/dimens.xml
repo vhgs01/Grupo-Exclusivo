@@ -3,9 +3,9 @@
     <!--    SplashScreen    -->
     <dimen name="splashLogoDimen">180dp</dimen>
     <dimen name="splashFromMarginBottom">12dp</dimen>
-    <dimen name="splashKaz">50dp</dimen>
-    <dimen name="splashKazMarginBottom">48dp</dimen>
-    <dimen name="splashKazTextSize">25sp</dimen>
+    <dimen name="splashGE">50dp</dimen>
+    <dimen name="splashGEMarginBottom">48dp</dimen>
+    <dimen name="splashGETextSize">25sp</dimen>
 
     <!--    RegisterScreen    -->
     <dimen name="registerTextMarginTop">8dp</dimen>

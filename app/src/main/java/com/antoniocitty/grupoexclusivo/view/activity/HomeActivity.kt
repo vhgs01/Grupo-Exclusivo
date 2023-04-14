@@ -9,11 +9,11 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.antoniocitty.grupoexclusivo.R
 import com.antoniocitty.grupoexclusivo.contract.HomeContract
+import com.antoniocitty.grupoexclusivo.databinding.ActivityHomeBinding
 import com.antoniocitty.grupoexclusivo.presenter.HomePresenter
 import com.antoniocitty.grupoexclusivo.util.LottieAnimation
 import com.antoniocitty.grupoexclusivo.util.SharedPreferences.FIELD_COURSE_COMPLETED
 import com.antoniocitty.grupoexclusivo.util.SharedPreferences.SHARED_PREFERENCES_NAME
-import kotlinx.android.synthetic.main.activity_home.*
 import org.koin.android.ext.android.inject
 import org.koin.core.parameter.parametersOf
 import java.net.URLEncoder
@@ -33,26 +33,31 @@ class HomeActivity : AppCompatActivity(), HomeContract.View {
             "Olá Antônio! Estava usando o aplicativo e fiquei com uma dúvida, poderia me ajudar?"
     }
 
+    private lateinit var binding: ActivityHomeBinding
+
     private val presenter: HomePresenter by inject { parametersOf(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        binding = ActivityHomeBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         setListeners()
     }
 
-    override fun onResume() {
+    override fun onResume() = with(binding) {
         super.onResume()
         val prefs = getSharedPreferences(SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE)
         val courseIsCompleted = prefs.getBoolean(FIELD_COURSE_COMPLETED, false)
 
         if (courseIsCompleted) {
             cardPurchase.visibility = View.VISIBLE
-            cardLoggedArea.visibility = View.VISIBLE
+            // In study if will be removed permanently
+            // cardLoggedArea.visibility = View.VISIBLE
         } else {
             cardPurchase.visibility = View.GONE
-            cardLoggedArea.visibility = View.GONE
+            // In study if will be removed permanently
+            // cardLoggedArea.visibility = View.GONE
         }
 
         Timer().schedule(object : TimerTask() {
@@ -72,7 +77,7 @@ class HomeActivity : AppCompatActivity(), HomeContract.View {
         setFabListener()
     }
 
-    override fun handleAnimation(startAnimation: Boolean) {
+    override fun handleAnimation(startAnimation: Boolean) = with(binding) {
         if (startAnimation) {
             homeLogout.text = ""
 
@@ -94,8 +99,8 @@ class HomeActivity : AppCompatActivity(), HomeContract.View {
         finishAffinity()
     }
 
-    private fun setLogoutButtonListener() {
-        homeLogout?.let { btn ->
+    private fun setLogoutButtonListener() = with(binding) {
+        homeLogout.let { btn ->
             btn.setOnClickListener {
                 handleAnimation(true)
                 presenter.singOutUser()
@@ -103,13 +108,13 @@ class HomeActivity : AppCompatActivity(), HomeContract.View {
         }
     }
 
-    private fun setCardViewModulesListener() {
+    private fun setCardViewModulesListener() = with(binding) {
         cardViewModules.setOnClickListener {
             startActivity(Intent(applicationContext, ModulesActivity::class.java))
         }
     }
 
-    private fun setHandoutButtonListener() {
+    private fun setHandoutButtonListener() = with(binding) {
         cardViewHandout.setOnClickListener {
             val intent = Intent(applicationContext, WebViewActivity::class.java)
 
@@ -118,7 +123,7 @@ class HomeActivity : AppCompatActivity(), HomeContract.View {
         }
     }
 
-    private fun setPurchaseButtonListener() {
+    private fun setPurchaseButtonListener() = with(binding) {
         cardPurchase.setOnClickListener {
             val intent = Intent(applicationContext, WebViewActivity::class.java)
 
@@ -127,7 +132,7 @@ class HomeActivity : AppCompatActivity(), HomeContract.View {
         }
     }
 
-    private fun setLoggedAreaButtonListener() {
+    private fun setLoggedAreaButtonListener() = with(binding) {
         cardLoggedArea.setOnClickListener {
             val intent = Intent(applicationContext, WebViewActivity::class.java)
 
@@ -136,7 +141,7 @@ class HomeActivity : AppCompatActivity(), HomeContract.View {
         }
     }
 
-    private fun setFabListener() {
+    private fun setFabListener() = with(binding) {
         favWhats.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW)
 

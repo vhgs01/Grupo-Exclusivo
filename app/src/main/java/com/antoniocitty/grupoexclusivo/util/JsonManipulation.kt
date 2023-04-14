@@ -2,7 +2,7 @@ package com.antoniocitty.grupoexclusivo.util
 
 import android.content.Context
 import com.antoniocitty.grupoexclusivo.R
-import com.antoniocitty.grupoexclusivo.model.courses.CourseKaz
+import com.antoniocitty.grupoexclusivo.model.courses.CourseGE
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import java.io.*
@@ -10,23 +10,23 @@ import java.lang.Exception
 
 object JsonManipulation {
 
-    fun getCourseKaz(context: Context): CourseKaz? {
+    fun getCourseGE(context: Context): CourseGE? {
         val file = File(context.filesDir, "method_grupo_exclusivo.json")
         return try {
-            val jsonInText = readCourseKazJsonFromFiles(file)
-            Gson().fromJson(jsonInText, CourseKaz::class.java)
+            val jsonInText = readCourseGEJsonFromFiles(file)
+            Gson().fromJson(jsonInText, CourseGE::class.java)
         } catch (e: Exception) {
-            readCourseKazJsonFromRaw(context)
-            val jsonInText = readCourseKazJsonFromFiles(file)
-            Gson().fromJson(jsonInText, CourseKaz::class.java)
+            readCoursGEJsonFromRaw(context)
+            val jsonInText = readCourseGEJsonFromFiles(file)
+            Gson().fromJson(jsonInText, CourseGE::class.java)
         }
     }
 
-    fun convertCourseKazToJson(courseKaz: CourseKaz): String {
-        return GsonBuilder().serializeNulls().create().toJson(courseKaz)
+    fun convertCourseGEToJson(courseGE: CourseGE): String {
+        return GsonBuilder().serializeNulls().create().toJson(courseGE)
     }
 
-    fun overrideCourseKazJson(context: Context, str: String) {
+    fun overrideCourseGEJson(context: Context, str: String) {
         val file = File(context.filesDir, "method_grupo_exclusivo.json")
         val fileWriter = FileWriter(file)
         val bufferedWriter = BufferedWriter(fileWriter)
@@ -35,7 +35,7 @@ object JsonManipulation {
         bufferedWriter.close()
     }
 
-    private fun readCourseKazJsonFromFiles(file: File): String {
+    private fun readCourseGEJsonFromFiles(file: File): String {
         val fileReader = FileReader(file)
         val bufferedReader = BufferedReader(fileReader)
         val stringBuilder = StringBuilder()
@@ -51,11 +51,11 @@ object JsonManipulation {
         return jsonInText
     }
 
-    private fun readCourseKazJsonFromRaw(context: Context) {
+    private fun readCoursGEJsonFromRaw(context: Context) {
         val rawResource = context.resources.openRawResource(R.raw.method_grupo_exclusivo)
         val jsonInText = readTextFile(rawResource)
 
-        jsonInText?.let { overrideCourseKazJson(context, it) }
+        jsonInText?.let { overrideCourseGEJson(context, it) }
     }
 
     private fun readTextFile(inputStream: InputStream): String? {

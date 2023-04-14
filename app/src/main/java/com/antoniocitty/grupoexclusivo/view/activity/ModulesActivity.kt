@@ -3,17 +3,18 @@ package com.antoniocitty.grupoexclusivo.view.activity
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.antoniocitty.grupoexclusivo.R
 import com.antoniocitty.grupoexclusivo.contract.ModuleContract
-import com.antoniocitty.grupoexclusivo.util.JsonManipulation.getCourseKaz
-import com.antoniocitty.grupoexclusivo.view.adapter.CourseKazAdapter
-import kotlinx.android.synthetic.main.activity_modules.*
+import com.antoniocitty.grupoexclusivo.databinding.ActivityModulesBinding
+import com.antoniocitty.grupoexclusivo.util.JsonManipulation.getCourseGE
+import com.antoniocitty.grupoexclusivo.view.adapter.CourseGEAdapter
 
 class ModulesActivity : AppCompatActivity(), ModuleContract.View {
 
+    private lateinit var binding: ActivityModulesBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_modules)
+        binding = ActivityModulesBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         setListeners()
     }
@@ -28,17 +29,16 @@ class ModulesActivity : AppCompatActivity(), ModuleContract.View {
         setModulesBackListener()
     }
 
-    override fun configureAdapter() {
+    override fun configureAdapter() = with(binding) {
         val recyclerView = modulesList
-        recyclerView.adapter =
-            getCourseKaz(applicationContext)?.let { CourseKazAdapter(it, this) }
-        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = getCourseGE(applicationContext)?.let {
+            CourseGEAdapter(it, applicationContext)
+        }
+        recyclerView.layoutManager = LinearLayoutManager(applicationContext)
     }
 
-    private fun setModulesBackListener() {
-        modulesBack.setOnClickListener {
-            finish()
-        }
+    private fun setModulesBackListener() = with(binding) {
+        modulesBack.setOnClickListener { finish() }
     }
 
 }

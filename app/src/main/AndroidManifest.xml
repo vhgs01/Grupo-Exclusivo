@@ -19,7 +19,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Kaz"
+        android:theme="@style/Theme.GE"
         android:usesCleartextTraffic="true">
 
         <meta-data
@@ -31,7 +31,7 @@
 
         <activity
             android:name=".view.activity.SplashActivity"
-            android:label="@string/app_name"
+            android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/FullScreen">
             <intent-filter>

@@ -1,6 +1,6 @@
 package com.antoniocitty.grupoexclusivo.model.courses
 
-data class ModuleKaz(
+data class ModuleGE(
     var completed: Boolean?,
     val description: String,
     val steps: List<Step>,
