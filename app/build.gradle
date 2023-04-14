@@ -13,8 +13,8 @@ android {
         applicationId "com.antoniocitty.grupoexclusivo"
         minSdk 24
         targetSdk 33
-        versionCode 6
-        versionName "0.0.6"
+        versionCode 100
+        versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
